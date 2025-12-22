@@ -1,0 +1,50 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios17-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name VouchSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import Foundation
+import Swift
+import SwiftUI
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct VouchSuccess {
+  public let proofId: Swift.String
+}
+public struct VouchError : Swift.Error {
+  public let proofId: Swift.String
+  public let reason: VouchSDK.VouchErrorReason
+}
+public enum VouchErrorReason : Swift.Error {
+  case dataSourceOrCustomerNotFound
+  case outdatedVersion
+  case creatingProofRequestFailed
+  case backgroundTimeout
+  case requestTooLarge
+  case dataSourceMisconfigured
+  case provingFailed
+  case proofUploadFailed
+  case attachmentReuploadFailed
+  case proofIdTaken
+  case networkConnectionLost
+  public static func == (a: VouchSDK.VouchErrorReason, b: VouchSDK.VouchErrorReason) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class SDK {
+  @_Concurrency.MainActor public init()
+  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, customerId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
+  
+  @objc deinit
+}
+@_Concurrency.MainActor @preconcurrency public struct VouchView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s8VouchSDK0A4ViewV4bodyQrvp", 0) __
+}
+extension VouchSDK.VouchErrorReason : Swift.Equatable {}
+extension VouchSDK.VouchErrorReason : Swift.Hashable {}
+extension VouchSDK.VouchView : Swift.Sendable {}
