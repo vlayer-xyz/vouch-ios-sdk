@@ -1,6 +1,9 @@
 # Vouch iOS SDK
 This repository contains a binary iOS framework for integrating with the Vouch platform.
 
+# Documentation
+For detailed documentation, please visit our [official docs](https://docs.getvouch.io/mobile-introduction).
+
 # Installation
 In Xcode, go to `File` -> `Add Packages...` and enter the following URL:
 ```
@@ -16,13 +19,12 @@ import VouchSDK
 ```
 Initialize the Vouch SDK
 ```swift
-let sdk = VouchSDK.SDK()
+let sdk = VouchSDK.SDK(customerId: "your_customer_id")
 ```
 Start proof by calling the `start` method providing data source id, customer id (provided by Vouch), webhook url (to receive proof results) and a callback:
 ```swift
 sdk.start(
     dataSourceId: "your_data_source_id",
-    customerId: "your_customer_id",
     webhookUrl: "https://your-webhook-url.com",
     callback: { result in
         switch result {
