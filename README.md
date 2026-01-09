@@ -5,12 +5,25 @@ This repository contains a binary iOS framework for integrating with the Vouch p
 For detailed documentation, please visit our [official docs](https://docs.getvouch.io/mobile-introduction).
 
 # Installation
+
+## Swift Package Manager
 In Xcode, go to `File` -> `Add Packages...` and enter the following URL:
 ```
 https://github.com/vlayer-xyz/vouch-ios-sdk
 ```
 
 Select the latest version and add the package to your project.
+
+## CocoaPods
+Add the following line to your `Podfile`:
+```ruby
+pod 'vouch-ios-sdk'
+```
+
+Then run:
+```bash
+pod install
+```
 
 # Usage
 Import the Vouch framework in your Swift files:
