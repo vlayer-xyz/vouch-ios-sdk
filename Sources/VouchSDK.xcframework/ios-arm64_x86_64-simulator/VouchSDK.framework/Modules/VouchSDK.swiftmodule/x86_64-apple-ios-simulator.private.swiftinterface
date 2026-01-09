@@ -34,8 +34,8 @@ public enum VouchErrorReason : Swift.Error {
   }
 }
 public class SDK {
-  @_Concurrency.MainActor public init()
-  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, customerId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
+  @_Concurrency.MainActor public init(customerId: Swift.String)
+  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
   
   @objc deinit
 }

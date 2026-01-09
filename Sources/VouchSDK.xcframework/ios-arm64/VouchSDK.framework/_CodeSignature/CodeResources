@@ -6,15 +6,15 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		6xA2lrc95vnfZPMma+/ppuxN4FE=
+		NGIK3sBNPMHY/iv57CbTqiQhBhQ=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		vTSqv2h6DJFFWjjbsjKl+Noxtfs=
+		MERzODxIs0282mpvR3vkgIZDYJc=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		a1DlYMAmG13O3zUPRCY5v1p7fFM=
+		M5OAjSK2kUli1d9O2efH9nbjMq8=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -22,15 +22,15 @@
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		a1DlYMAmG13O3zUPRCY5v1p7fFM=
+		M5OAjSK2kUli1d9O2efH9nbjMq8=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NC1rvwgLHPsagCaC3vYaS+/a/yU=
+		uPpQAb0xHpzdAHi4CpDrxOb0akA=
 		</data>
 		<key>Packages_Common.bundle/API.js</key>
 		<data>
-		Ie9kjAxysRsP2VraJlV8BshtzFA=
+		2W6I1d4iNr/RmGz5CrffYcwIo7s=
 		</data>
 		<key>Packages_Common.bundle/Assets.car</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Packages_Common.bundle/Info.plist</key>
 		<data>
-		1L9Dg26jS80LLB482E1PEqXg3E0=
+		DnoB47yBNQFtR5EgBz7w43VSasI=
 		</data>
 		<key>Packages_Common.bundle/Localizable.strings</key>
 		<data>
@@ -52,14 +52,6 @@
 		<data>
 		A2sUBkx7kLSyAPJzCYHv/qXlixU=
 		</data>
-		<key>Packages_Common.bundle/Model.momd/Model.mom</key>
-		<data>
-		sWr5o1AYA3h9hroeWAssOr8qhSo=
-		</data>
-		<key>Packages_Common.bundle/Model.momd/VersionInfo.plist</key>
-		<data>
-		Ydmdofe3pzDXZHQatQOJ5MkbE8M=
-		</data>
 		<key>Packages_Common.bundle/Runner.js</key>
 		<data>
 		gt0GY3mfiaDq9ClnXgbVaWeZTTk=
@@ -70,7 +62,7 @@
 		</data>
 		<key>SwiftyJSON_SwiftyJSON.bundle/Info.plist</key>
 		<data>
-		1fSd3HZhrxPliOxkAfiJq8H0Iwk=
+		XGssTEnlzAPhX9+r3MIaNd8zZ7w=
 		</data>
 		<key>SwiftyJSON_SwiftyJSON.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -83,14 +75,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7WTRrx4nUl7YgpoOLOe4TjLuP788FmCagCQDpMslojY=
+			BEmIA0AUY1A1oY80CRPq91EMmmXejLx3kBAM8370gTU=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AOKBg+7updvj4JBmnc86IoU1PqtKYeABynTs4H1xGbI=
+			dyHgHSCE4LqgQpUdZTS4T0grOX2wHuPTBJH5nCylrbU=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -104,21 +96,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AOKBg+7updvj4JBmnc86IoU1PqtKYeABynTs4H1xGbI=
+			dyHgHSCE4LqgQpUdZTS4T0grOX2wHuPTBJH5nCylrbU=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eaphY8ynplKh3xHr1HCjNeZNEqUoA4d3V5Vjb9tsokE=
+			Lk+OM6dys50MLRDPJvzvjBx5rcDwSdunx+h3E6NbMGg=
 			</data>
 		</dict>
 		<key>Packages_Common.bundle/API.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gI78RQ7GCaZoRdMT141m26+dtjN6Xtv01EKi4duew7g=
+			6BPrJJciV3DxBbK/Gr6XUDDSFIE85R7gq/hKGW74BXU=
 			</data>
 		</dict>
 		<key>Packages_Common.bundle/Assets.car</key>
@@ -132,7 +124,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zEzE70/3YTPtT+2oE+TZKLcVMKQMLiwvZqvY53Rugp8=
+			/UItzGphSrK2qPFyJET/WSi71EIxztf44NYon6cix5c=
 			</data>
 		</dict>
 		<key>Packages_Common.bundle/Localizable.strings</key>
@@ -156,20 +148,6 @@
 			KWAXXglM9VlDXdate2c5FompXoZueYm3BWCTfcyq6oc=
 			</data>
 		</dict>
-		<key>Packages_Common.bundle/Model.momd/Model.mom</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Dv6VrJ8gtau3OckQT5+uhMvv83oyZxvPkQ3W8p4UKuc=
-			</data>
-		</dict>
-		<key>Packages_Common.bundle/Model.momd/VersionInfo.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zzMl8kJrZpZ/Kc+LAZoGgrHOKBl89pVGhNiQCr6ZZQE=
-			</data>
-		</dict>
 		<key>Packages_Common.bundle/Runner.js</key>
 		<dict>
 			<key>hash2</key>
@@ -188,7 +166,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VxL2Ns+Fa/3VJ9xB+VVo9udHv8KASVbnokkHfPBn/hk=
+			qQVJXPNXXXnx6ajLacDJ5axHH51O2pxjLvUmZX02bsY=
 			</data>
 		</dict>
 		<key>SwiftyJSON_SwiftyJSON.bundle/PrivacyInfo.xcprivacy</key>

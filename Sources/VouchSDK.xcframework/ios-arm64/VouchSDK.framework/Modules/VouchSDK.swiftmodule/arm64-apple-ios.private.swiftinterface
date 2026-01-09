@@ -8,6 +8,21 @@ import SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_Concurrency.MainActor @preconcurrency public struct VouchView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s8VouchSDK0A4ViewV4bodyQrvp", 0) __
+}
+public class SDK {
+  @_Concurrency.MainActor public init(customerId: Swift.String)
+  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
+  
+  @objc deinit
+}
+public struct VouchSuccess {
+  public let proofId: Swift.String
+}
 public struct VouchError : Swift.Error {
   public let proofId: Swift.String
   public let reason: VouchSDK.VouchErrorReason
@@ -30,21 +45,6 @@ public enum VouchErrorReason : Swift.Error {
     get
   }
 }
-@_Concurrency.MainActor @preconcurrency public struct VouchView : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s8VouchSDK0A4ViewV4bodyQrvp", 0) __
-}
-public class SDK {
-  @_Concurrency.MainActor public init()
-  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, customerId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
-  
-  @objc deinit
-}
-public struct VouchSuccess {
-  public let proofId: Swift.String
-}
+extension VouchSDK.VouchView : Swift.Sendable {}
 extension VouchSDK.VouchErrorReason : Swift.Equatable {}
 extension VouchSDK.VouchErrorReason : Swift.Hashable {}
-extension VouchSDK.VouchView : Swift.Sendable {}

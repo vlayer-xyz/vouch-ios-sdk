@@ -6,7 +6,7 @@
 	<dict>
 		<key>API.js</key>
 		<data>
-		Ie9kjAxysRsP2VraJlV8BshtzFA=
+		2W6I1d4iNr/RmGz5CrffYcwIo7s=
 		</data>
 		<key>Assets.car</key>
 		<data>
@@ -24,14 +24,6 @@
 		<data>
 		A2sUBkx7kLSyAPJzCYHv/qXlixU=
 		</data>
-		<key>Model.momd/Model.mom</key>
-		<data>
-		sWr5o1AYA3h9hroeWAssOr8qhSo=
-		</data>
-		<key>Model.momd/VersionInfo.plist</key>
-		<data>
-		Ydmdofe3pzDXZHQatQOJ5MkbE8M=
-		</data>
 		<key>Runner.js</key>
 		<data>
 		gt0GY3mfiaDq9ClnXgbVaWeZTTk=
@@ -47,11 +39,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ie9kjAxysRsP2VraJlV8BshtzFA=
+			2W6I1d4iNr/RmGz5CrffYcwIo7s=
 			</data>
 			<key>hash2</key>
 			<data>
-			gI78RQ7GCaZoRdMT141m26+dtjN6Xtv01EKi4duew7g=
+			6BPrJJciV3DxBbK/Gr6XUDDSFIE85R7gq/hKGW74BXU=
 			</data>
 		</dict>
 		<key>Assets.car</key>
@@ -96,28 +88,6 @@
 			<key>hash2</key>
 			<data>
 			KWAXXglM9VlDXdate2c5FompXoZueYm3BWCTfcyq6oc=
-			</data>
-		</dict>
-		<key>Model.momd/Model.mom</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sWr5o1AYA3h9hroeWAssOr8qhSo=
-			</data>
-			<key>hash2</key>
-			<data>
-			Dv6VrJ8gtau3OckQT5+uhMvv83oyZxvPkQ3W8p4UKuc=
-			</data>
-		</dict>
-		<key>Model.momd/VersionInfo.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Ydmdofe3pzDXZHQatQOJ5MkbE8M=
-			</data>
-			<key>hash2</key>
-			<data>
-			zzMl8kJrZpZ/Kc+LAZoGgrHOKBl89pVGhNiQCr6ZZQE=
 			</data>
 		</dict>
 		<key>Runner.js</key>
