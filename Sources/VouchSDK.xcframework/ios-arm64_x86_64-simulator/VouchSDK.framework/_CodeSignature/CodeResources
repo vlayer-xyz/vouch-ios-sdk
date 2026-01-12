@@ -4,53 +4,57 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/VouchSDK-Swift.h</key>
+		<data>
+		XR5rEf90EYuRFRHazBEiu6CRWe4=
+		</data>
 		<key>Info.plist</key>
 		<data>
 		jlrnLsBIRvhXnaK3MvfWEU15tzg=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		6CGYq260Zr7D1Lp7eAX+nOQaEUc=
+		8KXDR7hDIA3qfQGGo5wI1f5CYzk=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		esgy9l+ijfV83yNsHsNbY4ED71g=
+		8r0n7sD+P4bfeEL9hme579iVw58=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		uRgW4vSncgSfk7Pz1USBk/pa8uU=
+		3Alu019Me7pU+ZbboQSIgr2ZVIs=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		esgy9l+ijfV83yNsHsNbY4ED71g=
+		8r0n7sD+P4bfeEL9hme579iVw58=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ysTYRXIQIOBfYIw3QPOy9I/p6hU=
+		rf4WeqnTAB+JlwOj0cqTkC29jts=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		6CGYq260Zr7D1Lp7eAX+nOQaEUc=
+		8KXDR7hDIA3qfQGGo5wI1f5CYzk=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Kq0QZygAlwq7bwSjGfmR6WA3a8Q=
+		MFbXX/mcO3yZh4QkDtBWF0W0VAE=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		HB9E3iUYKMzDqeUvkcDhWlBGzMI=
+		LXlBFXQyB5eFzx7DKlMue1YO5iY=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Kq0QZygAlwq7bwSjGfmR6WA3a8Q=
+		MFbXX/mcO3yZh4QkDtBWF0W0VAE=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		l0mmetZ6rd8zjDA85hF522LKuZE=
+		c2Dcx61e/Lob6fDS6A/8wOFXimI=
 		</data>
 		<key>Packages_Common.bundle/API.js</key>
 		<data>
-		2W6I1d4iNr/RmGz5CrffYcwIo7s=
+		+oKd35xv2OklV7nrKWUxL/cvtVo=
 		</data>
 		<key>Packages_Common.bundle/Assets.car</key>
 		<data>
@@ -78,7 +82,7 @@
 		</data>
 		<key>Packages_Common.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		2wr1M6S12NhTKaLOkwMcQUa3cHA=
+		lFQ9FJ3ELyUbe815Sdg1MUEBzao=
 		</data>
 		<key>Packages_Common.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -86,11 +90,11 @@
 		</data>
 		<key>Packages_Common.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		Cj7k1swcYkoeivATVhBImJ33BXo=
+		/68LDrgff42jrQY7nSzKTYYsCeo=
 		</data>
 		<key>Packages_Common.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		OzeND9/7KyoTOvJ+6P/kUdefKQg=
+		vx79hOCgN7e2mlRjeCMSfKN3cfw=
 		</data>
 		<key>Packages_Common.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -131,81 +135,88 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/VouchSDK-Swift.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LrfAeHwOZPeehC4msVzCMd10R8mOjtbTO5mRTk846Tw=
+			</data>
+		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t/QMCh23NCUmGsePhKJdCgobZ54vPpWCyisgvK0yPI8=
+			YNSScolgHfAPVnaNQDb3dEEa7ORcq/HCL2P1prOz55U=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QTrLC/a/W7w5Rq7QjjU+BxBmVUSOnKdUd/CaBb/FoZc=
+			B8GqXv+EKV9JPUgnLxbNEID3D3NzxQY9/Zw1YlS7lrs=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c+S5sXjfzT77Dxf1zlcfjoD5V+a4tsomn47srOUsOQU=
+			HjuSllpOasKc3edJHUSRndtgDm5O99v55nNtfR7SaJA=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QTrLC/a/W7w5Rq7QjjU+BxBmVUSOnKdUd/CaBb/FoZc=
+			B8GqXv+EKV9JPUgnLxbNEID3D3NzxQY9/Zw1YlS7lrs=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lxBifaFV7hYyLPctvW4jdUiZ3qt2PkkHiqPkTEulBuQ=
+			YHiK8nP9oQ7bM9WR3hHZE1b/nrzBMuWfrrnyeq86xA0=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t/QMCh23NCUmGsePhKJdCgobZ54vPpWCyisgvK0yPI8=
+			YNSScolgHfAPVnaNQDb3dEEa7ORcq/HCL2P1prOz55U=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PvNYEU5YkMsA8q/qIseX2BJDZekAIjPFxJJXbiqozek=
+			lTpDPwe2RFZ6kJkBLfwvJtzc5yWOQwq78erUaBFxzYo=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oqaDOLrxQgnmiuewmPwv/uNo3fZhiL+1AA8pgFse5sc=
+			d3qLIfogeQ9yFliDvMXM7TkN6EljOAEhXiINoZpHbVQ=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PvNYEU5YkMsA8q/qIseX2BJDZekAIjPFxJJXbiqozek=
+			lTpDPwe2RFZ6kJkBLfwvJtzc5yWOQwq78erUaBFxzYo=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9hoHnFAGcDY1Hpmi526UtbqwmHGY1AXZPOMK9ZFgl1c=
+			rjkxggZToFPr/bFk9/YaY+L1o1F8JfV2XwsWgUCZelg=
 			</data>
 		</dict>
 		<key>Packages_Common.bundle/API.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6BPrJJciV3DxBbK/Gr6XUDDSFIE85R7gq/hKGW74BXU=
+			D6dYpDa7OI2uISQ9dBoXOnQgO0S05INFnBNbWyDZ6iY=
 			</data>
 		</dict>
 		<key>Packages_Common.bundle/Assets.car</key>
@@ -254,7 +265,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QP2BraaaRhsDfmqf+hLEPP0QXv+3JPjrSrcmPs/Emlo=
+			n9LaM17GNLvmCoa9dcJxOVWOBFbSwPTt2wsDJMLgl/k=
 			</data>
 		</dict>
 		<key>Packages_Common.bundle/_CodeSignature/CodeRequirements</key>
@@ -268,14 +279,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			y8RKt8A89Jd08SlhhT+xURyt0dZvmJZKHDCppAYi+zM=
+			Q0P/h9C7XfywBdjarHYTY5K8OGIj5h/3DG2bw+bDioY=
 			</data>
 		</dict>
 		<key>Packages_Common.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Flg8QXHQ33f20Y3tUGZooKmtxxRs9c1uSW3XQDYI9tE=
+			F5P/2+nNv+niqe7IiLLEp7ZcVt05fuGb4p8+qk5XRYE=
 			</data>
 		</dict>
 		<key>Packages_Common.bundle/_CodeSignature/CodeSignature</key>

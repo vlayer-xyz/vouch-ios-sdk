@@ -19,5 +19,5 @@ Pod::Spec.new do |spec|
 
   spec.vendored_frameworks = "Sources/VouchSDK.xcframework"
 
-  spec.frameworks = "Foundation", "SwiftUI"
+  spec.frameworks = "Foundation", "SwiftUI", "UIKit"
 end

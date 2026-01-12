@@ -8,21 +8,6 @@ import SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_Concurrency.MainActor @preconcurrency public struct VouchView : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s8VouchSDK0A4ViewV4bodyQrvp", 0) __
-}
-public class SDK {
-  @_Concurrency.MainActor public init(customerId: Swift.String)
-  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
-  
-  @objc deinit
-}
-public struct VouchSuccess {
-  public let proofId: Swift.String
-}
 public struct VouchError : Swift.Error {
   public let proofId: Swift.String
   public let reason: VouchSDK.VouchErrorReason
@@ -45,6 +30,64 @@ public enum VouchErrorReason : Swift.Error {
     get
   }
 }
-extension VouchSDK.VouchView : Swift.Sendable {}
+@_Concurrency.MainActor @preconcurrency public struct VouchView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s8VouchSDK0A4ViewV4bodyQrvp", 0) __
+}
+public struct VouchSuccess {
+  public let proofId: Swift.String
+}
+public class SDK {
+  @_Concurrency.MainActor public init(customerId: Swift.String)
+  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
+  
+  @objc deinit
+}
+@objc public enum VouchErrorReasonObjC : Swift.Int {
+  case dataSourceOrCustomerNotFound = 0
+  case outdatedVersion = 1
+  case creatingProofRequestFailed = 2
+  case backgroundTimeout = 3
+  case requestTooLarge = 4
+  case dataSourceMisconfigured = 5
+  case provingFailed = 6
+  case proofUploadFailed = 7
+  case attachmentReuploadFailed = 8
+  case proofIdTaken = 9
+  case networkConnectionLost = 10
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class VouchSuccessObjC : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @objc final public let proofId: Swift.String
+  @objc public init(proofId: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class VouchErrorObjC : Foundation.NSError, @unchecked Swift.Sendable {
+  @objc final public let proofId: Swift.String
+  @objc final public let reason: VouchSDK.VouchErrorReasonObjC
+  @objc public init(proofId: Swift.String, reason: VouchSDK.VouchErrorReasonObjC)
+  @objc deinit
+}
+@objc public class VouchSDKBridge : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @_Concurrency.MainActor @objc public init(customerId: Swift.String)
+  @_Concurrency.MainActor @objc public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String]?, completion: @escaping @Sendable (VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?) -> Swift.Void) -> UIKit.UIViewController
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
 extension VouchSDK.VouchErrorReason : Swift.Equatable {}
 extension VouchSDK.VouchErrorReason : Swift.Hashable {}
+extension VouchSDK.VouchView : Swift.Sendable {}
+extension VouchSDK.VouchErrorReasonObjC : Swift.Equatable {}
+extension VouchSDK.VouchErrorReasonObjC : Swift.Hashable {}
+extension VouchSDK.VouchErrorReasonObjC : Swift.RawRepresentable {}
