@@ -10,9 +10,11 @@ import VouchSDK
 
 @main
 struct ExampleApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  let sdk = VouchSDK.SDK(customerId: "1be03be8-5014-413c-835a-feddf4020da2")
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView(sdk: sdk)
     }
+  }
 }
