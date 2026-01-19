@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import VouchSDK
 
 @main
 struct ExampleApp: App {

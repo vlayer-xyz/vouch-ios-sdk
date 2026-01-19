@@ -15,7 +15,9 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "vouch-ios-sdk"),
+      name: "vouch-ios-sdk",
+      dependencies: ["VouchSDK"],
+      exclude: ["vouch-ios-sdk-Swift.h"]),
     .binaryTarget(
       name: "VouchSDK",
       path: "Sources/VouchSDK.xcframework"
