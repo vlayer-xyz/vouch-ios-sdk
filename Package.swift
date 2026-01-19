@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "vouch-ios-sdk",
   platforms: [
-    .iOS(.v17)
+    .iOS(.v14)
   ],
   products: [
     .library(

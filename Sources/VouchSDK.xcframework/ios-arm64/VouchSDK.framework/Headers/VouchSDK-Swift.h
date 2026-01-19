@@ -343,10 +343,8 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 /// \param customerId The unique customer identifier
 ///
 - (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId OBJC_DESIGNATED_INITIALIZER;
-/// Start a proof request flow
-/// Note: This method currently creates the SDK and attempts to start the flow,
-/// but since the underlying SDK returns a SwiftUI view, you’ll need to handle
-/// presentation in your React Native bridge code.
++ (BOOL)isSupported SWIFT_WARN_UNUSED_RESULT;
+/// Start a proof request flow. Returns a UIViewController to present.
 /// \param dataSourceId The data source identifier
 ///
 /// \param webhookUrl The webhook URL for callbacks

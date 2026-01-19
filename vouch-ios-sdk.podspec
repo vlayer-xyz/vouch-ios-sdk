@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "Vouch" => "https://getvouch.io" }
 
-  spec.platform     = :ios, "17.0"
+  spec.platform     = :ios, "14.0"
   spec.swift_version = "6.1"
 
   spec.source       = { :git => "https://github.com/vlayer-xyz/vouch-ios-sdk.git", :tag => "v#{spec.version}" }
