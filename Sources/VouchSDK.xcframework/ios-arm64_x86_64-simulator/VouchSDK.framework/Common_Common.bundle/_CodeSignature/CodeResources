@@ -6,15 +6,15 @@
 	<dict>
 		<key>API.js</key>
 		<data>
-		HIeiLg/8g9x3W930c+5hOTh/Xa0=
+		P3ZQDbMtzPki2gEniUXQquncX78=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		iAKKMVAkzF08U9SVkUx7Y5D0XnU=
+		cU4SqNXf5kuaH1xA7Jd+xdevD3c=
 		</data>
 		<key>Localizable.strings</key>
 		<data>
-		l3knL1i/H8ZDI4TzgIjEj5zRsrc=
+		6ivJ5FkMLwpmw+p6ytLJEIYeZuE=
 		</data>
 		<key>Manrope-Bold.ttf</key>
 		<data>
@@ -37,43 +37,27 @@
 	<dict>
 		<key>API.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			HIeiLg/8g9x3W930c+5hOTh/Xa0=
-			</data>
 			<key>hash2</key>
 			<data>
-			+08+yXpxcpCu574VQu9vHkVpqAh3PKviWfdRMjGoGuE=
+			hHaq5UaVUOWvSG7a6P8ZH0Bjufctg6gd4SZIbYD3b44=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			iAKKMVAkzF08U9SVkUx7Y5D0XnU=
-			</data>
 			<key>hash2</key>
 			<data>
-			5t7JqoBTQVhEi//a4HGhvJ7iU7liOl2NtzARDufI6pY=
+			m47QToRdpt1xQguUE+v7CCvlAzPjdLRiRYgBkp1FJBI=
 			</data>
 		</dict>
 		<key>Localizable.strings</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			l3knL1i/H8ZDI4TzgIjEj5zRsrc=
-			</data>
 			<key>hash2</key>
 			<data>
-			tj9CXqbrt93AT6Gu1kPlbRP0dtQgZQglh6TBYlMNspY=
+			KrSurg1u/zCPu2UhV7aZ+CIYRkiZ30SlODXvz9c/P6Y=
 			</data>
 		</dict>
 		<key>Manrope-Bold.ttf</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			prY8gy0SM377MSP0eGP1RHLIG/U=
-			</data>
 			<key>hash2</key>
 			<data>
 			zmh8DIZ6TUPcaD0ZxuBlu4TAJ9PJ5N1R6C+1OQjU+Ek=
@@ -81,10 +65,6 @@
 		</dict>
 		<key>Manrope-Regular.ttf</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			A2sUBkx7kLSyAPJzCYHv/qXlixU=
-			</data>
 			<key>hash2</key>
 			<data>
 			KWAXXglM9VlDXdate2c5FompXoZueYm3BWCTfcyq6oc=
@@ -92,10 +72,6 @@
 		</dict>
 		<key>Runner.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			gt0GY3mfiaDq9ClnXgbVaWeZTTk=
-			</data>
 			<key>hash2</key>
 			<data>
 			7JWqR5OoUmC7+gO+31Qp4komWCoJJPVlYcdwhEq9P+g=
@@ -103,10 +79,6 @@
 		</dict>
 		<key>iOSOverwrites.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MH7mKEJHslp1jEOIPv5n0+tckpg=
-			</data>
 			<key>hash2</key>
 			<data>
 			gbqURQD9544Bm+mYqCyR92uPBgtmWRCQ44uXI63Txzg=

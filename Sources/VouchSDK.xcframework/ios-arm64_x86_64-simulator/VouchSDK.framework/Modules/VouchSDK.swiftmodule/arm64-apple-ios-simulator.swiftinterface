@@ -1,68 +1,20 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target arm64-apple-ios14-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name VouchSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import Foundation
 import Swift
 import SwiftUI
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_Concurrency.MainActor @preconcurrency public struct VouchView : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s8VouchSDK0A4ViewV4bodyQrvp", 0) __
-}
-public struct VouchSuccess {
-  public let proofId: Swift.String
-}
 public class SDK {
   @_Concurrency.MainActor public init(customerId: Swift.String)
   public static func isSupported() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
   
-  @objc deinit
-}
-@objc public enum VouchErrorReasonObjC : Swift.Int {
-  case dataSourceOrCustomerNotFound = 0
-  case outdatedVersion = 1
-  case creatingProofRequestFailed = 2
-  case backgroundTimeout = 3
-  case requestTooLarge = 4
-  case dataSourceMisconfigured = 5
-  case provingFailed = 6
-  case proofUploadFailed = 7
-  case attachmentReuploadFailed = 8
-  case proofIdTaken = 9
-  case networkConnectionLost = 10
-  public var description: Swift.String {
-    get
-  }
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public class VouchSuccessObjC : ObjectiveC.NSObject, @unchecked Swift.Sendable {
-  @objc final public let proofId: Swift.String
-  @objc public init(proofId: Swift.String)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc public class VouchErrorObjC : Foundation.NSError, @unchecked Swift.Sendable {
-  @objc final public let proofId: Swift.String
-  @objc final public let reason: VouchSDK.VouchErrorReasonObjC
-  @objc public init(proofId: Swift.String, reason: VouchSDK.VouchErrorReasonObjC)
-  @objc deinit
-}
-@objc public class VouchSDKBridge : ObjectiveC.NSObject, @unchecked Swift.Sendable {
-  @_Concurrency.MainActor @objc public init(customerId: Swift.String)
-  @objc public static func isSupported() -> Swift.Bool
-  @_Concurrency.MainActor @objc public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String]?, completion: @escaping @Sendable (VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?) -> Swift.Void) -> UIKit.UIViewController
-  @objc public static var sdkVersion: Swift.String {
-    @objc get
-  }
+  #endif
   @objc deinit
 }
 public struct VouchError : Swift.Error {
@@ -87,9 +39,63 @@ public enum VouchErrorReason : Swift.Error {
     get
   }
 }
-extension VouchSDK.VouchView : Swift.Sendable {}
+@objc public enum VouchErrorReasonObjC : Swift.Int {
+  case dataSourceOrCustomerNotFound = 0
+  case outdatedVersion = 1
+  case creatingProofRequestFailed = 2
+  case backgroundTimeout = 3
+  case requestTooLarge = 4
+  case dataSourceMisconfigured = 5
+  case provingFailed = 6
+  case proofUploadFailed = 7
+  case attachmentReuploadFailed = 8
+  case proofIdTaken = 9
+  case networkConnectionLost = 10
+  public var description: Swift.String {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class VouchSuccessObjC : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @objc final public let proofId: Swift.String
+  @objc public init(proofId: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class VouchErrorObjC : Foundation.NSError, @unchecked Swift.Sendable {
+  @objc final public let proofId: Swift.String
+  @objc final public let reason: VouchSDK.VouchErrorReasonObjC
+  @objc public init(proofId: Swift.String, reason: VouchSDK.VouchErrorReasonObjC)
+  @objc deinit
+}
+@objc public class VouchSDKBridge : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @_Concurrency.MainActor @objc public init(customerId: Swift.String)
+  @objc public static func isSupported() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @objc public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String]?, completion: @escaping @Sendable (VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?) -> Swift.Void) -> UIKit.UIViewController
+  #endif
+  @objc public static var sdkVersion: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+public struct VouchSuccess {
+  public let proofId: Swift.String
+}
+@_Concurrency.MainActor @preconcurrency public struct VouchView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s8VouchSDK0A4ViewV4bodyQrvp", 0) __
+}
+extension VouchSDK.VouchErrorReason : Swift.Equatable {}
+extension VouchSDK.VouchErrorReason : Swift.Hashable {}
 extension VouchSDK.VouchErrorReasonObjC : Swift.Equatable {}
 extension VouchSDK.VouchErrorReasonObjC : Swift.Hashable {}
 extension VouchSDK.VouchErrorReasonObjC : Swift.RawRepresentable {}
-extension VouchSDK.VouchErrorReason : Swift.Equatable {}
-extension VouchSDK.VouchErrorReason : Swift.Hashable {}
+extension VouchSDK.VouchView : Swift.Sendable {}

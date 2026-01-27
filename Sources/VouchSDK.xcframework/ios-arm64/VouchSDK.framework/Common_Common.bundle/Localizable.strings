@@ -1,5 +1,5 @@
 "general.privacy_policy" = "Learn more about how vouch protects your [Privacy](https://www.vlayer.xyz/privacy-policy)";
-"general.unavaliable" = "Vouch requires iOS 16.4 or later to function";
+"general.unavailable" = "Vouch requires iOS 16.4 or later to function";
 
 "home.title" = "Welcome at";
 "home.description" = "Pick the demo flow to explore how it works.";

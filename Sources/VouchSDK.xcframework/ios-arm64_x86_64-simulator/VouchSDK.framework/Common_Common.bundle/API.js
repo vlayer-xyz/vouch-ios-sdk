@@ -6,7 +6,7 @@ const logo = "data:image/svg+xml,%3csvg%20width='101'%20height='22'%20viewBox='0
 
 const clockIcon = "data:image/svg+xml,%3csvg%20width='45'%20height='45'%20viewBox='0%200%2045%2045'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='22.5'%20cy='22.5'%20r='22.5'%20fill='%23B3F4DD'/%3e%3ccircle%20opacity='0.8'%20cx='22.7492'%20cy='22.701'%20r='11.4169'%20fill='white'%20stroke='%23135848'%20stroke-width='0.992771'/%3e%3cpath%20d='M22.748%2016.9884V20.8619'%20stroke='%23135848'%20stroke-width='0.992771'%20stroke-linecap='square'/%3e%3cpath%20d='M22.8682%2013.4619V11.9796M27.5199%2014.7096L28.2602%2013.4259M13.5288%2017.3774L14.8111%2018.1186M31.0602%2027.432L32.2075%2027.9571M18.2164%2014.7096L17.4761%2013.4259M14.8111%2027.432L13.5288%2028.1731M32.2075%2017.3774L30.9252%2018.1186M13.5646%2022.7753H12.084M33.6523%2022.7753H32.1717M22.8682%2033.5709V32.0887M17.4761%2032.1244L18.2164%2030.8408'%20stroke='%231BCF96'%20stroke-width='0.992771'%20stroke-linecap='square'/%3e%3cpath%20d='M28.2346%2032.1572L27.4961%2031.0726'%20stroke='%231BCF96'%20stroke-width='0.992771'%20stroke-linecap='square'/%3e%3cpath%20d='M27.499%2022.7034H24.6211'%20stroke='%23135848'%20stroke-width='0.992771'%20stroke-linecap='square'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M31.4624%2011.0514C32.3603%2011.7556%2033.1708%2012.5661%2033.8748%2013.4641L35.1717%2012.1672C35.5034%2011.8355%2035.5034%2011.2927%2035.1717%2010.9609L33.9654%209.75467C33.6337%209.42292%2033.0909%209.42292%2032.7591%209.75467L31.4624%2011.0514ZM11.6237%2013.4639C12.3278%2012.5661%2013.1383%2011.7556%2014.0363%2011.0515L12.7395%209.75467C12.4077%209.42292%2011.8649%209.42292%2011.5332%209.75467L10.3269%2010.961C9.99519%2011.2927%209.99519%2011.8355%2010.3269%2012.1673L11.6237%2013.4639Z'%20fill='%231BCF96'%20stroke='%23135848'%20stroke-width='0.992771'/%3e%3ccircle%20cx='22.7492'%20cy='22.701'%20r='11.4169'%20stroke='%23135848'%20stroke-width='0.992771'/%3e%3cmask%20id='path-9-inside-1_909_1654'%20fill='white'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M22.749%2037.5955C30.9734%2037.5955%2037.6405%2030.9283%2037.6405%2022.7039C37.6405%2014.4796%2030.9734%207.81238%2022.749%207.81238C14.5246%207.81238%207.85742%2014.4796%207.85742%2022.7039C7.85742%2030.9283%2014.5246%2037.5955%2022.749%2037.5955ZM22.7489%2033.6241C28.7801%2033.6241%2033.6694%2028.7348%2033.6694%2022.7036C33.6694%2016.6724%2028.7801%2011.7831%2022.7489%2011.7831C16.7177%2011.7831%2011.8284%2016.6724%2011.8284%2022.7036C11.8284%2028.7348%2016.7177%2033.6241%2022.7489%2033.6241Z'/%3e%3c/mask%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M22.749%2037.5955C30.9734%2037.5955%2037.6405%2030.9283%2037.6405%2022.7039C37.6405%2014.4796%2030.9734%207.81238%2022.749%207.81238C14.5246%207.81238%207.85742%2014.4796%207.85742%2022.7039C7.85742%2030.9283%2014.5246%2037.5955%2022.749%2037.5955ZM22.7489%2033.6241C28.7801%2033.6241%2033.6694%2028.7348%2033.6694%2022.7036C33.6694%2016.6724%2028.7801%2011.7831%2022.7489%2011.7831C16.7177%2011.7831%2011.8284%2016.6724%2011.8284%2022.7036C11.8284%2028.7348%2016.7177%2033.6241%2022.7489%2033.6241Z'%20fill='%23B3F4DD'/%3e%3cpath%20d='M36.6478%2022.7039C36.6478%2030.38%2030.4251%2036.6027%2022.749%2036.6027V38.5883C31.5217%2038.5883%2038.6333%2031.4766%2038.6333%2022.7039H36.6478ZM22.749%208.80515C30.4251%208.80515%2036.6478%2015.0278%2036.6478%2022.7039H38.6333C38.6333%2013.9313%2031.5217%206.81961%2022.749%206.81961V8.80515ZM8.85019%2022.7039C8.85019%2015.0278%2015.0729%208.80515%2022.749%208.80515V6.81961C13.9763%206.81961%206.86465%2013.9313%206.86465%2022.7039H8.85019ZM22.749%2036.6027C15.0729%2036.6027%208.85019%2030.38%208.85019%2022.7039H6.86465C6.86465%2031.4766%2013.9763%2038.5883%2022.749%2038.5883V36.6027ZM32.6766%2022.7036C32.6766%2028.1865%2028.2318%2032.6313%2022.7489%2032.6313V34.6169C29.3284%2034.6169%2034.6622%2029.2831%2034.6622%2022.7036H32.6766ZM22.7489%2012.7759C28.2318%2012.7759%2032.6766%2017.2207%2032.6766%2022.7036H34.6622C34.6622%2016.1241%2029.3284%2010.7904%2022.7489%2010.7904V12.7759ZM12.8212%2022.7036C12.8212%2017.2207%2017.266%2012.7759%2022.7489%2012.7759V10.7904C16.1694%2010.7904%2010.8357%2016.1241%2010.8357%2022.7036H12.8212ZM22.7489%2032.6313C17.266%2032.6313%2012.8212%2028.1865%2012.8212%2022.7036H10.8357C10.8357%2029.2831%2016.1694%2034.6169%2022.7489%2034.6169V32.6313Z'%20fill='%23135848'%20mask='url(%23path-9-inside-1_909_1654)'/%3e%3cpath%20d='M22.7494%2024.5255C23.7566%2024.5255%2024.5732%2023.7089%2024.5732%2022.7016C24.5732%2021.6943%2023.7566%2020.8778%2022.7494%2020.8778C21.7421%2020.8778%2020.9255%2021.6943%2020.9255%2022.7016C20.9255%2023.7089%2021.7421%2024.5255%2022.7494%2024.5255Z'%20fill='%231BCF96'%20stroke='%23135848'%20stroke-width='0.992771'/%3e%3c/svg%3e";
 
-const overlayStyles = "@import url(\"https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap\");\n\n.vouch-processing {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100svh;\n  background-color: rgba(0, 0, 0, 0.85);\n  z-index: 999;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  pointer-events: auto;\n  padding: 16px;\n  backdrop-filter: blur(6px);\n  font-family:\n    \"Sora\",\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    Roboto,\n    sans-serif;\n}\n\n#vouch-processing-overlay {\n  user-select: none;\n}\n\n.vouch-processing .modal-container {\n  display: flex;\n  width: 100%;\n  max-width: 500px;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: #ffffff;\n  border-radius: 28px;\n  padding: 24px;\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\n}\n\n.vouch-processing .spinner {\n  width: 40px;\n  height: 40px;\n  border: 5px solid rgba(27, 175, 128, 0.2);\n  border-top-color: #1baf80;\n  border-radius: 50%;\n  animation: vouch-spin 1s linear infinite;\n}\n\n.vouch-processing .message-container {\n  margin-top: 20px;\n  margin-bottom: 24px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  text-align: center;\n  gap: 6px;\n}\n\n#vouch-processing-message .vouch-processing .message-container {\n  flex-direction: column;\n  gap: 10px;\n}\n\n.vouch-processing .logo {\n  height: 13px;\n  width: auto;\n}\n\n.vouch-processing .message {\n  font-size: 16px;\n  font-weight: 600;\n  color: #000000;\n}\n\n.vouch-processing .message-header {\n  font-size: 16px;\n  font-weight: 600;\n  color: #000000;\n}\n\n#vouch-processing-message .vouch-processing .message-header {\n  font-size: 18px;\n}\n\n.vouch-processing .message-text {\n  font-size: 15px;\n  font-weight: 400;\n  color: #000000;\n}\n\n.vouch-processing .info-box {\n  display: flex;\n  width: 100%;\n  border-radius: 8px;\n  background-color: #f5faf9;\n  padding: 12px;\n}\n\n.vouch-processing .info-icon {\n  width: 45px;\n  height: 45px;\n  margin-right: 12px;\n  flex-shrink: 0;\n  border-radius: 50%;\n}\n\n.vouch-processing .info-content {\n  display: flex;\n  flex-direction: column;\n}\n\n.vouch-processing .info-title {\n  font-weight: 700;\n  color: #3a4341;\n  font-size: 16px;\n  margin-bottom: 2px;\n}\n\n.vouch-processing .info-description {\n  font-size: 14px;\n  color: #3a4341;\n}\n\n.vouch-processing .modal-button {\n  background-color: rgb(19, 88, 72);\n  color: rgb(255, 255, 255);\n  min-width: 200px;\n  font-size: 14px;\n  font-weight: 700;\n  cursor: pointer;\n  margin-top: 16px;\n  border-radius: 12px;\n  padding: 12px 40px;\n  border-width: initial;\n  border-style: none;\n  border-color: initial;\n  border-image: initial;\n  transition: 0.3s;\n}\n\n.vouch-processing .modal-button:hover {\n  transform: scale(1.05);\n}\n\n.vouch-processing .button-container {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 100%;\n  margin-top: 24px;\n}\n\n.vouch-processing .button-container .modal-button {\n  margin-top: 0;\n  width: 100%;\n}\n\n.vouch-processing .error-title {\n  font-size: 18px;\n  font-weight: 700;\n  color: #000000;\n  margin-bottom: 8px;\n}\n\n.vouch-processing .error-description {\n  font-size: 14px;\n  color: #3a4341;\n  text-align: center;\n  line-height: 1.5;\n}\n\n@keyframes vouch-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n";
+const overlayStyles = "@import url(\"https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap\");\n\n.vouch-processing {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100svh;\n  background-color: rgba(0, 0, 0, 0.85);\n  z-index: 999;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  pointer-events: auto;\n  padding: 16px;\n  backdrop-filter: blur(6px);\n  font-family:\n    \"Sora\",\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    Roboto,\n    sans-serif;\n}\n\n#vouch-processing-overlay {\n  user-select: none;\n}\n\n.vouch-processing .modal-container {\n  display: flex;\n  width: 100%;\n  max-width: 500px;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: #ffffff;\n  border-radius: 28px;\n  padding: 24px;\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\n}\n\n.vouch-processing .spinner {\n  width: 40px;\n  height: 40px;\n  border: 5px solid rgba(27, 175, 128, 0.2);\n  border-top-color: #1baf80;\n  border-radius: 50%;\n  animation: vouch-spin 1s linear infinite;\n}\n\n.vouch-processing .message-container {\n  margin-top: 20px;\n  margin-bottom: 24px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  text-align: center;\n  gap: 6px;\n}\n\n#vouch-processing-message .vouch-processing .message-container {\n  flex-direction: column;\n  gap: 10px;\n}\n\n.vouch-processing .logo {\n  height: 13px;\n  width: auto;\n}\n\n.vouch-processing .message {\n  font-size: 16px;\n  font-weight: 600;\n  color: #000000;\n}\n\n.vouch-processing .message-header {\n  font-size: 16px;\n  font-weight: 600;\n  color: #000000;\n}\n\n#vouch-processing-message .vouch-processing .message-header {\n  font-size: 18px;\n}\n\n.vouch-processing .message-text {\n  font-size: 15px;\n  font-weight: 400;\n  color: #000000;\n}\n\n.vouch-processing .info-box {\n  display: flex;\n  width: 100%;\n  border-radius: 8px;\n  background-color: #f5faf9;\n  padding: 12px;\n}\n\n.vouch-processing .info-icon {\n  width: 45px;\n  height: 45px;\n  margin-right: 12px;\n  flex-shrink: 0;\n  border-radius: 50%;\n}\n\n.vouch-processing .info-content {\n  display: flex;\n  flex-direction: column;\n}\n\n.vouch-processing .info-title {\n  font-weight: 700;\n  color: #3a4341;\n  font-size: 16px;\n  margin-bottom: 2px;\n}\n\n.vouch-processing .info-description {\n  font-size: 14px;\n  color: #3a4341;\n}\n\n.vouch-processing .modal-button {\n  background-color: rgb(19, 88, 72);\n  color: rgb(255, 255, 255);\n  min-width: 200px;\n  font-size: 14px;\n  font-weight: 700;\n  cursor: pointer;\n  margin-top: 16px;\n  border-radius: 12px;\n  padding: 12px 40px;\n  border-width: initial;\n  border-style: none;\n  border-color: initial;\n  border-image: initial;\n  transition: 0.3s;\n}\n\n.vouch-processing .modal-button:hover {\n  transform: scale(1.05);\n}\n\n.vouch-processing .button-container {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 100%;\n  margin-top: 24px;\n}\n\n.vouch-processing .button-container .modal-button {\n  margin-top: 0;\n  width: 100%;\n}\n\n.vouch-processing .error-title {\n  font-size: 18px;\n  font-weight: 700;\n  color: #000000;\n  margin-bottom: 8px;\n}\n\n.vouch-processing .error-description,\n.vouch-processing .upload-description {\n  font-size: 14px;\n  color: #3a4341;\n  text-align: center;\n  line-height: 1.5;\n}\n\n.vouch-processing .upload-modal {\n  gap: 12px;\n}\n\n.vouch-processing .upload-icon {\n  width: 20px;\n  height: 20px;\n  color: #000;\n}\n\n.vouch-processing .upload-title {\n  font-size: 16px;\n  font-weight: 700;\n  color: #000;\n  text-align: center;\n}\n\n.vouch-processing .upload-progress-wrapper {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  width: 100%;\n  max-width: 400px;\n}\n\n.vouch-processing .progress-container {\n  width: 100%;\n  height: 12px;\n  background: rgba(0, 0, 0, 0.1);\n  border-radius: 6px;\n  overflow: hidden;\n}\n\n.vouch-processing .progress-bar {\n  width: 0%;\n  height: 100%;\n  background: #1baf80;\n  border-radius: 6px;\n  transition: width 0.3s ease;\n}\n\n.vouch-processing .progress-text {\n  font-size: 14px;\n  color: #6b7280;\n  text-align: center;\n}\n\n@keyframes vouch-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n";
 
 function div(attributes, ...child) {
   return appendChild("div", attributes, child);
@@ -45,8 +45,119 @@ function injectCss(styleId) {
   }
 }
 
+const uploadIcon = "data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2015%2015'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7.5%201.5L7.5%2010.5M7.5%201.5L4%205M7.5%201.5L11%205'%20stroke='%23000000'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M2.5%2013.5H12.5'%20stroke='%23000000'%20stroke-width='1.5'%20stroke-linecap='round'/%3e%3c/svg%3e";
+
+const UploadEvents = {
+  Start: "UploadStart",
+  Progress: "UploadProgress",
+  Complete: "UploadComplete",
+  Error: "UploadError"
+};
+const UPLOAD_OVERLAY_ID = "vouch-upload-overlay";
+function createUploadOverlay() {
+  removeProcessingOverlay();
+  if (document.getElementById(UPLOAD_OVERLAY_ID)) {
+    removeUploadOverlay();
+  }
+  injectCss(`${UPLOAD_OVERLAY_ID}-style`);
+  const overlay = div(
+    { id: UPLOAD_OVERLAY_ID, className: "vouch-processing" },
+    div(
+      { className: "modal-container upload-modal" },
+      img({ className: "upload-icon", alt: "Upload", src: uploadIcon }),
+      div({
+        className: "upload-title",
+        textContent: "Uploading your content..."
+      }),
+      div({
+        className: "upload-description",
+        textContent: "Please keep this tab open."
+      }),
+      div(
+        { className: "upload-progress-wrapper" },
+        div(
+          { className: "progress-container" },
+          div({ className: "progress-bar" })
+        ),
+        div({ className: "progress-text", textContent: "0%" })
+      )
+    )
+  );
+  document.body.appendChild(overlay);
+}
+function updateUploadProgress(progress) {
+  const progressBar = document.querySelector(
+    `#${UPLOAD_OVERLAY_ID} .progress-bar`
+  );
+  const progressText = document.querySelector(
+    `#${UPLOAD_OVERLAY_ID} .progress-text`
+  );
+  if (progressBar) {
+    progressBar.style.width = `${progress.toString()}%`;
+  }
+  if (progressText) {
+    progressText.textContent = `${progress.toFixed(1)}%`;
+  }
+}
+function removeUploadOverlay() {
+  document.getElementById(UPLOAD_OVERLAY_ID)?.remove();
+}
+function transformUploadToErrorState() {
+  const overlay = document.getElementById(UPLOAD_OVERLAY_ID);
+  if (!overlay) return;
+  const modalContainer = overlay.querySelector(".modal-container");
+  if (!modalContainer) return;
+  const errorContent = div(
+    { className: "modal-container" },
+    div({ className: "error-title", textContent: "Upload interrupted" }),
+    div({
+      className: "error-description",
+      textContent: "We couldn't complete the upload. This is often caused by a temporary network issue."
+    }),
+    div({ className: "button-container" }, createRetryButton("reupload")),
+    div({
+      className: "hint",
+      textContent: "Make sure you have a stable internet connection."
+    })
+  );
+  modalContainer.replaceWith(errorContent);
+}
+function setupUploadEventListeners() {
+  window.addEventListener(UploadEvents.Start, (() => {
+    createUploadOverlay();
+  }));
+  window.addEventListener(UploadEvents.Progress, ((e) => {
+    updateUploadProgress(e.detail.progress);
+  }));
+  window.addEventListener(UploadEvents.Complete, (() => {
+    removeUploadOverlay();
+  }));
+  window.addEventListener(UploadEvents.Error, (() => {
+    transformUploadToErrorState();
+  }));
+}
+
+function createRetryButton(type) {
+  const btn = button({
+    className: "modal-button",
+    textContent: "Retry",
+    type: "button"
+  });
+  btn.addEventListener("click", () => {
+    window.sendEvent({
+      type: type === "proving" ? "RetryProving" : "RetryReupload"
+    });
+    if (type === "proving") {
+      removeProcessingOverlay();
+    } else {
+      removeUploadOverlay();
+    }
+  });
+  return btn;
+}
+
 const OVERLAY_ID = "vouch-processing-overlay";
-function createOverlay({
+function createProcessingOverlay({
   text,
   withVouchLogo = false,
   timeout = 15e3
@@ -90,7 +201,7 @@ function createOverlay({
     }, timeout);
   }
 }
-function removeOverlay() {
+function removeProcessingOverlay() {
   clearOverlayTimeout();
   const overlay = document.getElementById(OVERLAY_ID);
   if (overlay) {
@@ -124,23 +235,9 @@ function transformToErrorState() {
       className: "error-description",
       textContent: "The operation took longer than expected. You can send diagnostic information to help us investigate and retry."
     }),
-    div({ className: "button-container" }, createRetryButton())
+    div({ className: "button-container" }, createRetryButton("proving"))
   );
   modalContainer.replaceWith(errorContent);
-}
-function createRetryButton() {
-  const btn = button({
-    className: "modal-button",
-    textContent: "Retry",
-    type: "button"
-  });
-  btn.addEventListener("click", () => {
-    window.sendEvent({
-      type: "RetryProving"
-    });
-    removeOverlay();
-  });
-  return btn;
 }
 let timeoutId = null;
 function clearOverlayTimeout() {
@@ -229,60 +326,16 @@ function reuploadAttachment(attachment) {
   window.sendEvent(event);
 }
 function openProcessingOverlay(options) {
-  createOverlay(options);
+  createProcessingOverlay(options);
 }
 function closeProcessingOverlay() {
-  removeOverlay();
+  removeProcessingOverlay();
 }
 function displayMessage(options) {
   showMessage(options);
 }
 function closeMessage() {
   hideMessage();
-}
-function splitFirst(str, separator) {
-  const index = str.indexOf(separator);
-  if (index === -1) return [str];
-  return [str.slice(0, index), str.slice(index + separator.length)];
-}
-function globToUrlPattern(globUrl) {
-  const globWithoutProtocol = globUrl.replace(/^.*:\/\//, "").replace(/^www\./, "");
-  const hostEnd = /[/#]/.exec(globWithoutProtocol)?.index ?? globWithoutProtocol.length;
-  const hostname = `(www.)?${globWithoutProtocol.slice(0, hostEnd)}`;
-  let pathname = globWithoutProtocol.slice(hostEnd) || void 0;
-  if (!pathname && hostname.endsWith("*")) {
-    pathname = "*";
-  } else {
-    pathname ??= "/";
-  }
-  let search;
-  let hash;
-  if (pathname) {
-    [pathname, search] = splitFirst(pathname, "?");
-  } else {
-    [, search] = splitFirst(globWithoutProtocol, "?");
-  }
-  if (search) {
-    [search, hash] = splitFirst(search, "#");
-  } else if (pathname) {
-    [pathname, hash] = splitFirst(pathname, "#");
-  } else {
-    [, hash] = splitFirst(globWithoutProtocol, "#");
-  }
-  return new URLPattern({
-    hostname,
-    pathname,
-    search,
-    hash
-  });
-}
-async function within(urlGlobs, callback) {
-  const isWithin = (typeof urlGlobs === "string" ? [urlGlobs] : urlGlobs).map(globToUrlPattern).some((pattern) => pattern.test(window.location.href));
-  if (isWithin) {
-    await callback();
-    return true;
-  }
-  return false;
 }
 function sendTelemetry(message) {
   window.sendEvent({
@@ -660,3 +713,13 @@ function addHostIfMissing(url) {
   }
   return url;
 }
+
+window.sendEvent({
+  type: "Telemetry",
+  payload: {
+    event: "PROCESSING_NEW_PAGE",
+    metadata: {
+      url: window.location.href,
+    },
+  },
+});
