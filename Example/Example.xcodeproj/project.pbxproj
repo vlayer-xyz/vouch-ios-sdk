@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		60507D522F1E2ED60069176A /* vouch-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 60507D512F1E2ED60069176A /* vouch-ios-sdk */; };
+		606E1B142F32018B00FDC6BA /* vouch-ios-sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 606E1B132F32018B00FDC6BA /* vouch-ios-sdk */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60507D522F1E2ED60069176A /* vouch-ios-sdk in Frameworks */,
+				606E1B142F32018B00FDC6BA /* vouch-ios-sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				60507D512F1E2ED60069176A /* vouch-ios-sdk */,
+				606E1B132F32018B00FDC6BA /* vouch-ios-sdk */,
 			);
 			productName = Example;
 			productReference = 60507D412F1E22AE0069176A /* Example.app */;
@@ -101,7 +101,7 @@
 			mainGroup = 60507D382F1E22AE0069176A;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				60507D502F1E2ED60069176A /* XCRemoteSwiftPackageReference "vouch-ios-sdk" */,
+				606E1B122F32018B00FDC6BA /* XCLocalSwiftPackageReference "../../vouch-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 60507D422F1E22AE0069176A /* Products */;
@@ -334,21 +334,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		60507D502F1E2ED60069176A /* XCRemoteSwiftPackageReference "vouch-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vlayer-xyz/vouch-ios-sdk";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		606E1B122F32018B00FDC6BA /* XCLocalSwiftPackageReference "../../vouch-ios-sdk" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../vouch-ios-sdk";
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		60507D512F1E2ED60069176A /* vouch-ios-sdk */ = {
+		606E1B132F32018B00FDC6BA /* vouch-ios-sdk */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 60507D502F1E2ED60069176A /* XCRemoteSwiftPackageReference "vouch-ios-sdk" */;
 			productName = "vouch-ios-sdk";
 		};
 /* End XCSwiftPackageProductDependency section */
