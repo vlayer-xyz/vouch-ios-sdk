@@ -12,10 +12,6 @@
 		<data>
 		cU4SqNXf5kuaH1xA7Jd+xdevD3c=
 		</data>
-		<key>Localizable.strings</key>
-		<data>
-		6ivJ5FkMLwpmw+p6ytLJEIYeZuE=
-		</data>
 		<key>Manrope-Bold.ttf</key>
 		<data>
 		prY8gy0SM377MSP0eGP1RHLIG/U=
@@ -28,10 +24,28 @@
 		<data>
 		gt0GY3mfiaDq9ClnXgbVaWeZTTk=
 		</data>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6ivJ5FkMLwpmw+p6ytLJEIYeZuE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>iOSOverwrites.js</key>
 		<data>
 		MH7mKEJHslp1jEOIPv5n0+tckpg=
 		</data>
+		<key>pl.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Z2nnpRsOAFSUdE9GwuPmzTu9xfo=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -47,13 +61,6 @@
 			<key>hash2</key>
 			<data>
 			m47QToRdpt1xQguUE+v7CCvlAzPjdLRiRYgBkp1FJBI=
-			</data>
-		</dict>
-		<key>Localizable.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KrSurg1u/zCPu2UhV7aZ+CIYRkiZ30SlODXvz9c/P6Y=
 			</data>
 		</dict>
 		<key>Manrope-Bold.ttf</key>
@@ -77,12 +84,30 @@
 			7JWqR5OoUmC7+gO+31Qp4komWCoJJPVlYcdwhEq9P+g=
 			</data>
 		</dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KrSurg1u/zCPu2UhV7aZ+CIYRkiZ30SlODXvz9c/P6Y=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>iOSOverwrites.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			gbqURQD9544Bm+mYqCyR92uPBgtmWRCQ44uXI63Txzg=
 			</data>
+		</dict>
+		<key>pl.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YnaWEGYp3p9DoZct4IGrc6UtZel6uzAe9cL0KHDyiJY=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>

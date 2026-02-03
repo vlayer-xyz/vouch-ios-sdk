@@ -37,7 +37,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(customerId:)",
+            "printedName": "init(customerId:style:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -50,11 +50,26 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VouchSDK.VouchStyle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchStyle",
+                    "printedName": "VouchSDK.VouchStyle",
+                    "usr": "s:8VouchSDK0A5StyleV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8VouchSDK0B0C10customerIdACSS_tcfc",
-            "mangledName": "$s8VouchSDK0B0C10customerIdACSS_tcfc",
+            "usr": "s:8VouchSDK0B0C10customerId5styleACSS_AA0A5StyleVSgtcfc",
+            "mangledName": "$s8VouchSDK0B0C10customerId5styleACSS_AA0A5StyleVSgtcfc",
             "moduleName": "VouchSDK",
             "declAttributes": [
               "AccessControl",
@@ -955,6 +970,13 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "VouchSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "VouchSDK"
       },
@@ -2106,9 +2128,445 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "VouchStyleObjC",
+        "printedName": "VouchStyleObjC",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "logo",
+            "printedName": "logo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC(py)logo",
+            "mangledName": "$s8VouchSDK0A9StyleObjCC4logoSo7UIImageCSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC(im)logo",
+                "mangledName": "$s8VouchSDK0A9StyleObjCC4logoSo7UIImageCSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "logoSmall",
+            "printedName": "logoSmall",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC(py)logoSmall",
+            "mangledName": "$s8VouchSDK0A9StyleObjCC9logoSmallSo7UIImageCSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC(im)logoSmall",
+                "mangledName": "$s8VouchSDK0A9StyleObjCC9logoSmallSo7UIImageCSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "footerLogo",
+            "printedName": "footerLogo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC(py)footerLogo",
+            "mangledName": "$s8VouchSDK0A9StyleObjCC10footerLogoSo7UIImageCSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIImage?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC(im)footerLogo",
+                "mangledName": "$s8VouchSDK0A9StyleObjCC10footerLogoSo7UIImageCSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(logo:logoSmall:footerLogo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchStyleObjC",
+                "printedName": "VouchSDK.VouchStyleObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC(im)initWithLogo:logoSmall:footerLogo:",
+            "mangledName": "$s8VouchSDK0A9StyleObjCC4logo0E5Small10footerLogoACSo7UIImageCSg_A2Itcfc",
+            "moduleName": "VouchSDK",
+            "objc_name": "initWithLogo:logoSmall:footerLogo:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchStyleObjC",
+                "printedName": "VouchSDK.VouchStyleObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC(im)init",
+            "mangledName": "$s8VouchSDK0A9StyleObjCCACycfc",
+            "moduleName": "VouchSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC",
+        "mangledName": "$s8VouchSDK0A9StyleObjCC",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "VouchSDKBridge",
         "printedName": "VouchSDKBridge",
         "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(customerId:style:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchSDKBridge",
+                "printedName": "VouchSDK.VouchSDKBridge",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VouchSDK.VouchStyleObjC?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchStyleObjC",
+                    "printedName": "VouchSDK.VouchStyleObjC",
+                    "usr": "c:@M@VouchSDK@objc(cs)VouchStyleObjC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)initWithCustomerId:style:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC10customerId5styleACSS_AA0A9StyleObjCCSgtcfc",
+            "moduleName": "VouchSDK",
+            "objc_name": "initWithCustomerId:style:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "Custom",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
           {
             "kind": "Constructor",
             "name": "init",
@@ -2133,12 +2591,12 @@
             "moduleName": "VouchSDK",
             "objc_name": "initWithCustomerId:",
             "declAttributes": [
+              "Convenience",
               "AccessControl",
               "ObjC",
-              "Custom",
-              "RawDocComment"
+              "Custom"
             ],
-            "init_kind": "Designated"
+            "init_kind": "Convenience"
           },
           {
             "kind": "Function",
@@ -2456,6 +2914,299 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "VouchSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VouchStyle",
+        "printedName": "VouchStyle",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "logo",
+            "printedName": "logo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.Image?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Image",
+                    "printedName": "SwiftUI.Image",
+                    "usr": "s:7SwiftUI5ImageV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK0A5StyleV4logo7SwiftUI5ImageVSgvp",
+            "mangledName": "$s8VouchSDK0A5StyleV4logo7SwiftUI5ImageVSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SwiftUI.Image?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Image",
+                        "printedName": "SwiftUI.Image",
+                        "usr": "s:7SwiftUI5ImageV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK0A5StyleV4logo7SwiftUI5ImageVSgvg",
+                "mangledName": "$s8VouchSDK0A5StyleV4logo7SwiftUI5ImageVSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "logoSmall",
+            "printedName": "logoSmall",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.Image?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Image",
+                    "printedName": "SwiftUI.Image",
+                    "usr": "s:7SwiftUI5ImageV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK0A5StyleV9logoSmall7SwiftUI5ImageVSgvp",
+            "mangledName": "$s8VouchSDK0A5StyleV9logoSmall7SwiftUI5ImageVSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SwiftUI.Image?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Image",
+                        "printedName": "SwiftUI.Image",
+                        "usr": "s:7SwiftUI5ImageV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK0A5StyleV9logoSmall7SwiftUI5ImageVSgvg",
+                "mangledName": "$s8VouchSDK0A5StyleV9logoSmall7SwiftUI5ImageVSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "footerLogo",
+            "printedName": "footerLogo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.Image?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Image",
+                    "printedName": "SwiftUI.Image",
+                    "usr": "s:7SwiftUI5ImageV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK0A5StyleV10footerLogo7SwiftUI5ImageVSgvp",
+            "mangledName": "$s8VouchSDK0A5StyleV10footerLogo7SwiftUI5ImageVSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SwiftUI.Image?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Image",
+                        "printedName": "SwiftUI.Image",
+                        "usr": "s:7SwiftUI5ImageV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK0A5StyleV10footerLogo7SwiftUI5ImageVSgvg",
+                "mangledName": "$s8VouchSDK0A5StyleV10footerLogo7SwiftUI5ImageVSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(logo:logoSmall:footerLogo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchStyle",
+                "printedName": "VouchSDK.VouchStyle",
+                "usr": "s:8VouchSDK0A5StyleV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.Image?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Image",
+                    "printedName": "SwiftUI.Image",
+                    "usr": "s:7SwiftUI5ImageV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.Image?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Image",
+                    "printedName": "SwiftUI.Image",
+                    "usr": "s:7SwiftUI5ImageV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftUI.Image?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Image",
+                    "printedName": "SwiftUI.Image",
+                    "usr": "s:7SwiftUI5ImageV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8VouchSDK0A5StyleV4logo0D5Small10footerLogoAC7SwiftUI5ImageVSg_A2Jtcfc",
+            "mangledName": "$s8VouchSDK0A5StyleV4logo0D5Small10footerLogoAC7SwiftUI5ImageVSg_A2Jtcfc",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8VouchSDK0A5StyleV",
+        "mangledName": "$s8VouchSDK0A5StyleV",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Common",
+        "printedName": "Common",
+        "declKind": "Import",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "VouchSuccess",
         "printedName": "VouchSuccess",
@@ -2677,7 +3428,7 @@
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/SDK.swift",
       "kind": "Dictionary",
-      "offset": 681,
+      "offset": 784,
       "length": 3,
       "value": "[]"
     },
@@ -2686,89 +3437,89 @@
       "kind": "StringLiteral",
       "offset": 104,
       "length": 7,
-      "value": "\"0.0.8\""
+      "value": "\"0.0.9\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 283,
+      "offset": 296,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 312,
+      "offset": 325,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 352,
+      "offset": 365,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 383,
+      "offset": 396,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 412,
+      "offset": 425,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 449,
+      "offset": 462,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 476,
+      "offset": 489,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 507,
+      "offset": 520,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 545,
+      "offset": 558,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 571,
+      "offset": 584,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 606,
+      "offset": 619,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "StringLiteral",
-      "offset": 6087,
+      "offset": 7100,
       "length": 7,
       "value": "\"0.0.3\""
     }

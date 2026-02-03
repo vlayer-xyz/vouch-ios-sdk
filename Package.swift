@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
   name: "vouch-ios-sdk",
+  defaultLocalization: "en",
   platforms: [
     .iOS(.v14)
   ],
