@@ -55,7 +55,7 @@
 "proving.error.return_button_title" = "Powrót";
 "proving.error.send_logs_button_title" = "Wyślij logi";
 "proving.error.unknown_error.title" = "Nieznany błąd";
-"proving.error.unknown_error.description" = "Prover nie powiódł się z powodu nieznanego błędu.";
+"proving.error.unknown_error.description" = "Dowód nie powiódł się z powodu nieznanego błędu.";
 "proving.error.timeout.title" = "Błąd w tle";
 "proving.error.timeout.description" = "Dowód nie powiódł się, ponieważ aplikacja zbyt długo działała w tle.";
 "proving.error.prove_request_misconfiguration.title" = "Błędna konfiguracja żądania dowodu";

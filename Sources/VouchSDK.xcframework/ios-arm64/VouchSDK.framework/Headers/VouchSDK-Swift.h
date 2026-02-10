@@ -333,7 +333,6 @@ typedef SWIFT_ENUM(NSInteger, VouchErrorReasonObjC, open) {
   VouchErrorReasonObjCNetworkConnectionLost = 10,
 };
 
-@class VouchStyleObjC;
 @class VouchSuccessObjC;
 @class UIViewController;
 /// Objective-C compatible wrapper for VouchSDK
@@ -343,8 +342,7 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 /// Initialize with a customer ID
 /// \param customerId The unique customer identifier
 ///
-- (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId style:(VouchStyleObjC * _Nullable)style OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId;
+- (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId OBJC_DESIGNATED_INITIALIZER;
 + (BOOL)isSupported SWIFT_WARN_UNUSED_RESULT;
 /// Start a proof request flow. Returns a UIViewController to present.
 /// \param dataSourceId The data source identifier
@@ -359,17 +357,6 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 /// Get the SDK version
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersion;)
 + (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-@class UIImage;
-SWIFT_CLASS("_TtC8VouchSDK14VouchStyleObjC")
-@interface VouchStyleObjC : NSObject
-@property (nonatomic, readonly, strong) UIImage * _Nullable logo;
-@property (nonatomic, readonly, strong) UIImage * _Nullable logoSmall;
-@property (nonatomic, readonly, strong) UIImage * _Nullable footerLogo;
-- (nonnull instancetype)initWithLogo:(UIImage * _Nullable)logo logoSmall:(UIImage * _Nullable)logoSmall footerLogo:(UIImage * _Nullable)footerLogo OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
