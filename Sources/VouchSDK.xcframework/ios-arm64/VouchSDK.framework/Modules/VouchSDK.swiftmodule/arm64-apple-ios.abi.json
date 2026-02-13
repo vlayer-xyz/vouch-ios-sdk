@@ -786,6 +786,43 @@
             "moduleName": "VouchSDK"
           },
           {
+            "kind": "Var",
+            "name": "processingTimeout",
+            "printedName": "processingTimeout",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReason.Type) -> VouchSDK.VouchErrorReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReason",
+                    "printedName": "VouchSDK.VouchErrorReason",
+                    "usr": "s:8VouchSDK0A11ErrorReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReason",
+                        "printedName": "VouchSDK.VouchErrorReason",
+                        "usr": "s:8VouchSDK0A11ErrorReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK0A11ErrorReasonO17processingTimeoutyA2CmF",
+            "mangledName": "$s8VouchSDK0A11ErrorReasonO17processingTimeoutyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -2693,7 +2730,7 @@
       "kind": "StringLiteral",
       "offset": 104,
       "length": 7,
-      "value": "\"0.1.1\""
+      "value": "\"0.2.0\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",

@@ -34,6 +34,7 @@ public enum VouchErrorReason : Swift.Error {
   case attachmentReuploadFailed
   case proofIdTaken
   case networkConnectionLost
+  case processingTimeout
   public static func == (a: VouchSDK.VouchErrorReason, b: VouchSDK.VouchErrorReason) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {

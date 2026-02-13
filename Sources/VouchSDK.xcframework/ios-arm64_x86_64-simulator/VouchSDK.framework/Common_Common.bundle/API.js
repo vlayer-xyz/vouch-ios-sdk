@@ -196,13 +196,27 @@ function createRetryButton(type) {
   });
   btn.addEventListener("click", () => {
     window.sendEvent({
-      type: type === "proving" ? "RetryProving" : "RetryReupload"
+      type: type === "proving" ? "RetryProcessing" : "RetryReupload"
     });
     if (type === "proving") {
       removeProcessingOverlay();
     } else {
       removeUploadOverlay();
     }
+  });
+  return btn;
+}
+function createCancelButton() {
+  const btn = button({
+    className: "vouch-modal-button",
+    textContent: "Cancel",
+    type: "button"
+  });
+  btn.addEventListener("click", () => {
+    window.sendEvent({
+      type: "CancelProcessing"
+    });
+    removeProcessingOverlay();
   });
   return btn;
 }
@@ -230,6 +244,9 @@ function getProcessingIcon() {
 function getShieldIcon() {
   return colorizeSvg(shieldIconRaw);
 }
+function shouldShowCancelButton() {
+  return window.__VOUCH_MOBILE__ === true;
+}
 const OVERLAY_ID = "vouch-processing-overlay";
 const PROCESSING_TITLE = "Please wait";
 const PROCESSING_SUBTITLE = "Fetching relevant information...";
@@ -238,7 +255,7 @@ const TIMEOUT_SUBTITLE = "The operation took longer than expected. You can send 
 function createProcessingOverlay({
   text,
   withVouchLogo = false,
-  timeout = 15e3
+  timeout = 3e4
 } = {}) {
   if (document.getElementById(OVERLAY_ID)) {
     return;
@@ -358,7 +375,8 @@ function transformToErrorState() {
         { className: "vouch-modal-bottom" },
         div(
           { className: "vouch-button-container" },
-          createRetryButton("proving")
+          createRetryButton("proving"),
+          shouldShowCancelButton() && createCancelButton()
         )
       )
     )
@@ -472,6 +490,8 @@ function sendTelemetry(message) {
     }
   });
 }
+
+window.__VOUCH_MOBILE__ = true;
 
 //
 //  Listener.js
@@ -604,10 +624,21 @@ window.fetch = async function (input, init = {}) {
       input = new Request(input, { headers: headers });
     }
   } else {
+    if (init && init.body !== undefined) {
+      if (init.body instanceof ReadableStream) {
+        const [readStream, passStream] = init.body.tee();
+        requestBody = [await readableStreamToString(readStream)];
+        init.body = passStream;
+      } else {
+        requestBody = [await bodyToText(init.body)];
+      }
+    } else {
+      requestBody = [];
+    }
+
     headers = new Headers(init.headers || {});
     setCacheKeyHeader(headers);
     init.headers = Object.fromEntries(headers.entries());
-    requestBody = init && init.body ? [init.body] : [];
   }
 
   headers.set("user-agent", navigator.userAgent);
@@ -706,6 +737,46 @@ async function readableStreamToString(stream) {
   } finally {
     reader.releaseLock();
   }
+}
+
+async function bodyToText(body) {
+  if (body == null) return "";
+
+  // string
+  if (typeof body === "string") return body;
+
+  // URLSearchParams
+  if (body instanceof URLSearchParams) return body.toString();
+
+  // Blob or File
+  if (body instanceof Blob) return await body.text();
+
+  // FormData
+  if (body instanceof FormData) {
+    // No single “correct” textual representation; common choice is debug output:
+    const entries = [];
+    for (const [k, v] of body.entries()) {
+      entries.push([
+        k,
+        v instanceof File ? `File(${v.name}, ${v.type}, ${v.size})` : String(v),
+      ]);
+    }
+    return JSON.stringify(entries);
+  }
+
+  // ArrayBuffer
+  if (body instanceof ArrayBuffer) {
+    return new TextDecoder().decode(new Uint8Array(body));
+  }
+
+  // TypedArray (Uint8Array, etc.) or DataView
+  if (ArrayBuffer.isView(body)) {
+    return new TextDecoder().decode(
+      new Uint8Array(body.buffer, body.byteOffset, body.byteLength),
+    );
+  }
+
+  return String(body);
 }
 
 function isRedirect(response) {
