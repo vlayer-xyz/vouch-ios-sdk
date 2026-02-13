@@ -262,68 +262,21 @@ function createProcessingOverlay({
   }
   clearOverlayTimeout();
   injectCss(`${OVERLAY_ID}-style`);
+  activeOverlayOptions = {
+    text,
+    withVouchLogo,
+    timeout
+  };
   const overlay = div(
     { id: OVERLAY_ID, className: "vouch-overlay" },
-    div(
-      { className: "vouch-modal-container" },
-      div(
-        { className: "vouch-modal-content" },
-        div(
-          { className: "vouch-modal-icon" },
-          img({
-            alt: "Processing",
-            src: getProcessingIcon()
-          })
-        ),
-        div(
-          { className: "vouch-modal-text" },
-          div(
-            { className: "vouch-modal-title-row" },
-            withVouchLogo && img({ className: "vouch-logo", alt: "Vouch", src: logo }),
-            div({
-              className: "vouch-modal-title",
-              textContent: text ?? PROCESSING_TITLE
-            })
-          ),
-          div({
-            className: "vouch-modal-subtitle",
-            textContent: PROCESSING_SUBTITLE
-          })
-        ),
-        div(
-          { className: "vouch-modal-bottom" },
-          div(
-            { className: "vouch-info-box" },
-            img({
-              className: "vouch-info-icon",
-              alt: "shield icon",
-              src: getShieldIcon()
-            }),
-            div(
-              { className: "vouch-info-content" },
-              div({
-                className: "vouch-info-title",
-                textContent: "Keep this tab open."
-              }),
-              div({
-                className: "vouch-info-description",
-                textContent: "Your verification runs securely in the background."
-              })
-            )
-          )
-        )
-      )
-    )
+    createProcessingModalContainer(activeOverlayOptions)
   );
   document.body.appendChild(overlay);
-  if (timeout > 0) {
-    timeoutId = setTimeout(() => {
-      handleTimeout();
-    }, timeout);
-  }
+  startOverlayTimeout(timeout);
 }
 function removeProcessingOverlay() {
   clearOverlayTimeout();
+  activeOverlayOptions = null;
   const overlay = document.getElementById(OVERLAY_ID);
   if (overlay) {
     overlay.remove();
@@ -375,6 +328,7 @@ function transformToErrorState() {
         { className: "vouch-modal-bottom" },
         div(
           { className: "vouch-button-container" },
+          createContinueButton(),
           createRetryButton("proving"),
           shouldShowCancelButton() && createCancelButton()
         )
@@ -383,11 +337,95 @@ function transformToErrorState() {
   );
   modalContainer.replaceWith(errorContent);
 }
+function createProcessingModalContainer({
+  text,
+  withVouchLogo
+}) {
+  return div(
+    { className: "vouch-modal-container" },
+    div(
+      { className: "vouch-modal-content" },
+      div(
+        { className: "vouch-modal-icon" },
+        img({
+          alt: "Processing",
+          src: getProcessingIcon()
+        })
+      ),
+      div(
+        { className: "vouch-modal-text" },
+        div(
+          { className: "vouch-modal-title-row" },
+          withVouchLogo && img({ className: "vouch-logo", alt: "Vouch", src: logo }),
+          div({
+            className: "vouch-modal-title",
+            textContent: text ?? PROCESSING_TITLE
+          })
+        ),
+        div({
+          className: "vouch-modal-subtitle",
+          textContent: PROCESSING_SUBTITLE
+        })
+      ),
+      div(
+        { className: "vouch-modal-bottom" },
+        div(
+          { className: "vouch-info-box" },
+          img({
+            className: "vouch-info-icon",
+            alt: "shield icon",
+            src: getShieldIcon()
+          }),
+          div(
+            { className: "vouch-info-content" },
+            div({
+              className: "vouch-info-title",
+              textContent: "Keep this tab open."
+            }),
+            div({
+              className: "vouch-info-description",
+              textContent: "Your verification runs securely in the background."
+            })
+          )
+        )
+      )
+    )
+  );
+}
+function createContinueButton() {
+  const btn = button({
+    className: "vouch-modal-button",
+    textContent: "Continue",
+    type: "button"
+  });
+  btn.addEventListener("click", () => {
+    restoreProcessingState();
+  });
+  return btn;
+}
+function restoreProcessingState() {
+  const overlay = document.getElementById(OVERLAY_ID);
+  if (!overlay || !activeOverlayOptions) return;
+  const modalContainer = overlay.querySelector(".vouch-modal-container");
+  if (!modalContainer) return;
+  const processingContent = createProcessingModalContainer(activeOverlayOptions);
+  modalContainer.replaceWith(processingContent);
+  startOverlayTimeout(activeOverlayOptions.timeout);
+}
 let timeoutId = null;
+let activeOverlayOptions = null;
 function clearOverlayTimeout() {
   if (timeoutId) {
     clearTimeout(timeoutId);
     timeoutId = null;
+  }
+}
+function startOverlayTimeout(timeout) {
+  clearOverlayTimeout();
+  if (timeout > 0) {
+    timeoutId = setTimeout(() => {
+      handleTimeout();
+    }, timeout);
   }
 }
 
