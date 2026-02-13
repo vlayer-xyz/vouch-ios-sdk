@@ -58,6 +58,8 @@ struct ContentView: View {
               print("Connection error.")
             case .proofIdTaken:
               print("Proof id taken.")
+            case .processingTimeout:
+              print("Processing timeout.")
             @unknown default:
               print("Unknown error.")
             }
