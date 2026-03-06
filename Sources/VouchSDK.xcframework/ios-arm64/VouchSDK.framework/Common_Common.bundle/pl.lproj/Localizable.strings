@@ -28,6 +28,7 @@
 "sniffer.error.url_pattern" = "Nieprawidłowy wzorzec URL: %s";
 "sniffer.error.body_filter" = "Nieprawidłowy filtr treści: %s";
 "sniffer.error.output" = "Nieprawidłowy filtr wyjściowy: %s";
+"sniffer.draft_mode_banner" = "Tryb roboczy - nie do użytku produkcyjnego.";
 
 "redirect.title" = "Zweryfikuj swoje dane";
 "redirect.description" = "Odwiedź swoje %s, aby kontynuować.";
@@ -124,6 +125,7 @@
 
 "log_preview.title" = "Logi";
 "log_preview.send_logs_button_title" = "Wyślij logi";
+"log_preview.copy_all_logs_button_title" = "Kopiuj wszystkie logi";
 "log_preview.send_logs_agreement" = "Wysyłając logi, zgadzasz się udostępnić swoje prywatne dane firmie Vouch.";
 "log_preview.refresh_button_title" = "Odśwież";
 "log_preview.alert.success.title" = "Sukces";

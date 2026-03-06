@@ -28,6 +28,7 @@
 "sniffer.error.url_pattern" = "Invalid url pattern: %s";
 "sniffer.error.body_filter" = "Invalid body filter: %s";
 "sniffer.error.output" = "Invalid output filter: %s";
+"sniffer.draft_mode_banner" = "Draft mode only - not for production use.";
 
 "redirect.title" = "Verify your data";
 "redirect.description" = "Please visit your %s to proceed.";
@@ -124,6 +125,7 @@
 
 "log_preview.title" = "Logs";
 "log_preview.send_logs_button_title" = "Send Logs";
+"log_preview.copy_all_logs_button_title" = "Copy All Logs";
 "log_preview.send_logs_agreement" = "By sending logs you agree to share your private data with Vouch.";
 "log_preview.refresh_button_title" = "Refresh";
 "log_preview.alert.success.title" = "Success";

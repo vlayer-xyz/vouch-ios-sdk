@@ -4,7 +4,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const logo = "data:image/svg+xml,%3csvg%20width='101'%20height='22'%20viewBox='0%200%20101%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M9.61218%2021.6922L0%200.5H5.67663L11.2774%2014.1236L16.8782%200.5H22.5241L12.6032%2021.6922H9.61218ZM27.3368%2020.894C28.6259%2021.4261%2030.0072%2021.6922%2031.4805%2021.6922C32.9275%2021.6922%2034.2824%2021.4261%2035.5453%2020.894C36.8345%2020.3353%2037.9658%2019.577%2038.9392%2018.6191C39.939%2017.6613%2040.7019%2016.5438%2041.2281%2015.2667C41.7806%2013.963%2042.0569%2012.5794%2042.0569%2011.1161C42.0569%209.62609%2041.7806%208.24254%2041.2281%206.96542C40.7019%205.6883%2039.939%204.57082%2038.9392%203.61298C37.9658%202.62853%2036.8345%201.87024%2035.5453%201.33811C34.2824%200.77937%2032.9275%200.5%2031.4805%200.5C30.0072%200.5%2028.6259%200.77937%2027.3368%201.33811C26.0739%201.87024%2024.9558%202.62853%2023.9823%203.61298C23.0089%204.57082%2022.2459%205.6883%2021.6934%206.96542C21.1409%208.24254%2020.8647%209.62609%2020.8647%2011.1161C20.8647%2012.5794%2021.1409%2013.963%2021.6934%2015.2667C22.2459%2016.5438%2023.0089%2017.6613%2023.9823%2018.6191C24.9558%2019.577%2026.0739%2020.3353%2027.3368%2020.894ZM34.3219%2016.4241C33.48%2016.903%2032.5329%2017.1425%2031.4805%2017.1425C30.4544%2017.1425%2029.5073%2016.903%2028.6391%2016.4241C27.7709%2015.9186%2027.0737%2015.2135%2026.5475%2014.3089C26.0476%2013.4042%2025.7977%2012.34%2025.7977%2011.1161C25.7977%209.86555%2026.0476%208.78798%2026.5475%207.88335C27.0737%206.97872%2027.7709%206.28695%2028.6391%205.80803C29.5073%205.3025%2030.4544%205.04974%2031.4805%205.04974C32.5329%205.04974%2033.48%205.3025%2034.3219%205.80803C35.1901%206.28695%2035.8742%206.97872%2036.374%207.88335C36.8739%208.78798%2037.1239%209.86555%2037.1239%2011.1161C37.1239%2012.34%2036.8739%2013.4042%2036.374%2014.3089C35.8742%2015.2135%2035.1901%2015.9186%2034.3219%2016.4241ZM69.8997%2020.8541C71.1898%2021.4128%2072.6009%2021.6922%2074.133%2021.6922C75.6651%2021.6922%2076.9149%2021.4794%2077.8825%2021.0537C78.877%2020.6013%2079.6296%2020.149%2080.1403%2019.6967V15.3066C79.4414%2015.8121%2078.6485%2016.2512%2077.7616%2016.6236C76.8746%2016.9695%2075.786%2017.1425%2074.4958%2017.1425C73.3401%2017.1425%2072.3053%2016.8764%2071.3914%2016.3443C70.5044%2015.8121%2069.8056%2015.0938%2069.2949%2014.1891C68.7842%2013.2845%2068.5289%2012.2735%2068.5289%2011.156C68.5289%2010.0119%2068.7842%208.98753%2069.2949%208.0829C69.8325%207.17828%2070.5582%206.45989%2071.4721%205.92776C72.3859%205.39563%2073.3938%205.12956%2074.4958%205.12956C75.786%205.12956%2076.8746%205.31581%2077.7616%205.6883C78.6485%206.03419%2079.4414%206.4599%2080.1403%206.96542V2.57532C79.6296%202.14961%2078.877%201.6973%2077.8825%201.21838C76.9149%200.73946%2075.6651%200.5%2074.133%200.5C72.6009%200.5%2071.1898%200.792673%2069.8997%201.37802C68.6095%201.93676%2067.4807%202.72166%2066.513%203.73271C65.5454%204.71716%2064.7928%205.84794%2064.2553%207.12506C63.7446%208.40218%2063.4892%209.74582%2063.4892%2011.156C63.4892%2012.5661%2063.7446%2013.9098%2064.2553%2015.1869C64.7928%2016.4374%2065.5454%2017.5549%2066.513%2018.5393C67.4807%2019.5238%2068.6095%2020.2954%2069.8997%2020.8541ZM81.6528%200.5V21.6922H86.537V14.1236H96.0784V21.6922H100.963V0.5H96.0784V9.58238H86.537V0.5H81.6528ZM52.7769%2021.7013C50.9832%2021.7013%2049.3828%2021.5053%2047.9755%2020.7878C46.5958%2020.0704%2045.492%2019.0494%2044.6642%2017.7249C43.864%2016.3728%2043.5241%2014.7723%2043.5241%2012.9235L43.5244%200.5H48.4308V12.1785C48.4308%2013.8065%2048.8447%2015.0483%2049.6725%2015.9037C50.5003%2016.7315%2051.5351%2017.1454%2052.7769%2017.1454C54.0186%2017.1454%2055.0396%2016.7315%2055.8398%2015.9037C56.6676%2015.0483%2057.0815%2013.8065%2057.0815%2012.1785V0.5H62.1887V12.9235C62.1887%2014.7723%2061.6759%2016.3728%2060.8481%2017.7249C60.0479%2019.0494%2058.9441%2020.0704%2057.5368%2020.7878C56.1295%2021.5053%2054.5429%2021.7013%2052.7769%2021.7013Z'%20fill='%231BAF80'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M100.963%200.5H96.0884L100.963%2011.2465V0.5ZM80.1356%202.57102V3.89407L80.1408%203.88729V6.96543L80.1356%206.96169C79.438%206.4578%2078.6469%206.03334%2077.7621%205.68831C77.0538%205.39084%2076.2169%205.21215%2075.2515%205.15224V0.546803C76.2852%200.637841%2077.1624%200.861702%2077.883%201.21838C78.8742%201.69569%2079.625%202.14657%2080.1356%202.57102ZM80.1356%2015.3104V19.7013C79.625%2020.1521%2078.8742%2020.6029%2077.883%2021.0537C77.1624%2021.3707%2076.2852%2021.5697%2075.2515%2021.6506V17.1214C76.2169%2017.0658%2077.0538%2016.8999%2077.7621%2016.6236C78.6469%2016.2521%2079.438%2015.8143%2080.1356%2015.3104ZM62.1889%2010.2137V12.9356C62.1867%2014.7793%2061.6743%2016.3757%2060.8483%2017.7249C60.6535%2018.0473%2060.4408%2018.3516%2060.21%2018.6381C60.1771%2018.6054%2060.1443%2018.5725%2060.1117%2018.5393C59.1441%2017.5549%2058.3915%2016.4374%2057.854%2015.1869C57.3433%2013.9098%2057.0879%2012.5661%2057.0879%2011.156C57.0879%209.74582%2057.3433%208.40218%2057.854%207.12506C58.3915%205.84794%2059.1441%204.71716%2060.1117%203.73271C60.7368%203.07956%2061.4292%202.52079%2062.1889%202.0564V10.2137ZM37.1232%202.15129C37.7798%202.56519%2038.3853%203.05242%2038.9396%203.61297C39.9394%204.57081%2040.7023%205.68829%2041.2285%206.96541C41.781%208.24253%2042.0573%209.62608%2042.0573%2011.1161C42.0573%2012.5794%2041.781%2013.963%2041.2285%2015.2667C40.7023%2016.5438%2039.9394%2017.6613%2038.9396%2018.6191C38.8841%2018.6737%2038.8282%2018.7276%2038.7717%2018.7809C38.5919%2018.5484%2038.4223%2018.3047%2038.263%2018.0498C37.4628%2016.6977%2037.1229%2015.0972%2037.1229%2013.2484L37.1229%2011.27C37.1238%2011.219%2037.1242%2011.1677%2037.1242%2011.1161C37.1242%2011.0635%2037.1238%2011.0113%2037.1229%2010.9593L37.1232%202.15129ZM18.9677%208.09644L22.4743%200.6061C21.5675%200.734183%2020.6989%200.978167%2019.8686%201.33805C18.6057%201.87019%2017.4876%202.62848%2016.5141%203.61292C15.5407%204.57076%2014.7777%205.68824%2014.2252%206.96536C13.6727%208.24249%2013.3965%209.62603%2013.3965%2011.116C13.3965%2012.5794%2013.6727%2013.9629%2014.2252%2015.2666C14.4375%2015.7573%2014.6808%2016.2243%2014.9552%2016.6678L18.8668%208.31197C18.899%208.23913%2018.9327%208.16729%2018.9677%208.09644Z'%20fill='%231BAF80'/%3e%3c/svg%3e";
 
-const overlayStyles = "@import url(\"https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap\");\n\n.vouch-overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100svh;\n  background-color: rgba(0, 0, 0, 0.85);\n  z-index: 999;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  pointer-events: auto;\n  padding: 16px;\n  backdrop-filter: blur(6px);\n  font-family:\n    \"Sora\",\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    Roboto,\n    sans-serif;\n  user-select: none;\n}\n\n.vouch-overlay .vouch-modal-container {\n  display: flex;\n  width: 100%;\n  max-width: 500px;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: #ffffff;\n  border-radius: 28px;\n  padding: 24px;\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\n}\n\n.vouch-overlay .vouch-modal-content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 24px;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-modal-icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.vouch-overlay .vouch-modal-icon img {\n  width: 70px;\n  height: 65px;\n}\n\n.vouch-overlay .vouch-modal-text {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 8px;\n  text-align: center;\n}\n\n.vouch-overlay .vouch-modal-title-row {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n}\n\n.vouch-overlay .vouch-logo {\n  height: 13px;\n  width: auto;\n}\n\n.vouch-overlay .vouch-modal-title {\n  font-size: 18px;\n  font-weight: 700;\n  color: #000000;\n}\n\n.vouch-overlay .vouch-modal-subtitle {\n  font-size: 14px;\n  font-weight: 400;\n  color: #5a706c;\n  line-height: 1.5;\n}\n\n.vouch-overlay .vouch-modal-bottom {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-modal-button {\n  background-color: var(--vouch-customer-brand, #1baf80);\n  color: var(--vouch-customer-brand-text, #ffffff);\n  min-width: 200px;\n  font-size: 14px;\n  font-weight: 700;\n  cursor: pointer;\n  border-radius: 12px;\n  padding: 12px 40px;\n  border: none;\n  transition: 0.3s;\n}\n\n.vouch-overlay .vouch-modal-button:hover {\n  transform: scale(1.05);\n}\n\n.vouch-overlay .vouch-button-container {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-button-container .vouch-modal-button {\n  width: 100%;\n}\n\n.vouch-overlay .vouch-progress-text-container {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  text-align: center;\n  font-size: 56px;\n  line-height: 120%;\n  font-weight: 700;\n}\n\n.vouch-overlay .vouch-progress-text-background {\n  color: #d4d4d4;\n}\n\n.vouch-overlay .vouch-progress-text-fill {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n  line-height: 120%;\n  color: var(--vouch-customer-brand, #1baf80);\n  transition: clip-path 0.3s ease;\n  clip-path: inset(90% 0 0 0);\n}\n\n.vouch-overlay .vouch-info-box {\n  display: flex;\n  width: 100%;\n  border-radius: 8px;\n  background-color: #f5faf9;\n  padding: 12px;\n}\n\n.vouch-overlay .vouch-info-icon {\n  width: 45px;\n  height: 45px;\n  margin-right: 12px;\n  flex-shrink: 0;\n  border-radius: 50%;\n}\n\n.vouch-overlay .vouch-info-content {\n  display: flex;\n  flex-direction: column;\n}\n\n.vouch-overlay .vouch-info-title {\n  font-weight: 700;\n  color: #3a4341;\n  font-size: 16px;\n  margin-bottom: 2px;\n}\n\n.vouch-overlay .vouch-info-description {\n  font-size: 14px;\n  color: #3a4341;\n}\n\n.vouch-overlay .vouch-hint {\n  font-size: 12px;\n  color: #5a706c;\n  text-align: center;\n  margin-top: 16px;\n}\n";
+const overlayStyles = "@import url(\"https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap\");\n\n.vouch-overlay {\n  position: fixed;\n  inset: 0;\n  background-color: var(--vouch-customer-bg, #ffffff);\n  z-index: 999;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  pointer-events: auto;\n  padding: 16px;\n  backdrop-filter: blur(6px);\n  font-family:\n    \"Sora\",\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    Roboto,\n    sans-serif;\n  user-select: none;\n  box-sizing: border-box;\n}\n\n.vouch-overlay *,\n.vouch-overlay *::before,\n.vouch-overlay *::after {\n  box-sizing: border-box;\n}\n\n.vouch-overlay .vouch-modal-container {\n  display: flex;\n  width: 100%;\n  max-width: 500px;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: var(--vouch-customer-modal-bg, #ffffff);\n  border-radius: var(--vouch-customer-border-radius, 28px);\n  border: 1px solid var(--vouch-customer-border, #e1eae8);\n  padding: 24px;\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\n}\n\n.vouch-overlay .vouch-modal-content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 24px;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-modal-icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.vouch-overlay .vouch-modal-icon img {\n  width: 70px;\n  height: 65px;\n}\n\n.vouch-overlay .vouch-modal-text {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 8px;\n  text-align: center;\n}\n\n.vouch-overlay .vouch-modal-title-row {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n}\n\n.vouch-overlay .vouch-logo {\n  height: 13px;\n  width: auto;\n}\n\n.vouch-overlay .vouch-modal-title {\n  font-size: 18px;\n  font-weight: 700;\n  color: var(--vouch-customer-font-primary, #000000);\n}\n\n.vouch-overlay .vouch-modal-subtitle {\n  font-size: 14px;\n  font-weight: 400;\n  color: var(--vouch-customer-font-secondary, #5a706c);\n  line-height: 1.5;\n}\n\n.vouch-overlay .vouch-modal-bottom {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-modal-button {\n  background-color: var(--vouch-customer-brand, #1baf80);\n  color: var(--vouch-customer-brand-text, #ffffff);\n  min-width: 200px;\n  font-size: 14px;\n  font-weight: 700;\n  cursor: pointer;\n  border-radius: 12px;\n  padding: 12px 40px;\n  border: none;\n  transition: 0.3s;\n}\n\n.vouch-overlay .vouch-modal-button:hover {\n  transform: scale(1.05);\n}\n\n.vouch-overlay .vouch-button-container {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-button-container .vouch-modal-button {\n  width: 100%;\n}\n\n.vouch-overlay .vouch-progress-text-container {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  text-align: center;\n  font-size: 56px;\n  line-height: 120%;\n  font-weight: 700;\n}\n\n.vouch-overlay .vouch-progress-text-background {\n  color: #d4d4d4;\n}\n\n.vouch-overlay .vouch-progress-text-fill {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n  line-height: 120%;\n  color: var(--vouch-customer-brand, #1baf80);\n  transition: clip-path 0.3s ease;\n  clip-path: inset(90% 0 0 0);\n}\n\n.vouch-overlay .vouch-info-box {\n  display: flex;\n  width: 100%;\n  border-radius: 8px;\n  background-color: color-mix(\n    in oklch,\n    var(--vouch-customer-modal-bg, #ffffff) 95%,\n    var(--vouch-customer-brand, #1baf80)\n  );\n  padding: 12px;\n}\n\n.vouch-overlay .vouch-info-icon {\n  width: 45px;\n  height: 45px;\n  margin-right: 12px;\n  flex-shrink: 0;\n  border-radius: 50%;\n}\n\n.vouch-overlay .vouch-info-content {\n  display: flex;\n  flex-direction: column;\n}\n\n.vouch-overlay .vouch-info-title {\n  font-weight: 700;\n  color: var(--vouch-customer-font-primary, #000000);\n  font-size: 16px;\n  margin-bottom: 2px;\n}\n\n.vouch-overlay .vouch-info-description {\n  font-size: 14px;\n  color: var(--vouch-customer-font-secondary, #5a706c);\n}\n\n.vouch-overlay .vouch-hint {\n  font-size: 12px;\n  color: var(--vouch-customer-font-secondary, #5a706c);\n  text-align: center;\n  margin-top: 16px;\n}\n";
 
 function div(attributes, ...child) {
   return appendChild("div", attributes, child);
@@ -255,7 +255,7 @@ const TIMEOUT_SUBTITLE = "The operation took longer than expected. You can send 
 function createProcessingOverlay({
   text,
   withVouchLogo = false,
-  timeout = 3e4
+  timeout = 3e5
 } = {}) {
   if (document.getElementById(OVERLAY_ID)) {
     return;
@@ -356,7 +356,7 @@ function createProcessingModalContainer({
         { className: "vouch-modal-text" },
         div(
           { className: "vouch-modal-title-row" },
-          withVouchLogo && img({ className: "vouch-logo", alt: "Vouch", src: logo }),
+          withVouchLogo && img({ className: "vouch-logo", alt: "vouch", src: logo }),
           div({
             className: "vouch-modal-title",
             textContent: text ?? PROCESSING_TITLE
@@ -446,7 +446,7 @@ function showMessage({
       { className: "vouch-processing" },
       div(
         { className: "modal-container" },
-        withVouchLogo && img({ className: "logo", alt: "Vouch", src: logo }),
+        withVouchLogo && img({ className: "logo", alt: "vouch", src: logo }),
         div(
           { className: "message-container" },
           Boolean(header?.length) && div({
@@ -650,11 +650,10 @@ window.fetch = async function (input, init = {}) {
     setCacheKeyHeader(headers);
 
     if (input.body) {
-      const [readStream, passStream] = input.body.tee();
-      requestBody = [await readableStreamToString(readStream)];
+      const body = await readableStreamToUint8Array(input.body);
+      requestBody = [trySerializeBody(body, headers.get("content-type"))];
       input = new Request(input, {
-        duplex: "half",
-        body: passStream,
+        body: body,
         headers: headers,
       });
     } else {
@@ -662,11 +661,13 @@ window.fetch = async function (input, init = {}) {
       input = new Request(input, { headers: headers });
     }
   } else {
+    headers = new Headers(init.headers || {});
+
     if (init && init.body !== undefined) {
       if (init.body instanceof ReadableStream) {
-        const [readStream, passStream] = init.body.tee();
-        requestBody = [await readableStreamToString(readStream)];
-        init.body = passStream;
+        const body = await readableStreamToUint8Array(init.body);
+        requestBody = [trySerializeBody(body, headers.get("content-type"))];
+        init.body = body;
       } else {
         requestBody = [await bodyToText(init.body)];
       }
@@ -674,7 +675,6 @@ window.fetch = async function (input, init = {}) {
       requestBody = [];
     }
 
-    headers = new Headers(init.headers || {});
     setCacheKeyHeader(headers);
     init.headers = Object.fromEntries(headers.entries());
   }
@@ -755,18 +755,27 @@ window.fetch = async function (input, init = {}) {
   }
 };
 
-async function readableStreamToString(stream) {
+async function readableStreamToUint8Array(stream) {
   const reader = stream.getReader();
-  const decoder = new TextDecoder();
-  let result = "";
+  const chunks = [];
+  let totalLength = 0;
 
   try {
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;
-      result += decoder.decode(value, { stream: true });
+      const chunk = value instanceof Uint8Array ? value : new Uint8Array(value);
+      chunks.push(chunk);
+      totalLength += chunk.byteLength;
     }
-    result += decoder.decode(); // flush
+
+    const result = new Uint8Array(totalLength);
+    let offset = 0;
+    for (const chunk of chunks) {
+      result.set(chunk, offset);
+      offset += chunk.byteLength;
+    }
+
     return result;
   } catch (error) {
     throw new Error(
@@ -775,6 +784,41 @@ async function readableStreamToString(stream) {
   } finally {
     reader.releaseLock();
   }
+}
+
+function trySerializeBody(bytes, contentType) {
+  const shouldTryDecode = !contentType || isTextContentType(contentType);
+  if (!shouldTryDecode) {
+    return "";
+  }
+
+  try {
+    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  } catch {
+    return "";
+  }
+}
+
+function isTextContentType(contentType) {
+  if (!contentType) {
+    return false;
+  }
+
+  const mediaType = contentType.toLowerCase().split(";")[0].trim();
+
+  if (mediaType.startsWith("text/")) {
+    return true;
+  }
+
+  if (!mediaType.startsWith("application/")) {
+    return false;
+  }
+
+  return (
+    mediaType.includes("json") ||
+    mediaType.includes("xml") ||
+    mediaType.includes("www-form-urlencoded")
+  );
 }
 
 async function bodyToText(body) {

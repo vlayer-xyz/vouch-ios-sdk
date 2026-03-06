@@ -331,6 +331,7 @@ typedef SWIFT_ENUM(NSInteger, VouchErrorReasonObjC, open) {
   VouchErrorReasonObjCAttachmentReuploadFailed = 8,
   VouchErrorReasonObjCProofIdTaken = 9,
   VouchErrorReasonObjCNetworkConnectionLost = 10,
+  VouchErrorReasonObjCProcessingTimeout = 11,
 };
 
 @class VouchSuccessObjC;
