@@ -41,8 +41,7 @@
 "verify.false" = "false";
 "verify.verify_button_title" = "Verify";
 
-"proving.title" = "Keep application open and active until verification is done";
-"proving.task_label" = "Proving %s";
+"proving.title" = "Don't leave this screen.\nVerification will stop.";
 "proving.progress.configuration" = "Downloading configuration...";
 "proving.progress.start_proving" = "Starting proving...";
 "proving.progress.proving" = "Proving...";

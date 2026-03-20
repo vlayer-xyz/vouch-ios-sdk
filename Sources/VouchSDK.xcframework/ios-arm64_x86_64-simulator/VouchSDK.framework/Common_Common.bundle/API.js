@@ -2,9 +2,16 @@
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const logo = "data:image/svg+xml,%3csvg%20width='101'%20height='22'%20viewBox='0%200%20101%2022'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M9.61218%2021.6922L0%200.5H5.67663L11.2774%2014.1236L16.8782%200.5H22.5241L12.6032%2021.6922H9.61218ZM27.3368%2020.894C28.6259%2021.4261%2030.0072%2021.6922%2031.4805%2021.6922C32.9275%2021.6922%2034.2824%2021.4261%2035.5453%2020.894C36.8345%2020.3353%2037.9658%2019.577%2038.9392%2018.6191C39.939%2017.6613%2040.7019%2016.5438%2041.2281%2015.2667C41.7806%2013.963%2042.0569%2012.5794%2042.0569%2011.1161C42.0569%209.62609%2041.7806%208.24254%2041.2281%206.96542C40.7019%205.6883%2039.939%204.57082%2038.9392%203.61298C37.9658%202.62853%2036.8345%201.87024%2035.5453%201.33811C34.2824%200.77937%2032.9275%200.5%2031.4805%200.5C30.0072%200.5%2028.6259%200.77937%2027.3368%201.33811C26.0739%201.87024%2024.9558%202.62853%2023.9823%203.61298C23.0089%204.57082%2022.2459%205.6883%2021.6934%206.96542C21.1409%208.24254%2020.8647%209.62609%2020.8647%2011.1161C20.8647%2012.5794%2021.1409%2013.963%2021.6934%2015.2667C22.2459%2016.5438%2023.0089%2017.6613%2023.9823%2018.6191C24.9558%2019.577%2026.0739%2020.3353%2027.3368%2020.894ZM34.3219%2016.4241C33.48%2016.903%2032.5329%2017.1425%2031.4805%2017.1425C30.4544%2017.1425%2029.5073%2016.903%2028.6391%2016.4241C27.7709%2015.9186%2027.0737%2015.2135%2026.5475%2014.3089C26.0476%2013.4042%2025.7977%2012.34%2025.7977%2011.1161C25.7977%209.86555%2026.0476%208.78798%2026.5475%207.88335C27.0737%206.97872%2027.7709%206.28695%2028.6391%205.80803C29.5073%205.3025%2030.4544%205.04974%2031.4805%205.04974C32.5329%205.04974%2033.48%205.3025%2034.3219%205.80803C35.1901%206.28695%2035.8742%206.97872%2036.374%207.88335C36.8739%208.78798%2037.1239%209.86555%2037.1239%2011.1161C37.1239%2012.34%2036.8739%2013.4042%2036.374%2014.3089C35.8742%2015.2135%2035.1901%2015.9186%2034.3219%2016.4241ZM69.8997%2020.8541C71.1898%2021.4128%2072.6009%2021.6922%2074.133%2021.6922C75.6651%2021.6922%2076.9149%2021.4794%2077.8825%2021.0537C78.877%2020.6013%2079.6296%2020.149%2080.1403%2019.6967V15.3066C79.4414%2015.8121%2078.6485%2016.2512%2077.7616%2016.6236C76.8746%2016.9695%2075.786%2017.1425%2074.4958%2017.1425C73.3401%2017.1425%2072.3053%2016.8764%2071.3914%2016.3443C70.5044%2015.8121%2069.8056%2015.0938%2069.2949%2014.1891C68.7842%2013.2845%2068.5289%2012.2735%2068.5289%2011.156C68.5289%2010.0119%2068.7842%208.98753%2069.2949%208.0829C69.8325%207.17828%2070.5582%206.45989%2071.4721%205.92776C72.3859%205.39563%2073.3938%205.12956%2074.4958%205.12956C75.786%205.12956%2076.8746%205.31581%2077.7616%205.6883C78.6485%206.03419%2079.4414%206.4599%2080.1403%206.96542V2.57532C79.6296%202.14961%2078.877%201.6973%2077.8825%201.21838C76.9149%200.73946%2075.6651%200.5%2074.133%200.5C72.6009%200.5%2071.1898%200.792673%2069.8997%201.37802C68.6095%201.93676%2067.4807%202.72166%2066.513%203.73271C65.5454%204.71716%2064.7928%205.84794%2064.2553%207.12506C63.7446%208.40218%2063.4892%209.74582%2063.4892%2011.156C63.4892%2012.5661%2063.7446%2013.9098%2064.2553%2015.1869C64.7928%2016.4374%2065.5454%2017.5549%2066.513%2018.5393C67.4807%2019.5238%2068.6095%2020.2954%2069.8997%2020.8541ZM81.6528%200.5V21.6922H86.537V14.1236H96.0784V21.6922H100.963V0.5H96.0784V9.58238H86.537V0.5H81.6528ZM52.7769%2021.7013C50.9832%2021.7013%2049.3828%2021.5053%2047.9755%2020.7878C46.5958%2020.0704%2045.492%2019.0494%2044.6642%2017.7249C43.864%2016.3728%2043.5241%2014.7723%2043.5241%2012.9235L43.5244%200.5H48.4308V12.1785C48.4308%2013.8065%2048.8447%2015.0483%2049.6725%2015.9037C50.5003%2016.7315%2051.5351%2017.1454%2052.7769%2017.1454C54.0186%2017.1454%2055.0396%2016.7315%2055.8398%2015.9037C56.6676%2015.0483%2057.0815%2013.8065%2057.0815%2012.1785V0.5H62.1887V12.9235C62.1887%2014.7723%2061.6759%2016.3728%2060.8481%2017.7249C60.0479%2019.0494%2058.9441%2020.0704%2057.5368%2020.7878C56.1295%2021.5053%2054.5429%2021.7013%2052.7769%2021.7013Z'%20fill='%231BAF80'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M100.963%200.5H96.0884L100.963%2011.2465V0.5ZM80.1356%202.57102V3.89407L80.1408%203.88729V6.96543L80.1356%206.96169C79.438%206.4578%2078.6469%206.03334%2077.7621%205.68831C77.0538%205.39084%2076.2169%205.21215%2075.2515%205.15224V0.546803C76.2852%200.637841%2077.1624%200.861702%2077.883%201.21838C78.8742%201.69569%2079.625%202.14657%2080.1356%202.57102ZM80.1356%2015.3104V19.7013C79.625%2020.1521%2078.8742%2020.6029%2077.883%2021.0537C77.1624%2021.3707%2076.2852%2021.5697%2075.2515%2021.6506V17.1214C76.2169%2017.0658%2077.0538%2016.8999%2077.7621%2016.6236C78.6469%2016.2521%2079.438%2015.8143%2080.1356%2015.3104ZM62.1889%2010.2137V12.9356C62.1867%2014.7793%2061.6743%2016.3757%2060.8483%2017.7249C60.6535%2018.0473%2060.4408%2018.3516%2060.21%2018.6381C60.1771%2018.6054%2060.1443%2018.5725%2060.1117%2018.5393C59.1441%2017.5549%2058.3915%2016.4374%2057.854%2015.1869C57.3433%2013.9098%2057.0879%2012.5661%2057.0879%2011.156C57.0879%209.74582%2057.3433%208.40218%2057.854%207.12506C58.3915%205.84794%2059.1441%204.71716%2060.1117%203.73271C60.7368%203.07956%2061.4292%202.52079%2062.1889%202.0564V10.2137ZM37.1232%202.15129C37.7798%202.56519%2038.3853%203.05242%2038.9396%203.61297C39.9394%204.57081%2040.7023%205.68829%2041.2285%206.96541C41.781%208.24253%2042.0573%209.62608%2042.0573%2011.1161C42.0573%2012.5794%2041.781%2013.963%2041.2285%2015.2667C40.7023%2016.5438%2039.9394%2017.6613%2038.9396%2018.6191C38.8841%2018.6737%2038.8282%2018.7276%2038.7717%2018.7809C38.5919%2018.5484%2038.4223%2018.3047%2038.263%2018.0498C37.4628%2016.6977%2037.1229%2015.0972%2037.1229%2013.2484L37.1229%2011.27C37.1238%2011.219%2037.1242%2011.1677%2037.1242%2011.1161C37.1242%2011.0635%2037.1238%2011.0113%2037.1229%2010.9593L37.1232%202.15129ZM18.9677%208.09644L22.4743%200.6061C21.5675%200.734183%2020.6989%200.978167%2019.8686%201.33805C18.6057%201.87019%2017.4876%202.62848%2016.5141%203.61292C15.5407%204.57076%2014.7777%205.68824%2014.2252%206.96536C13.6727%208.24249%2013.3965%209.62603%2013.3965%2011.116C13.3965%2012.5794%2013.6727%2013.9629%2014.2252%2015.2666C14.4375%2015.7573%2014.6808%2016.2243%2014.9552%2016.6678L18.8668%208.31197C18.899%208.23913%2018.9327%208.16729%2018.9677%208.09644Z'%20fill='%231BAF80'/%3e%3c/svg%3e";
+const overlayStyles = ".vouch-overlay {\n  position: fixed;\n  inset: 0;\n  background-color: var(--vouch-customer-bg, #ffffff);\n  z-index: 999;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  pointer-events: auto;\n  padding: 16px;\n  backdrop-filter: blur(6px);\n  font-family:\n    \"Sora\",\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    Roboto,\n    sans-serif;\n  user-select: none;\n  box-sizing: border-box;\n}\n\n.vouch-overlay *,\n.vouch-overlay *::before,\n.vouch-overlay *::after {\n  box-sizing: border-box;\n}\n\n.vouch-overlay .vouch-modal-container {\n  display: flex;\n  width: 100%;\n  max-width: 535px;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: var(--vouch-customer-modal-bg, #ffffff);\n  border-radius: var(--vouch-customer-border-radius, 28px);\n  border: 1px solid var(--vouch-customer-border, #e1eae8);\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\n}\n\n.vouch-overlay .vouch-modal-header {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  padding: 24px;\n  border-bottom: 1px solid var(--vouch-customer-border, #e1eae8);\n}\n\n.vouch-overlay .vouch-modal-content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 24px;\n  width: 100%;\n  padding: 24px;\n}\n\n.vouch-overlay .vouch-signets-row {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.vouch-overlay .vouch-customer-signet-container {\n  display: flex;\n  align-items: flex-end;\n  flex-shrink: 0;\n}\n\n.vouch-overlay .vouch-signet-img {\n  width: 40px;\n  height: 40px;\n  border-radius: 8px;\n  border: 1px solid var(--vouch-customer-border, #e1eae8);\n  object-fit: contain;\n}\n\n.vouch-overlay .vouch-signet-badge {\n  width: 24px;\n  height: 24px;\n  border-radius: 6px;\n  border: 1px solid var(--vouch-customer-border, #e1eae8);\n  margin-left: -16px;\n  object-fit: contain;\n}\n\n.vouch-overlay .vouch-signets-arrow {\n  width: 20px;\n  height: 20px;\n  flex-shrink: 0;\n}\n\n.vouch-overlay .vouch-modal-icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.vouch-overlay .vouch-modal-icon img,\n.vouch-overlay .vouch-modal-icon svg {\n  width: 70px;\n  height: 65px;\n}\n\n.vouch-overlay .vouch-modal-text {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 8px;\n  text-align: center;\n}\n\n.vouch-overlay .vouch-modal-title-row {\n  display: inline-flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.vouch-overlay .vouch-logo {\n  height: 13px;\n  width: auto;\n}\n\n.vouch-overlay .vouch-modal-title {\n  font-size: 18px;\n  font-weight: 700;\n  color: var(--vouch-customer-font-primary, #000000);\n}\n\n.vouch-overlay .vouch-modal-subtitle {\n  font-size: 14px;\n  font-weight: 400;\n  color: var(--vouch-customer-font-secondary, #5a706c);\n  line-height: 1.5;\n  white-space: pre-line;\n}\n\n.vouch-overlay .vouch-modal-bottom {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 16px;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-modal-button {\n  background-color: var(--vouch-customer-brand, #1baf80);\n  color: var(--vouch-customer-brand-text, #ffffff);\n  min-width: 200px;\n  font-size: 14px;\n  font-weight: 700;\n  cursor: pointer;\n  border-radius: 10px;\n  padding: 12px 40px;\n  border: none;\n  transition: 0.3s;\n}\n\n.vouch-overlay .vouch-modal-button:hover {\n  transform: scale(1.05);\n}\n\n.vouch-overlay .vouch-modal-button-outline {\n  background-color: transparent;\n  color: var(--vouch-customer-font-primary, #000000);\n  border: 1px solid var(--vouch-customer-brand, #1baf80);\n}\n\n.vouch-overlay .vouch-modal-button-outline:hover {\n  background-color: rgba(0, 0, 0, 0.03);\n}\n\n.vouch-overlay .vouch-button-container {\n  display: flex;\n  flex-direction: row;\n  gap: 12px;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-button-container .vouch-modal-button {\n  flex: 1;\n  min-width: 0;\n}\n\n.vouch-overlay .vouch-progress-text-container {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  text-align: center;\n  font-size: 56px;\n  line-height: 120%;\n  font-weight: 700;\n}\n\n.vouch-overlay .vouch-progress-text-background {\n  color: #d4d4d4;\n}\n\n.vouch-overlay .vouch-progress-text-fill {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n  line-height: 120%;\n  color: var(--vouch-customer-brand, #1baf80);\n  transition: clip-path 0.3s ease;\n  clip-path: inset(90% 0 0 0);\n}\n\n.vouch-overlay .vouch-info-box {\n  display: flex;\n  width: 100%;\n  border-radius: 8px;\n  background-color: color-mix(\n    in oklch,\n    var(--vouch-customer-modal-bg, #ffffff) 95%,\n    var(--vouch-customer-brand, #1baf80)\n  );\n  padding: 12px;\n}\n\n.vouch-overlay .vouch-info-icon {\n  width: 70px;\n  height: 65px;\n  margin-right: 12px;\n  flex-shrink: 0;\n}\n\n.vouch-overlay .vouch-info-content {\n  display: flex;\n  flex-direction: column;\n}\n\n.vouch-overlay .vouch-info-title {\n  font-weight: 700;\n  color: var(--vouch-customer-font-primary, #000000);\n  font-size: 16px;\n  margin-bottom: 2px;\n}\n\n.vouch-overlay .vouch-info-description {\n  font-size: 14px;\n  color: var(--vouch-customer-font-secondary, #5a706c);\n}\n";
 
-const overlayStyles = "@import url(\"https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap\");\n\n.vouch-overlay {\n  position: fixed;\n  inset: 0;\n  background-color: var(--vouch-customer-bg, #ffffff);\n  z-index: 999;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  pointer-events: auto;\n  padding: 16px;\n  backdrop-filter: blur(6px);\n  font-family:\n    \"Sora\",\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    Roboto,\n    sans-serif;\n  user-select: none;\n  box-sizing: border-box;\n}\n\n.vouch-overlay *,\n.vouch-overlay *::before,\n.vouch-overlay *::after {\n  box-sizing: border-box;\n}\n\n.vouch-overlay .vouch-modal-container {\n  display: flex;\n  width: 100%;\n  max-width: 500px;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  background-color: var(--vouch-customer-modal-bg, #ffffff);\n  border-radius: var(--vouch-customer-border-radius, 28px);\n  border: 1px solid var(--vouch-customer-border, #e1eae8);\n  padding: 24px;\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);\n}\n\n.vouch-overlay .vouch-modal-content {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 24px;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-modal-icon {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.vouch-overlay .vouch-modal-icon img {\n  width: 70px;\n  height: 65px;\n}\n\n.vouch-overlay .vouch-modal-text {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 8px;\n  text-align: center;\n}\n\n.vouch-overlay .vouch-modal-title-row {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  gap: 6px;\n}\n\n.vouch-overlay .vouch-logo {\n  height: 13px;\n  width: auto;\n}\n\n.vouch-overlay .vouch-modal-title {\n  font-size: 18px;\n  font-weight: 700;\n  color: var(--vouch-customer-font-primary, #000000);\n}\n\n.vouch-overlay .vouch-modal-subtitle {\n  font-size: 14px;\n  font-weight: 400;\n  color: var(--vouch-customer-font-secondary, #5a706c);\n  line-height: 1.5;\n}\n\n.vouch-overlay .vouch-modal-bottom {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-modal-button {\n  background-color: var(--vouch-customer-brand, #1baf80);\n  color: var(--vouch-customer-brand-text, #ffffff);\n  min-width: 200px;\n  font-size: 14px;\n  font-weight: 700;\n  cursor: pointer;\n  border-radius: 12px;\n  padding: 12px 40px;\n  border: none;\n  transition: 0.3s;\n}\n\n.vouch-overlay .vouch-modal-button:hover {\n  transform: scale(1.05);\n}\n\n.vouch-overlay .vouch-button-container {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 100%;\n}\n\n.vouch-overlay .vouch-button-container .vouch-modal-button {\n  width: 100%;\n}\n\n.vouch-overlay .vouch-progress-text-container {\n  position: relative;\n  display: flex;\n  justify-content: center;\n  text-align: center;\n  font-size: 56px;\n  line-height: 120%;\n  font-weight: 700;\n}\n\n.vouch-overlay .vouch-progress-text-background {\n  color: #d4d4d4;\n}\n\n.vouch-overlay .vouch-progress-text-fill {\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n  line-height: 120%;\n  color: var(--vouch-customer-brand, #1baf80);\n  transition: clip-path 0.3s ease;\n  clip-path: inset(90% 0 0 0);\n}\n\n.vouch-overlay .vouch-info-box {\n  display: flex;\n  width: 100%;\n  border-radius: 8px;\n  background-color: color-mix(\n    in oklch,\n    var(--vouch-customer-modal-bg, #ffffff) 95%,\n    var(--vouch-customer-brand, #1baf80)\n  );\n  padding: 12px;\n}\n\n.vouch-overlay .vouch-info-icon {\n  width: 45px;\n  height: 45px;\n  margin-right: 12px;\n  flex-shrink: 0;\n  border-radius: 50%;\n}\n\n.vouch-overlay .vouch-info-content {\n  display: flex;\n  flex-direction: column;\n}\n\n.vouch-overlay .vouch-info-title {\n  font-weight: 700;\n  color: var(--vouch-customer-font-primary, #000000);\n  font-size: 16px;\n  margin-bottom: 2px;\n}\n\n.vouch-overlay .vouch-info-description {\n  font-size: 14px;\n  color: var(--vouch-customer-font-secondary, #5a706c);\n}\n\n.vouch-overlay .vouch-hint {\n  font-size: 12px;\n  color: var(--vouch-customer-font-secondary, #5a706c);\n  text-align: center;\n  margin-top: 16px;\n}\n";
+const SORA_WOFF2_BASE64 = "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";
+const FONT_FACE_CSS = `@font-face {
+  font-family: "Sora";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(data:font/woff2;base64,${SORA_WOFF2_BASE64}) format("woff2");
+}`;
 
 function div(attributes, ...child) {
   return appendChild("div", attributes, child);
@@ -18,11 +25,43 @@ function form(attributes, ...child) {
 function button(attributes) {
   return appendChild("button", attributes);
 }
-function img(attributes) {
+function nativeImg(attributes) {
   return appendChild("img", attributes);
 }
-function style(attributes) {
-  return appendChild("style", attributes);
+function img(src, alt, className) {
+  const el = nativeImg({ src, alt, className });
+  el.onerror = () => {
+    renderOnCanvas(dataUrlToBlob(src), el, { className, alt });
+  };
+  return el;
+}
+function dataUrlToBlob(dataUrl) {
+  const match = /^data:([^;]+);base64,(.+)$/.exec(dataUrl);
+  if (!match?.[1] || !match[2]) return null;
+  const bytes = Uint8Array.from(atob(match[2]), (c) => c.charCodeAt(0));
+  return new Blob([bytes], { type: match[1] });
+}
+function renderOnCanvas(blob, target, attributes) {
+  if (!blob) return;
+  createImageBitmap(blob).then((bitmap) => {
+    const c = document.createElement("canvas");
+    if (attributes?.className) {
+      c.className = attributes.className;
+    }
+    if (attributes?.alt) {
+      c.setAttribute("role", "img");
+      c.setAttribute("aria-label", attributes.alt);
+    }
+    c.width = bitmap.width;
+    c.height = bitmap.height;
+    c.getContext("2d")?.drawImage(bitmap, 0, 0);
+    bitmap.close();
+    target.replaceWith(c);
+  }).catch(() => {
+    if (target instanceof HTMLElement) {
+      target.style.display = "none";
+    }
+  });
 }
 function appendChild(type, attributes, child = []) {
   const element = document.createElement(type);
@@ -32,181 +71,140 @@ function appendChild(type, attributes, child = []) {
   child.filter((c) => !!c).forEach((c) => element.appendChild(c));
   return element;
 }
+const adoptedSheets = /* @__PURE__ */ new Map();
 function injectCss(styleId) {
-  if (!document.getElementById(styleId)) {
-    document.head.appendChild(
-      style({
-        id: styleId,
-        textContent: overlayStyles
+  if (adoptedSheets.has(styleId)) return;
+  if (typeof CSSStyleSheet === "undefined" || !("replaceSync" in CSSStyleSheet.prototype))
+    return;
+  const css = `${FONT_FACE_CSS}
+${overlayStyles.replace(/@import\s+url\([^)]+\)\s*;?/g, "")}`;
+  const sheet = new CSSStyleSheet();
+  sheet.replaceSync(css);
+  document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
+  adoptedSheets.set(styleId, sheet);
+}
+function removeInjectedCss(styleId) {
+  const sheet = adoptedSheets.get(styleId);
+  if (!sheet) return;
+  document.adoptedStyleSheets = document.adoptedStyleSheets.filter(
+    (s) => s !== sheet
+  );
+  adoptedSheets.delete(styleId);
+}
+function getSvgTrustedHtml(raw) {
+  const tt = window.trustedTypes;
+  if (!tt) return raw;
+  const policy = tt.createPolicy("vouch-svg", { createHTML: (s) => s });
+  return policy.createHTML(raw);
+}
+function parseSvg(svgRaw) {
+  try {
+    const template = document.createElement("template");
+    template.innerHTML = getSvgTrustedHtml(svgRaw.trim());
+    return template.content.firstElementChild;
+  } catch {
+    return null;
+  }
+}
+function parseSvgFallback(svgRaw) {
+  const svgElement = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "svg"
+  );
+  svgElement.setAttribute(
+    "data-src",
+    `data:image/svg+xml,${encodeURIComponent(svgRaw.trim())}`
+  );
+  return svgElement;
+}
+function svg(svgRaw, attributes) {
+  const svgElement = parseSvg(svgRaw) ?? parseSvgFallback(svgRaw);
+  if (attributes?.className)
+    svgElement.setAttribute("class", attributes.className);
+  if (attributes?.alt) {
+    svgElement.setAttribute("role", "img");
+    svgElement.setAttribute("aria-label", attributes.alt);
+  }
+  return svgElement;
+}
+
+const arrowsRaw = "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M13.333 2.5L16.6663 5.83333M16.6663 5.83333L13.333 9.16667M16.6663 5.83333H3.33301M6.66634 17.5L3.33301 14.1667M3.33301 14.1667L6.66634 10.8333M3.33301 14.1667H16.6663\" stroke=\"#8B9F9B\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n";
+
+const vouchSignetRaw = "<svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"40\" height=\"40\" fill=\"#1BAF80\"/>\n<path d=\"M19.7578 23.7036L25.2833 10.3704H30.8536L21.0659 31.1111H18.1144L8.63135 10.3704H14.2323L19.7578 23.7036Z\" fill=\"white\"/>\n</svg>\n";
+
+const keepTabOpenIconRaw = "<svg width=\"70\" height=\"65\" viewBox=\"0 0 70 65\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"48\" height=\"48\" rx=\"6\" fill=\"#1BAF80\"/>\n<rect x=\"4.5\" y=\"10.5\" width=\"39\" height=\"33\" rx=\"3.5\" stroke=\"white\"/>\n<foreignObject x=\"13\" y=\"8\" width=\"64\" height=\"64\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(3.5px);clip-path:url(#bgblur_0_476_6367_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter0_ii_476_6367)\">\n<circle cx=\"45\" cy=\"40\" r=\"25\" fill=\"url(#paint0_linear_476_6367)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M54 40C53.9999 41.9005 53.3981 43.7523 52.2809 45.2899C51.1637 46.8274 49.5885 47.9719 47.7809 48.5591C45.9733 49.1464 44.0262 49.1463 42.2186 48.559C40.4111 47.9716 38.8359 46.8271 37.7188 45.2895C36.6017 43.7518 36 41.9 36 39.9994C36 38.0989 36.6017 36.2471 37.7188 34.7095C38.836 33.1718 40.4112 32.0274 42.2188 31.44C44.0263 30.8527 45.9734 30.8527 47.781 31.44\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<circle cx=\"45\" cy=\"40\" r=\"24.75\" stroke=\"url(#paint1_linear_476_6367)\" stroke-opacity=\"0.3\" stroke-width=\"0.5\"/>\n<circle cx=\"6\" cy=\"5\" r=\"2\" fill=\"white\"/>\n<circle cx=\"11\" cy=\"5\" r=\"2\" fill=\"white\"/>\n<circle cx=\"16\" cy=\"5\" r=\"2\" fill=\"white\"/>\n<defs>\n<filter id=\"filter0_ii_476_6367\" x=\"13\" y=\"8\" width=\"64\" height=\"64\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_476_6367\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_476_6367\" result=\"effect2_innerShadow_476_6367\"/>\n</filter>\n<clipPath id=\"bgblur_0_476_6367_clip_path\" transform=\"translate(-13 -8)\"><circle cx=\"45\" cy=\"40\" r=\"25\"/></clipPath>\n<linearGradient id=\"paint0_linear_476_6367\" x1=\"25.6452\" y1=\"25.5581\" x2=\"59.8793\" y2=\"53.9208\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#9CFDFF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#56B0FF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E66FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint1_linear_476_6367\" x1=\"25.3506\" y1=\"19.6131\" x2=\"79.3189\" y2=\"47.5572\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#5A81FF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#567DFF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E78FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n</defs>\n</svg>\n";
+
+function getProofRequestData() {
+  return window.__VOUCH_PROOF_REQUEST_DATA__;
+}
+function createSignetsRow() {
+  const data = getProofRequestData();
+  if (!data) return false;
+  if (!data.customerSignet && !data.datasourceLogo) return false;
+  return div(
+    { className: "vouch-signets-row" },
+    div(
+      { className: "vouch-customer-signet-container" },
+      data.customerSignet ? img(data.customerSignet, "Customer", "vouch-signet-img") : null,
+      svg(vouchSignetRaw, {
+        alt: "vouch",
+        className: "vouch-signet-badge"
       })
-    );
-  }
+    ),
+    svg(arrowsRaw, { className: "vouch-signets-arrow" }),
+    data.datasourceLogo ? img(data.datasourceLogo, "Data source", "vouch-signet-img") : null
+  );
 }
-
-const uploadIconRaw = "<svg width=\"70\" height=\"65\" viewBox=\"0 0 70 65\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"48\" height=\"48\" rx=\"6\" fill=\"#1BAF80\"/>\n<foreignObject x=\"13\" y=\"8\" width=\"64\" height=\"64\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(3.5px);clip-path:url(#bgblur_0_5542_1770_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter0_ii_5542_1770)\" data-figma-bg-blur-radius=\"7\">\n<circle cx=\"45\" cy=\"40\" r=\"25\" fill=\"url(#paint0_linear_5542_1770)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M54 43V47C54 47.5304 53.7893 48.0391 53.4142 48.4142C53.0391 48.7893 52.5304 49 52 49H38C37.4696 49 36.9609 48.7893 36.5858 48.4142C36.2107 48.0391 36 47.5304 36 47V43M50 36L45 31M45 31L40 36M45 31V43\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<foreignObject x=\"-10\" y=\"-15\" width=\"110\" height=\"110\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(15px);height:100%;width:100%\"></div></foreignObject><circle data-figma-bg-blur-radius=\"30\" cx=\"45\" cy=\"40\" r=\"24.75\" stroke=\"url(#paint1_linear_5542_1770)\" stroke-opacity=\"0.3\" stroke-width=\"0.5\"/>\n<defs>\n<filter id=\"filter0_ii_5542_1770\" x=\"13\" y=\"8\" width=\"64\" height=\"64\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_5542_1770\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_5542_1770\" result=\"effect2_innerShadow_5542_1770\"/>\n</filter>\n<clipPath id=\"bgblur_0_5542_1770_clip_path\" transform=\"translate(-13 -8)\"><circle cx=\"45\" cy=\"40\" r=\"25\"/>\n</clipPath><linearGradient id=\"paint0_linear_5542_1770\" x1=\"25.6452\" y1=\"25.5581\" x2=\"59.8793\" y2=\"53.9208\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#9CFDFF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#56B0FF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E66FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint1_linear_5542_1770\" x1=\"25.3506\" y1=\"19.6131\" x2=\"79.3189\" y2=\"47.5572\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#5A81FF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#567DFF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E78FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n</defs>\n</svg>\n";
-
-const errorIconRaw = "<svg width=\"70\" height=\"65\" viewBox=\"0 0 70 65\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<foreignObject x=\"-7.17188\" y=\"-7.17114\" width=\"62.3438\" height=\"62.3423\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(4px);clip-path:url(#bgblur_0_5542_1771_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter0_ii_5542_1771)\" data-figma-bg-blur-radius=\"8\">\n<path d=\"M1.41363 8.97368C0.632843 9.7547 0.632868 11.0207 1.41368 11.8017L12.2027 22.5932C12.9835 23.3742 12.9835 24.6402 12.2028 25.4212L1.42792 36.1993C0.647153 36.9803 0.647152 38.2463 1.42792 39.0273L8.98352 46.5851C9.76462 47.3665 11.0313 47.3665 11.8124 46.5852L22.5856 35.8087C23.3667 35.0274 24.6333 35.0274 25.4144 35.8087L36.1876 46.5852C36.9687 47.3665 38.2354 47.3665 39.0165 46.5852L46.5721 39.0272C47.3529 38.2463 47.3529 36.9803 46.5722 36.1993L35.7981 25.4212C35.0174 24.6402 35.0174 23.3742 35.7982 22.5932L46.5864 11.8017C47.3672 11.0207 47.3672 9.75474 46.5864 8.97374L39.0298 1.41485C38.2487 0.633516 36.982 0.633517 36.2009 1.41485L25.4144 12.2046C24.6333 12.9859 23.3667 12.9859 22.5856 12.2046L11.7991 1.41485C11.018 0.633515 9.75131 0.633517 8.97021 1.41485L1.41363 8.97368Z\" fill=\"#1BAF80\"/>\n</g>\n<foreignObject x=\"-29.1719\" y=\"-29.1711\" width=\"106.344\" height=\"106.342\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(15px);clip-path:url(#bgblur_1_5542_1771_clip_path);height:100%;width:100%\"></div></foreignObject><path data-figma-bg-blur-radius=\"30\" d=\"M1.41363 8.97368C0.632843 9.7547 0.632868 11.0207 1.41368 11.8017L12.2027 22.5932C12.9835 23.3742 12.9835 24.6402 12.2028 25.4212L1.42792 36.1993C0.647153 36.9803 0.647152 38.2463 1.42792 39.0273L8.98352 46.5851C9.76462 47.3665 11.0313 47.3665 11.8124 46.5852L22.5856 35.8087C23.3667 35.0274 24.6333 35.0274 25.4144 35.8087L36.1876 46.5852C36.9687 47.3665 38.2354 47.3665 39.0165 46.5852L46.5721 39.0272C47.3529 38.2463 47.3529 36.9803 46.5722 36.1993L35.7981 25.4212C35.0174 24.6402 35.0174 23.3742 35.7982 22.5932L46.5864 11.8017C47.3672 11.0207 47.3672 9.75474 46.5864 8.97374L39.0298 1.41485C38.2487 0.633516 36.982 0.633517 36.2009 1.41485L25.4144 12.2046C24.6333 12.9859 23.3667 12.9859 22.5856 12.2046L11.7991 1.41485C11.018 0.633515 9.75131 0.633517 8.97021 1.41485L1.41363 8.97368Z\" fill=\"#1BAF80\"/>\n<foreignObject x=\"13\" y=\"8\" width=\"64\" height=\"64\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(3.5px);clip-path:url(#bgblur_2_5542_1771_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter2_ii_5542_1771)\" data-figma-bg-blur-radius=\"7\">\n<circle cx=\"45\" cy=\"40\" r=\"25\" fill=\"url(#paint0_linear_5542_1771)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M54 43V47C54 47.5304 53.7893 48.0391 53.4142 48.4142C53.0391 48.7893 52.5304 49 52 49H38C37.4696 49 36.9609 48.7893 36.5858 48.4142C36.2107 48.0391 36 47.5304 36 47V43M50 36L45 31M45 31L40 36M45 31V43\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<foreignObject x=\"-10\" y=\"-15\" width=\"110\" height=\"110\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(15px);height:100%;width:100%\"></div></foreignObject><circle data-figma-bg-blur-radius=\"30\" cx=\"45\" cy=\"40\" r=\"24.75\" stroke=\"url(#paint1_linear_5542_1771)\" stroke-opacity=\"0.3\" stroke-width=\"0.5\"/>\n<defs>\n<filter id=\"filter0_ii_5542_1771\" x=\"-7.17188\" y=\"-7.17114\" width=\"62.3438\" height=\"62.3423\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_5542_1771\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_5542_1771\" result=\"effect2_innerShadow_5542_1771\"/>\n</filter>\n<clipPath id=\"bgblur_0_5542_1771_clip_path\" transform=\"translate(7.17188 7.17114)\"><path d=\"M1.41363 8.97368C0.632843 9.7547 0.632868 11.0207 1.41368 11.8017L12.2027 22.5932C12.9835 23.3742 12.9835 24.6402 12.2028 25.4212L1.42792 36.1993C0.647153 36.9803 0.647152 38.2463 1.42792 39.0273L8.98352 46.5851C9.76462 47.3665 11.0313 47.3665 11.8124 46.5852L22.5856 35.8087C23.3667 35.0274 24.6333 35.0274 25.4144 35.8087L36.1876 46.5852C36.9687 47.3665 38.2354 47.3665 39.0165 46.5852L46.5721 39.0272C47.3529 38.2463 47.3529 36.9803 46.5722 36.1993L35.7981 25.4212C35.0174 24.6402 35.0174 23.3742 35.7982 22.5932L46.5864 11.8017C47.3672 11.0207 47.3672 9.75474 46.5864 8.97374L39.0298 1.41485C38.2487 0.633516 36.982 0.633517 36.2009 1.41485L25.4144 12.2046C24.6333 12.9859 23.3667 12.9859 22.5856 12.2046L11.7991 1.41485C11.018 0.633515 9.75131 0.633517 8.97021 1.41485L1.41363 8.97368Z\"/>\n</clipPath><clipPath id=\"bgblur_1_5542_1771_clip_path\" transform=\"translate(29.1719 29.1711)\"><path d=\"M1.41363 8.97368C0.632843 9.7547 0.632868 11.0207 1.41368 11.8017L12.2027 22.5932C12.9835 23.3742 12.9835 24.6402 12.2028 25.4212L1.42792 36.1993C0.647153 36.9803 0.647152 38.2463 1.42792 39.0273L8.98352 46.5851C9.76462 47.3665 11.0313 47.3665 11.8124 46.5852L22.5856 35.8087C23.3667 35.0274 24.6333 35.0274 25.4144 35.8087L36.1876 46.5852C36.9687 47.3665 38.2354 47.3665 39.0165 46.5852L46.5721 39.0272C47.3529 38.2463 47.3529 36.9803 46.5722 36.1993L35.7981 25.4212C35.0174 24.6402 35.0174 23.3742 35.7982 22.5932L46.5864 11.8017C47.3672 11.0207 47.3672 9.75474 46.5864 8.97374L39.0298 1.41485C38.2487 0.633516 36.982 0.633517 36.2009 1.41485L25.4144 12.2046C24.6333 12.9859 23.3667 12.9859 22.5856 12.2046L11.7991 1.41485C11.018 0.633515 9.75131 0.633517 8.97021 1.41485L1.41363 8.97368Z\"/>\n</clipPath><filter id=\"filter2_ii_5542_1771\" x=\"13\" y=\"8\" width=\"64\" height=\"64\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_5542_1771\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_5542_1771\" result=\"effect2_innerShadow_5542_1771\"/>\n</filter>\n<clipPath id=\"bgblur_2_5542_1771_clip_path\" transform=\"translate(-13 -8)\"><circle cx=\"45\" cy=\"40\" r=\"25\"/>\n</clipPath><linearGradient id=\"paint0_linear_5542_1771\" x1=\"25.6452\" y1=\"25.5581\" x2=\"59.8793\" y2=\"53.9208\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#9CFDFF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#56B0FF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E66FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint1_linear_5542_1771\" x1=\"25.3506\" y1=\"19.6131\" x2=\"79.3189\" y2=\"47.5572\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#5A81FF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#567DFF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E78FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n</defs>\n</svg>\n";
-
-const UploadEvents = {
-  Start: "UploadStart",
-  Progress: "UploadProgress",
-  Complete: "UploadComplete",
-  Error: "UploadError"
-};
-const UPLOAD_OVERLAY_ID = "vouch-upload-overlay";
-const UPLOAD_TITLE = "Uploading your content";
-const UPLOAD_SUBTITLE = "Please keep this tab open.";
-const ERROR_TITLE = "Upload interrupted";
-const ERROR_SUBTITLE = "We couldn't complete the upload. This is often caused by a temporary network issue.";
-const ERROR_HINT = "Make sure you have a stable internet connection.";
-function getUploadIcon() {
-  return colorizeSvg(uploadIconRaw);
-}
-function getErrorIcon() {
-  return colorizeSvg(errorIconRaw);
-}
-function createUploadOverlay() {
-  removeProcessingOverlay();
-  if (document.getElementById(UPLOAD_OVERLAY_ID)) {
-    removeUploadOverlay();
-  }
-  injectCss(`${UPLOAD_OVERLAY_ID}-style`);
-  const overlay = div(
-    { id: UPLOAD_OVERLAY_ID, className: "vouch-overlay" },
+function createInfoBox() {
+  return div(
+    { className: "vouch-info-box" },
+    svg(colorizeSvg(keepTabOpenIconRaw), {
+      className: "vouch-info-icon",
+      alt: "keep tab open icon"
+    }),
     div(
-      { className: "vouch-modal-container" },
-      div(
-        { className: "vouch-modal-content" },
-        div(
-          { className: "vouch-modal-icon" },
-          img({
-            alt: "Upload",
-            src: getUploadIcon()
-          })
-        ),
-        div(
-          { className: "vouch-modal-text" },
-          div({
-            className: "vouch-modal-title",
-            textContent: UPLOAD_TITLE
-          }),
-          div({
-            className: "vouch-modal-subtitle",
-            textContent: UPLOAD_SUBTITLE
-          })
-        ),
-        div(
-          { className: "vouch-modal-bottom" },
-          div(
-            { className: "vouch-progress-text-container" },
-            div({
-              className: "vouch-progress-text-background",
-              textContent: "0%"
-            }),
-            div({ className: "vouch-progress-text-fill", textContent: "0%" })
-          )
-        )
-      )
+      { className: "vouch-info-content" },
+      div({
+        className: "vouch-info-title",
+        textContent: "Keep this tab open"
+      }),
+      div({
+        className: "vouch-info-description",
+        textContent: "Your verification is running securely in the background."
+      })
     )
   );
-  document.body.appendChild(overlay);
 }
-function updateUploadProgress(progress) {
-  const progressBackground = document.querySelector(
-    `#${UPLOAD_OVERLAY_ID} .vouch-progress-text-background`
-  );
-  const progressFill = document.querySelector(
-    `#${UPLOAD_OVERLAY_ID} .vouch-progress-text-fill`
-  );
-  const displayText = `${Math.round(progress).toString()}%`;
-  const clipInset = 90 - progress * 0.8;
-  if (progressBackground) {
-    progressBackground.textContent = displayText;
-  }
-  if (progressFill) {
-    progressFill.textContent = displayText;
-    progressFill.style.clipPath = `inset(${clipInset.toString()}% 0 0 0)`;
-  }
-}
-function removeUploadOverlay() {
-  document.getElementById(UPLOAD_OVERLAY_ID)?.remove();
-}
-function transformUploadToErrorState() {
-  const overlay = document.getElementById(UPLOAD_OVERLAY_ID);
-  if (!overlay) return;
-  const modalContainer = overlay.querySelector(".vouch-modal-container");
-  if (!modalContainer) return;
-  const errorContent = div(
-    { className: "vouch-modal-container" },
-    div(
-      { className: "vouch-modal-content" },
-      div(
-        { className: "vouch-modal-icon" },
-        img({
-          alt: "Error",
-          src: getErrorIcon()
-        })
-      ),
-      div(
-        { className: "vouch-modal-text" },
-        div({
-          className: "vouch-modal-title",
-          textContent: ERROR_TITLE
-        }),
-        div({
-          className: "vouch-modal-subtitle",
-          textContent: ERROR_SUBTITLE
-        })
-      ),
-      div(
-        { className: "vouch-modal-bottom" },
-        div(
-          { className: "vouch-button-container" },
-          createRetryButton("reupload")
-        ),
-        div({
-          className: "vouch-hint",
-          textContent: ERROR_HINT
-        })
-      )
-    )
-  );
-  modalContainer.replaceWith(errorContent);
-}
-function setupUploadEventListeners() {
-  window.addEventListener(UploadEvents.Start, (() => {
-    createUploadOverlay();
-  }));
-  window.addEventListener(UploadEvents.Progress, ((e) => {
-    updateUploadProgress(e.detail.progress);
-  }));
-  window.addEventListener(UploadEvents.Complete, (() => {
-    removeUploadOverlay();
-  }));
-  window.addEventListener(UploadEvents.Error, (() => {
-    transformUploadToErrorState();
-  }));
-}
-
-function createRetryButton(type) {
+function createRetryButton(type, cleanupFn) {
   const btn = button({
     className: "vouch-modal-button",
-    textContent: "Retry",
+    textContent: "Try Again",
     type: "button"
   });
   btn.addEventListener("click", () => {
     window.sendEvent({
-      type: type === "proving" ? "RetryProcessing" : "RetryReupload"
+      type: type === "reupload" ? "RetryReupload" : "RetryProcessing"
     });
-    if (type === "proving") {
-      removeProcessingOverlay();
-    } else {
-      removeUploadOverlay();
-    }
+    cleanupFn();
   });
   return btn;
 }
-function createCancelButton() {
+function createReportIssueButton() {
+  const btn = button({
+    className: "vouch-modal-button vouch-modal-button-outline",
+    textContent: "Report Issue",
+    type: "button"
+  });
+  btn.addEventListener("click", () => {
+    window.sendEvent({
+      type: "SendLogs"
+    });
+    btn.textContent = "Report Sent";
+    btn.disabled = true;
+  });
+  return btn;
+}
+function createCancelButton(cleanupFn) {
   const btn = button({
     className: "vouch-modal-button",
     textContent: "Cancel",
@@ -216,42 +214,48 @@ function createCancelButton() {
     window.sendEvent({
       type: "CancelProcessing"
     });
-    removeProcessingOverlay();
+    cleanupFn();
   });
   return btn;
+}
+function createErrorModalContent(opts) {
+  return div(
+    { className: "vouch-modal-content" },
+    div(
+      { className: "vouch-modal-text" },
+      div(
+        { className: "vouch-modal-title-row" },
+        div({ className: "vouch-modal-title", textContent: opts.title })
+      ),
+      div({ className: "vouch-modal-subtitle", textContent: opts.subtitle })
+    ),
+    div({ className: "vouch-modal-icon" }, opts.icon),
+    div(
+      { className: "vouch-modal-bottom" },
+      div({ className: "vouch-button-container" }, ...opts.buttons)
+    )
+  );
 }
 function getBrandColor() {
   return getComputedStyle(document.documentElement).getPropertyValue("--vouch-customer-brand").trim() || void 0;
 }
-function colorizeSvg(svg) {
+function colorizeSvg(svgStr) {
   const color = getBrandColor();
-  const coloredSvg = color ? svg.replace(/#1baf80/gi, color) : svg;
-  return `data:image/svg+xml,${encodeURIComponent(coloredSvg)}`;
+  return color ? svgStr.replace(/#1baf80/gi, color) : svgStr;
 }
 
-const timeoutIconRaw = "<svg width=\"69\" height=\"64\" viewBox=\"0 0 69 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M43.9698 0C45.0744 0 46.0075 0.89601 45.9169 1.99686C44.918 14.132 35.0392 27 23 27C10.9608 27 1.08201 14.132 0.0831156 1.99686C-0.00750014 0.896013 0.949357 0 2.05393 0C44.0624 0 18.0243 0 43.9698 0Z\" fill=\"#1BAF80\"/>\n<path d=\"M36.9892 10C38.0938 10 39.0157 10.9057 38.7599 11.9803C37.4452 17.5021 30.8894 23 23 23C15.1106 23 8.55483 17.5021 7.24013 11.9803C6.98429 10.9057 7.9267 10 9.03127 10C37.079 10 20.062 10 36.9892 10Z\" fill=\"#EBFFF7\"/>\n<path d=\"M2.03019 54C0.925625 54 -0.00749969 53.104 0.0831146 52.0031C1.08201 39.868 10.9608 27 23 27C35.0392 27 44.918 39.868 45.9169 52.0031C46.0075 53.104 45.0506 54 43.9461 54C1.93761 54 27.9757 54 2.03019 54Z\" fill=\"#1BAF80\"/>\n<path d=\"M9.01081 51C7.90623 51 7.09289 50.0452 7.85866 49.2492C10.0126 47.0102 15.978 45 23 45C30.022 45 35.9874 47.0102 38.1413 49.2492C38.9071 50.0452 38.0733 51 36.9687 51C8.92096 51 25.938 51 9.01081 51Z\" fill=\"#EBFFF7\"/>\n<foreignObject x=\"12\" y=\"7\" width=\"64\" height=\"64\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(3.5px);clip-path:url(#bgblur_0_5542_1769_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter0_ii_5542_1769)\" data-figma-bg-blur-radius=\"7\">\n<circle cx=\"44\" cy=\"39\" r=\"25\" fill=\"url(#paint0_linear_5542_1769)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M44.0005 36V40M44.0005 44H44.0105M53.7304 45.0002L45.7304 31.0002C45.556 30.6924 45.303 30.4364 44.9973 30.2583C44.6917 30.0802 44.3442 29.9863 43.9904 29.9863C43.6366 29.9863 43.2892 30.0802 42.9835 30.2583C42.6778 30.4364 42.4249 30.6924 42.2504 31.0002L34.2504 45.0002C34.0741 45.3056 33.9816 45.6521 33.9824 46.0047C33.9832 46.3573 34.0772 46.7035 34.2549 47.008C34.4325 47.3126 34.6876 47.5648 34.9941 47.7391C35.3007 47.9133 35.6478 48.0034 36.0004 48.0002H52.0004C52.3513 47.9999 52.6959 47.9072 52.9997 47.7315C53.3035 47.5558 53.5556 47.3033 53.7309 46.9993C53.9062 46.6954 53.9985 46.3506 53.9984 45.9997C53.9983 45.6488 53.9059 45.3041 53.7304 45.0002Z\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<foreignObject x=\"-11\" y=\"-16\" width=\"110\" height=\"110\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(15px);height:100%;width:100%\"></div></foreignObject><circle data-figma-bg-blur-radius=\"30\" cx=\"44\" cy=\"39\" r=\"24.75\" stroke=\"url(#paint1_linear_5542_1769)\" stroke-opacity=\"0.3\" stroke-width=\"0.5\"/>\n<defs>\n<filter id=\"filter0_ii_5542_1769\" x=\"12\" y=\"7\" width=\"64\" height=\"64\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_5542_1769\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_5542_1769\" result=\"effect2_innerShadow_5542_1769\"/>\n</filter>\n<clipPath id=\"bgblur_0_5542_1769_clip_path\" transform=\"translate(-12 -7)\"><circle cx=\"44\" cy=\"39\" r=\"25\"/>\n</clipPath><linearGradient id=\"paint0_linear_5542_1769\" x1=\"24.6452\" y1=\"24.5581\" x2=\"58.8793\" y2=\"52.9208\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#9CFDFF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#56B0FF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E66FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint1_linear_5542_1769\" x1=\"24.3506\" y1=\"18.6131\" x2=\"78.3189\" y2=\"46.5572\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#5A81FF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#567DFF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E78FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n</defs>\n</svg>\n";
+const logoRaw = "<svg width=\"101\" height=\"22\" viewBox=\"0 0 101 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M9.61218 21.6922L0 0.5H5.67663L11.2774 14.1236L16.8782 0.5H22.5241L12.6032 21.6922H9.61218ZM27.3368 20.894C28.6259 21.4261 30.0072 21.6922 31.4805 21.6922C32.9275 21.6922 34.2824 21.4261 35.5453 20.894C36.8345 20.3353 37.9658 19.577 38.9392 18.6191C39.939 17.6613 40.7019 16.5438 41.2281 15.2667C41.7806 13.963 42.0569 12.5794 42.0569 11.1161C42.0569 9.62609 41.7806 8.24254 41.2281 6.96542C40.7019 5.6883 39.939 4.57082 38.9392 3.61298C37.9658 2.62853 36.8345 1.87024 35.5453 1.33811C34.2824 0.77937 32.9275 0.5 31.4805 0.5C30.0072 0.5 28.6259 0.77937 27.3368 1.33811C26.0739 1.87024 24.9558 2.62853 23.9823 3.61298C23.0089 4.57082 22.2459 5.6883 21.6934 6.96542C21.1409 8.24254 20.8647 9.62609 20.8647 11.1161C20.8647 12.5794 21.1409 13.963 21.6934 15.2667C22.2459 16.5438 23.0089 17.6613 23.9823 18.6191C24.9558 19.577 26.0739 20.3353 27.3368 20.894ZM34.3219 16.4241C33.48 16.903 32.5329 17.1425 31.4805 17.1425C30.4544 17.1425 29.5073 16.903 28.6391 16.4241C27.7709 15.9186 27.0737 15.2135 26.5475 14.3089C26.0476 13.4042 25.7977 12.34 25.7977 11.1161C25.7977 9.86555 26.0476 8.78798 26.5475 7.88335C27.0737 6.97872 27.7709 6.28695 28.6391 5.80803C29.5073 5.3025 30.4544 5.04974 31.4805 5.04974C32.5329 5.04974 33.48 5.3025 34.3219 5.80803C35.1901 6.28695 35.8742 6.97872 36.374 7.88335C36.8739 8.78798 37.1239 9.86555 37.1239 11.1161C37.1239 12.34 36.8739 13.4042 36.374 14.3089C35.8742 15.2135 35.1901 15.9186 34.3219 16.4241ZM69.8997 20.8541C71.1898 21.4128 72.6009 21.6922 74.133 21.6922C75.6651 21.6922 76.9149 21.4794 77.8825 21.0537C78.877 20.6013 79.6296 20.149 80.1403 19.6967V15.3066C79.4414 15.8121 78.6485 16.2512 77.7616 16.6236C76.8746 16.9695 75.786 17.1425 74.4958 17.1425C73.3401 17.1425 72.3053 16.8764 71.3914 16.3443C70.5044 15.8121 69.8056 15.0938 69.2949 14.1891C68.7842 13.2845 68.5289 12.2735 68.5289 11.156C68.5289 10.0119 68.7842 8.98753 69.2949 8.0829C69.8325 7.17828 70.5582 6.45989 71.4721 5.92776C72.3859 5.39563 73.3938 5.12956 74.4958 5.12956C75.786 5.12956 76.8746 5.31581 77.7616 5.6883C78.6485 6.03419 79.4414 6.4599 80.1403 6.96542V2.57532C79.6296 2.14961 78.877 1.6973 77.8825 1.21838C76.9149 0.73946 75.6651 0.5 74.133 0.5C72.6009 0.5 71.1898 0.792673 69.8997 1.37802C68.6095 1.93676 67.4807 2.72166 66.513 3.73271C65.5454 4.71716 64.7928 5.84794 64.2553 7.12506C63.7446 8.40218 63.4892 9.74582 63.4892 11.156C63.4892 12.5661 63.7446 13.9098 64.2553 15.1869C64.7928 16.4374 65.5454 17.5549 66.513 18.5393C67.4807 19.5238 68.6095 20.2954 69.8997 20.8541ZM81.6528 0.5V21.6922H86.537V14.1236H96.0784V21.6922H100.963V0.5H96.0784V9.58238H86.537V0.5H81.6528ZM52.7769 21.7013C50.9832 21.7013 49.3828 21.5053 47.9755 20.7878C46.5958 20.0704 45.492 19.0494 44.6642 17.7249C43.864 16.3728 43.5241 14.7723 43.5241 12.9235L43.5244 0.5H48.4308V12.1785C48.4308 13.8065 48.8447 15.0483 49.6725 15.9037C50.5003 16.7315 51.5351 17.1454 52.7769 17.1454C54.0186 17.1454 55.0396 16.7315 55.8398 15.9037C56.6676 15.0483 57.0815 13.8065 57.0815 12.1785V0.5H62.1887V12.9235C62.1887 14.7723 61.6759 16.3728 60.8481 17.7249C60.0479 19.0494 58.9441 20.0704 57.5368 20.7878C56.1295 21.5053 54.5429 21.7013 52.7769 21.7013Z\" fill=\"#1BAF80\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M100.963 0.5H96.0884L100.963 11.2465V0.5ZM80.1356 2.57102V3.89407L80.1408 3.88729V6.96543L80.1356 6.96169C79.438 6.4578 78.6469 6.03334 77.7621 5.68831C77.0538 5.39084 76.2169 5.21215 75.2515 5.15224V0.546803C76.2852 0.637841 77.1624 0.861702 77.883 1.21838C78.8742 1.69569 79.625 2.14657 80.1356 2.57102ZM80.1356 15.3104V19.7013C79.625 20.1521 78.8742 20.6029 77.883 21.0537C77.1624 21.3707 76.2852 21.5697 75.2515 21.6506V17.1214C76.2169 17.0658 77.0538 16.8999 77.7621 16.6236C78.6469 16.2521 79.438 15.8143 80.1356 15.3104ZM62.1889 10.2137V12.9356C62.1867 14.7793 61.6743 16.3757 60.8483 17.7249C60.6535 18.0473 60.4408 18.3516 60.21 18.6381C60.1771 18.6054 60.1443 18.5725 60.1117 18.5393C59.1441 17.5549 58.3915 16.4374 57.854 15.1869C57.3433 13.9098 57.0879 12.5661 57.0879 11.156C57.0879 9.74582 57.3433 8.40218 57.854 7.12506C58.3915 5.84794 59.1441 4.71716 60.1117 3.73271C60.7368 3.07956 61.4292 2.52079 62.1889 2.0564V10.2137ZM37.1232 2.15129C37.7798 2.56519 38.3853 3.05242 38.9396 3.61297C39.9394 4.57081 40.7023 5.68829 41.2285 6.96541C41.781 8.24253 42.0573 9.62608 42.0573 11.1161C42.0573 12.5794 41.781 13.963 41.2285 15.2667C40.7023 16.5438 39.9394 17.6613 38.9396 18.6191C38.8841 18.6737 38.8282 18.7276 38.7717 18.7809C38.5919 18.5484 38.4223 18.3047 38.263 18.0498C37.4628 16.6977 37.1229 15.0972 37.1229 13.2484L37.1229 11.27C37.1238 11.219 37.1242 11.1677 37.1242 11.1161C37.1242 11.0635 37.1238 11.0113 37.1229 10.9593L37.1232 2.15129ZM18.9677 8.09644L22.4743 0.6061C21.5675 0.734183 20.6989 0.978167 19.8686 1.33805C18.6057 1.87019 17.4876 2.62848 16.5141 3.61292C15.5407 4.57076 14.7777 5.68824 14.2252 6.96536C13.6727 8.24249 13.3965 9.62603 13.3965 11.116C13.3965 12.5794 13.6727 13.9629 14.2252 15.2666C14.4375 15.7573 14.6808 16.2243 14.9552 16.6678L18.8668 8.31197C18.899 8.23913 18.9327 8.16729 18.9677 8.09644Z\" fill=\"#1BAF80\"/>\n</svg>\n";
 
-const processingIconRaw = "<svg width=\"70\" height=\"65\" viewBox=\"0 0 70 65\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"48\" height=\"48\" rx=\"6\" fill=\"#1BAF80\"/>\n<rect x=\"4.5\" y=\"10.5\" width=\"39\" height=\"33\" rx=\"3.5\" stroke=\"white\"/>\n<foreignObject x=\"13\" y=\"8\" width=\"64\" height=\"64\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(3.5px);clip-path:url(#bgblur_0_5541_1768_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter0_ii_5541_1768)\" data-figma-bg-blur-radius=\"7\">\n<circle cx=\"45\" cy=\"40\" r=\"25\" fill=\"url(#paint0_linear_5541_1768)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M54 40C53.9999 41.9005 53.3981 43.7523 52.2809 45.2899C51.1637 46.8274 49.5885 47.9719 47.7809 48.5591C45.9733 49.1464 44.0262 49.1463 42.2186 48.559C40.4111 47.9716 38.8359 46.8271 37.7188 45.2895C36.6017 43.7518 36 41.9 36 39.9994C36 38.0989 36.6017 36.2471 37.7188 34.7095C38.836 33.1718 40.4112 32.0274 42.2188 31.44C44.0263 30.8527 45.9734 30.8527 47.781 31.44\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n<foreignObject x=\"-10\" y=\"-15\" width=\"110\" height=\"110\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(15px);height:100%;width:100%\"></div></foreignObject><circle data-figma-bg-blur-radius=\"30\" cx=\"45\" cy=\"40\" r=\"24.75\" stroke=\"url(#paint1_linear_5541_1768)\" stroke-opacity=\"0.3\" stroke-width=\"0.5\"/>\n<circle cx=\"6\" cy=\"5\" r=\"2\" fill=\"white\"/>\n<circle cx=\"11\" cy=\"5\" r=\"2\" fill=\"white\"/>\n<circle cx=\"16\" cy=\"5\" r=\"2\" fill=\"white\"/>\n<defs>\n<filter id=\"filter0_ii_5541_1768\" x=\"13\" y=\"8\" width=\"64\" height=\"64\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_5541_1768\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_5541_1768\" result=\"effect2_innerShadow_5541_1768\"/>\n</filter>\n<clipPath id=\"bgblur_0_5541_1768_clip_path\" transform=\"translate(-13 -8)\"><circle cx=\"45\" cy=\"40\" r=\"25\"/>\n</clipPath><linearGradient id=\"paint0_linear_5541_1768\" x1=\"25.6452\" y1=\"25.5581\" x2=\"59.8793\" y2=\"53.9208\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#9CFDFF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#56B0FF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E66FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint1_linear_5541_1768\" x1=\"25.3506\" y1=\"19.6131\" x2=\"79.3189\" y2=\"47.5572\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#5A81FF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#567DFF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E78FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n</defs>\n</svg>\n";
-
-const shieldIconRaw = "<svg width=\"44\" height=\"44\" viewBox=\"0 0 44 44\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle opacity=\"0.2\" cx=\"22\" cy=\"22\" r=\"22\" fill=\"#1BAF80\"/>\n<path d=\"M30 23C30 28 26.5 30.5 22.34 31.95C22.1222 32.0238 21.8855 32.0202 21.67 31.94C17.5 30.5 14 28 14 23V16C14 15.7347 14.1054 15.4804 14.2929 15.2929C14.4804 15.1053 14.7348 15 15 15C17 15 19.5 13.8 21.24 12.28C21.4519 12.099 21.7214 11.9995 22 11.9995C22.2786 11.9995 22.5481 12.099 22.76 12.28C24.51 13.81 27 15 29 15C29.2652 15 29.5196 15.1053 29.7071 15.2929C29.8946 15.4804 30 15.7347 30 16V23Z\" stroke=\"#1BAF80\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n";
+const timeoutIconRaw = "<svg width=\"69\" height=\"64\" viewBox=\"0 0 69 64\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M43.9698 0C45.0744 0 46.0075 0.89601 45.9169 1.99686C44.918 14.132 35.0392 27 23 27C10.9608 27 1.08201 14.132 0.0831156 1.99686C-0.00750014 0.896013 0.949357 0 2.05393 0C44.0624 0 18.0243 0 43.9698 0Z\" fill=\"#1BAF80\"/>\n<path d=\"M36.9892 10C38.0938 10 39.0157 10.9057 38.7599 11.9803C37.4452 17.5021 30.8894 23 23 23C15.1106 23 8.55483 17.5021 7.24013 11.9803C6.98429 10.9057 7.9267 10 9.03127 10C37.079 10 20.062 10 36.9892 10Z\" fill=\"#EBFFF7\"/>\n<path d=\"M2.03019 54C0.925625 54 -0.00749969 53.104 0.0831146 52.0031C1.08201 39.868 10.9608 27 23 27C35.0392 27 44.918 39.868 45.9169 52.0031C46.0075 53.104 45.0506 54 43.9461 54C1.93761 54 27.9757 54 2.03019 54Z\" fill=\"#1BAF80\"/>\n<path d=\"M9.01081 51C7.90623 51 7.09289 50.0452 7.85866 49.2492C10.0126 47.0102 15.978 45 23 45C30.022 45 35.9874 47.0102 38.1413 49.2492C38.9071 50.0452 38.0733 51 36.9687 51C8.92096 51 25.938 51 9.01081 51Z\" fill=\"#EBFFF7\"/>\n<foreignObject x=\"12\" y=\"7\" width=\"64\" height=\"64\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(3.5px);clip-path:url(#bgblur_0_5542_1769_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter0_ii_5542_1769)\" data-figma-bg-blur-radius=\"7\">\n<circle cx=\"44\" cy=\"39\" r=\"25\" fill=\"url(#paint0_linear_5542_1769)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M44.0005 36V40M44.0005 44H44.0105M53.7304 45.0002L45.7304 31.0002C45.556 30.6924 45.303 30.4364 44.9973 30.2583C44.6917 30.0802 44.3442 29.9863 43.9904 29.9863C43.6366 29.9863 43.2892 30.0802 42.9835 30.2583C42.6778 30.4364 42.4249 30.6924 42.2504 31.0002L34.2504 45.0002C34.0741 45.3056 33.9816 45.6521 33.9824 46.0047C33.9832 46.3573 34.0772 46.7035 34.2549 47.008C34.4325 47.3126 34.6876 47.5648 34.9941 47.7391C35.3007 47.9133 35.6478 48.0034 36.0004 48.0002H52.0004C52.3513 47.9999 52.6959 47.9072 52.9997 47.7315C53.3035 47.5558 53.5556 47.3033 53.7309 46.9993C53.9062 46.6954 53.9985 46.3506 53.9984 45.9997C53.9983 45.6488 53.9059 45.3041 53.7304 45.0002Z\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\n<defs>\n<filter id=\"filter0_ii_5542_1769\" x=\"12\" y=\"7\" width=\"64\" height=\"64\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_5542_1769\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_5542_1769\" result=\"effect2_innerShadow_5542_1769\"/>\n</filter>\n<clipPath id=\"bgblur_0_5542_1769_clip_path\" transform=\"translate(-12 -7)\"><circle cx=\"44\" cy=\"39\" r=\"25\"/>\n</clipPath><linearGradient id=\"paint0_linear_5542_1769\" x1=\"24.6452\" y1=\"24.5581\" x2=\"58.8793\" y2=\"52.9208\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#9CFDFF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#56B0FF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E66FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n</defs>\n</svg>\n";
 
 function getTimeoutIcon() {
   return colorizeSvg(timeoutIconRaw);
 }
-function getProcessingIcon() {
-  return colorizeSvg(processingIconRaw);
-}
-function getShieldIcon() {
-  return colorizeSvg(shieldIconRaw);
-}
-function shouldShowCancelButton() {
-  return window.__VOUCH_MOBILE__ === true;
-}
 const OVERLAY_ID = "vouch-processing-overlay";
-const PROCESSING_TITLE = "Please wait";
+const PROCESSING_TITLE = "Preparing Verification";
 const PROCESSING_SUBTITLE = "Fetching relevant information...";
-const TIMEOUT_TITLE = "Processing timed out";
-const TIMEOUT_SUBTITLE = "The operation took longer than expected. You can send diagnostic information to help us investigate and retry.";
+const TIMEOUT_TITLE = "Verification Timed Out";
+const TIMEOUT_SUBTITLE = "This sometimes happens. Try again,\nit usually works the second time.";
 function createProcessingOverlay({
   text,
   withVouchLogo = false,
@@ -281,6 +285,7 @@ function removeProcessingOverlay() {
   if (overlay) {
     overlay.remove();
   }
+  removeInjectedCss(`${OVERLAY_ID}-style`);
 }
 function handleTimeout() {
   window.sendEvent({
@@ -300,63 +305,34 @@ function handleTimeout() {
 function transformToErrorState() {
   const overlay = document.getElementById(OVERLAY_ID);
   if (!overlay) return;
-  const modalContainer = overlay.querySelector(".vouch-modal-container");
-  if (!modalContainer) return;
-  const errorContent = div(
-    { className: "vouch-modal-container" },
-    div(
-      { className: "vouch-modal-content" },
-      div(
-        { className: "vouch-modal-icon" },
-        img({
-          alt: "Timeout",
-          src: getTimeoutIcon()
-        })
-      ),
-      div(
-        { className: "vouch-modal-text" },
-        div({
-          className: "vouch-modal-title",
-          textContent: TIMEOUT_TITLE
-        }),
-        div({
-          className: "vouch-modal-subtitle",
-          textContent: TIMEOUT_SUBTITLE
-        })
-      ),
-      div(
-        { className: "vouch-modal-bottom" },
-        div(
-          { className: "vouch-button-container" },
-          createContinueButton(),
-          createRetryButton("proving"),
-          shouldShowCancelButton() && createCancelButton()
-        )
-      )
-    )
-  );
-  modalContainer.replaceWith(errorContent);
+  const modalContent = overlay.querySelector(".vouch-modal-content");
+  if (!modalContent) return;
+  const errorContent = createErrorModalContent({
+    title: TIMEOUT_TITLE,
+    subtitle: TIMEOUT_SUBTITLE,
+    icon: svg(getTimeoutIcon(), { alt: "Timeout" }),
+    buttons: [
+      createReportIssueButton(),
+      createRetryButton("proving", removeProcessingOverlay)
+    ]
+  });
+  modalContent.replaceWith(errorContent);
 }
 function createProcessingModalContainer({
   text,
-  withVouchLogo
+  withVouchLogo = false
 }) {
+  const signetsRow = createSignetsRow();
   return div(
     { className: "vouch-modal-container" },
+    signetsRow ? div({ className: "vouch-modal-header" }, signetsRow) : null,
     div(
       { className: "vouch-modal-content" },
-      div(
-        { className: "vouch-modal-icon" },
-        img({
-          alt: "Processing",
-          src: getProcessingIcon()
-        })
-      ),
       div(
         { className: "vouch-modal-text" },
         div(
           { className: "vouch-modal-title-row" },
-          withVouchLogo && img({ className: "vouch-logo", alt: "vouch", src: logo }),
+          withVouchLogo ? svg(logoRaw, { className: "vouch-logo", alt: "vouch" }) : null,
           div({
             className: "vouch-modal-title",
             textContent: text ?? PROCESSING_TITLE
@@ -367,50 +343,9 @@ function createProcessingModalContainer({
           textContent: PROCESSING_SUBTITLE
         })
       ),
-      div(
-        { className: "vouch-modal-bottom" },
-        div(
-          { className: "vouch-info-box" },
-          img({
-            className: "vouch-info-icon",
-            alt: "shield icon",
-            src: getShieldIcon()
-          }),
-          div(
-            { className: "vouch-info-content" },
-            div({
-              className: "vouch-info-title",
-              textContent: "Keep this tab open."
-            }),
-            div({
-              className: "vouch-info-description",
-              textContent: "Your verification runs securely in the background."
-            })
-          )
-        )
-      )
+      div({ className: "vouch-modal-bottom" }, createInfoBox())
     )
   );
-}
-function createContinueButton() {
-  const btn = button({
-    className: "vouch-modal-button",
-    textContent: "Continue",
-    type: "button"
-  });
-  btn.addEventListener("click", () => {
-    restoreProcessingState();
-  });
-  return btn;
-}
-function restoreProcessingState() {
-  const overlay = document.getElementById(OVERLAY_ID);
-  if (!overlay || !activeOverlayOptions) return;
-  const modalContainer = overlay.querySelector(".vouch-modal-container");
-  if (!modalContainer) return;
-  const processingContent = createProcessingModalContainer(activeOverlayOptions);
-  modalContainer.replaceWith(processingContent);
-  startOverlayTimeout(activeOverlayOptions.timeout);
 }
 let timeoutId = null;
 let activeOverlayOptions = null;
@@ -427,6 +362,102 @@ function startOverlayTimeout(timeout) {
       handleTimeout();
     }, timeout);
   }
+}
+
+const errorIconRaw$1 = "<svg width=\"70\" height=\"65\" viewBox=\"0 0 70 65\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<foreignObject x=\"-7.17188\" y=\"-7.17114\" width=\"62.3438\" height=\"62.3423\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(4px);clip-path:url(#bgblur_0_5542_1771_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter0_ii_5542_1771)\" data-figma-bg-blur-radius=\"8\">\n<path d=\"M1.41363 8.97368C0.632843 9.7547 0.632868 11.0207 1.41368 11.8017L12.2027 22.5932C12.9835 23.3742 12.9835 24.6402 12.2028 25.4212L1.42792 36.1993C0.647153 36.9803 0.647152 38.2463 1.42792 39.0273L8.98352 46.5851C9.76462 47.3665 11.0313 47.3665 11.8124 46.5852L22.5856 35.8087C23.3667 35.0274 24.6333 35.0274 25.4144 35.8087L36.1876 46.5852C36.9687 47.3665 38.2354 47.3665 39.0165 46.5852L46.5721 39.0272C47.3529 38.2463 47.3529 36.9803 46.5722 36.1993L35.7981 25.4212C35.0174 24.6402 35.0174 23.3742 35.7982 22.5932L46.5864 11.8017C47.3672 11.0207 47.3672 9.75474 46.5864 8.97374L39.0298 1.41485C38.2487 0.633516 36.982 0.633517 36.2009 1.41485L25.4144 12.2046C24.6333 12.9859 23.3667 12.9859 22.5856 12.2046L11.7991 1.41485C11.018 0.633515 9.75131 0.633517 8.97021 1.41485L1.41363 8.97368Z\" fill=\"#1BAF80\"/>\n</g>\n<foreignObject x=\"-29.1719\" y=\"-29.1711\" width=\"106.344\" height=\"106.342\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(15px);clip-path:url(#bgblur_1_5542_1771_clip_path);height:100%;width:100%\"></div></foreignObject><path data-figma-bg-blur-radius=\"30\" d=\"M1.41363 8.97368C0.632843 9.7547 0.632868 11.0207 1.41368 11.8017L12.2027 22.5932C12.9835 23.3742 12.9835 24.6402 12.2028 25.4212L1.42792 36.1993C0.647153 36.9803 0.647152 38.2463 1.42792 39.0273L8.98352 46.5851C9.76462 47.3665 11.0313 47.3665 11.8124 46.5852L22.5856 35.8087C23.3667 35.0274 24.6333 35.0274 25.4144 35.8087L36.1876 46.5852C36.9687 47.3665 38.2354 47.3665 39.0165 46.5852L46.5721 39.0272C47.3529 38.2463 47.3529 36.9803 46.5722 36.1993L35.7981 25.4212C35.0174 24.6402 35.0174 23.3742 35.7982 22.5932L46.5864 11.8017C47.3672 11.0207 47.3672 9.75474 46.5864 8.97374L39.0298 1.41485C38.2487 0.633516 36.982 0.633517 36.2009 1.41485L25.4144 12.2046C24.6333 12.9859 23.3667 12.9859 22.5856 12.2046L11.7991 1.41485C11.018 0.633515 9.75131 0.633517 8.97021 1.41485L1.41363 8.97368Z\" fill=\"#1BAF80\"/>\n<foreignObject x=\"13\" y=\"8\" width=\"64\" height=\"64\"><div xmlns=\"http://www.w3.org/1999/xhtml\" style=\"backdrop-filter:blur(3.5px);clip-path:url(#bgblur_2_5542_1771_clip_path);height:100%;width:100%\"></div></foreignObject><g filter=\"url(#filter2_ii_5542_1771)\" data-figma-bg-blur-radius=\"7\">\n<circle cx=\"45\" cy=\"40\" r=\"25\" fill=\"url(#paint0_linear_5542_1771)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M54 43V47C54 47.5304 53.7893 48.0391 53.4142 48.4142C53.0391 48.7893 52.5304 49 52 49H38C37.4696 49 36.9609 48.7893 36.5858 48.4142C36.2107 48.0391 36 47.5304 36 47V43M50 36L45 31M45 31L40 36M45 31V43\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\n<defs>\n<filter id=\"filter0_ii_5542_1771\" x=\"-7.17188\" y=\"-7.17114\" width=\"62.3438\" height=\"62.3423\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_5542_1771\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_5542_1771\" result=\"effect2_innerShadow_5542_1771\"/>\n</filter>\n<clipPath id=\"bgblur_0_5542_1771_clip_path\" transform=\"translate(7.17188 7.17114)\"><path d=\"M1.41363 8.97368C0.632843 9.7547 0.632868 11.0207 1.41368 11.8017L12.2027 22.5932C12.9835 23.3742 12.9835 24.6402 12.2028 25.4212L1.42792 36.1993C0.647153 36.9803 0.647152 38.2463 1.42792 39.0273L8.98352 46.5851C9.76462 47.3665 11.0313 47.3665 11.8124 46.5852L22.5856 35.8087C23.3667 35.0274 24.6333 35.0274 25.4144 35.8087L36.1876 46.5852C36.9687 47.3665 38.2354 47.3665 39.0165 46.5852L46.5721 39.0272C47.3529 38.2463 47.3529 36.9803 46.5722 36.1993L35.7981 25.4212C35.0174 24.6402 35.0174 23.3742 35.7982 22.5932L46.5864 11.8017C47.3672 11.0207 47.3672 9.75474 46.5864 8.97374L39.0298 1.41485C38.2487 0.633516 36.982 0.633517 36.2009 1.41485L25.4144 12.2046C24.6333 12.9859 23.3667 12.9859 22.5856 12.2046L11.7991 1.41485C11.018 0.633515 9.75131 0.633517 8.97021 1.41485L1.41363 8.97368Z\"/>\n</clipPath><clipPath id=\"bgblur_1_5542_1771_clip_path\" transform=\"translate(29.1719 29.1711)\"><path d=\"M1.41363 8.97368C0.632843 9.7547 0.632868 11.0207 1.41368 11.8017L12.2027 22.5932C12.9835 23.3742 12.9835 24.6402 12.2028 25.4212L1.42792 36.1993C0.647153 36.9803 0.647152 38.2463 1.42792 39.0273L8.98352 46.5851C9.76462 47.3665 11.0313 47.3665 11.8124 46.5852L22.5856 35.8087C23.3667 35.0274 24.6333 35.0274 25.4144 35.8087L36.1876 46.5852C36.9687 47.3665 38.2354 47.3665 39.0165 46.5852L46.5721 39.0272C47.3529 38.2463 47.3529 36.9803 46.5722 36.1993L35.7981 25.4212C35.0174 24.6402 35.0174 23.3742 35.7982 22.5932L46.5864 11.8017C47.3672 11.0207 47.3672 9.75474 46.5864 8.97374L39.0298 1.41485C38.2487 0.633516 36.982 0.633517 36.2009 1.41485L25.4144 12.2046C24.6333 12.9859 23.3667 12.9859 22.5856 12.2046L11.7991 1.41485C11.018 0.633515 9.75131 0.633517 8.97021 1.41485L1.41363 8.97368Z\"/>\n</clipPath><filter id=\"filter2_ii_5542_1771\" x=\"13\" y=\"8\" width=\"64\" height=\"64\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_5542_1771\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_5542_1771\" result=\"effect2_innerShadow_5542_1771\"/>\n</filter>\n<clipPath id=\"bgblur_2_5542_1771_clip_path\" transform=\"translate(-13 -8)\"><circle cx=\"45\" cy=\"40\" r=\"25\"/>\n</clipPath><linearGradient id=\"paint0_linear_5542_1771\" x1=\"25.6452\" y1=\"25.5581\" x2=\"59.8793\" y2=\"53.9208\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#9CFDFF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#56B0FF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E66FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n</defs>\n</svg>\n";
+
+const UploadEvents = {
+  Start: "UploadStart",
+  Progress: "UploadProgress",
+  Complete: "UploadComplete",
+  Error: "UploadError"
+};
+const UPLOAD_OVERLAY_ID = "vouch-upload-overlay";
+const UPLOAD_TITLE = "Preparing Your Data";
+const UPLOAD_SUBTITLE = "Fetching relevant information...";
+const ERROR_TITLE$1 = "Verification Interrupted";
+const ERROR_SUBTITLE = "This is often caused by connection issues.\nCheck your internet and try again.";
+function getErrorIcon() {
+  return colorizeSvg(errorIconRaw$1);
+}
+function createUploadOverlay() {
+  removeProcessingOverlay();
+  if (document.getElementById(UPLOAD_OVERLAY_ID)) {
+    removeUploadOverlay();
+  }
+  injectCss(`${UPLOAD_OVERLAY_ID}-style`);
+  const signetsRow = createSignetsRow();
+  const overlay = div(
+    { id: UPLOAD_OVERLAY_ID, className: "vouch-overlay" },
+    div(
+      { className: "vouch-modal-container" },
+      signetsRow ? div({ className: "vouch-modal-header" }, signetsRow) : null,
+      div(
+        { className: "vouch-modal-content" },
+        div(
+          { className: "vouch-modal-text" },
+          div(
+            { className: "vouch-modal-title-row" },
+            div({
+              className: "vouch-modal-title",
+              textContent: UPLOAD_TITLE
+            })
+          ),
+          div({
+            className: "vouch-modal-subtitle",
+            textContent: UPLOAD_SUBTITLE
+          })
+        ),
+        div(
+          { className: "vouch-modal-bottom" },
+          div(
+            { className: "vouch-progress-text-container" },
+            div({
+              className: "vouch-progress-text-background",
+              textContent: "0%"
+            }),
+            div({ className: "vouch-progress-text-fill", textContent: "0%" })
+          ),
+          createInfoBox()
+        )
+      )
+    )
+  );
+  document.body.appendChild(overlay);
+}
+function updateUploadProgress(progress) {
+  const progressBackground = document.querySelector(
+    `#${UPLOAD_OVERLAY_ID} .vouch-progress-text-background`
+  );
+  const progressFill = document.querySelector(
+    `#${UPLOAD_OVERLAY_ID} .vouch-progress-text-fill`
+  );
+  const displayText = `${Math.round(progress).toString()}%`;
+  const clipInset = 90 - progress * 0.8;
+  if (progressBackground) {
+    progressBackground.textContent = displayText;
+  }
+  if (progressFill) {
+    progressFill.textContent = displayText;
+    progressFill.style.clipPath = `inset(${clipInset.toString()}% 0 0 0)`;
+  }
+}
+function removeUploadOverlay() {
+  document.getElementById(UPLOAD_OVERLAY_ID)?.remove();
+  removeInjectedCss(`${UPLOAD_OVERLAY_ID}-style`);
+}
+function transformUploadToErrorState() {
+  const overlay = document.getElementById(UPLOAD_OVERLAY_ID);
+  if (!overlay) return;
+  const modalContent = overlay.querySelector(".vouch-modal-content");
+  if (!modalContent) return;
+  const errorContent = createErrorModalContent({
+    title: ERROR_TITLE$1,
+    subtitle: ERROR_SUBTITLE,
+    icon: svg(getErrorIcon(), { alt: "Error" }),
+    buttons: [createRetryButton("reupload", removeUploadOverlay)]
+  });
+  modalContent.replaceWith(errorContent);
 }
 
 const MESSAGE_ID = "vouch-processing-message";
@@ -446,7 +477,7 @@ function showMessage({
       { className: "vouch-processing" },
       div(
         { className: "modal-container" },
-        withVouchLogo && img({ className: "logo", alt: "vouch", src: logo }),
+        withVouchLogo && svg(logoRaw, { className: "logo", alt: "vouch" }),
         div(
           { className: "message-container" },
           Boolean(header?.length) && div({
@@ -475,6 +506,41 @@ function hideMessage() {
   if (message) {
     message.remove();
   }
+}
+
+const errorIconRaw = "<svg width=\"91\" height=\"87\" viewBox=\"0 0 91 87\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect y=\"22\" width=\"58\" height=\"58\" rx=\"29\" fill=\"url(#paint0_linear_3930_34401)\"/>\n<g filter=\"url(#filter0_ii_3930_34401)\">\n<path d=\"M45.335 13.3052C45.4656 13.2726 45.5982 13.2587 45.7307 13.2681C46.2481 13.309 46.7351 13.5787 46.9325 14.0621L50.9713 23.9786L52.0766 22.353C52.2735 22.0633 52.5627 21.8717 52.88 21.7925C53.2242 21.7066 53.5991 21.7522 53.9225 21.9465L75.3497 34.8171C75.9761 35.1937 76.2002 35.9904 75.8598 36.6364L74.9447 38.376L85.5952 37.2829C86.1147 37.2298 86.6182 37.4753 86.8988 37.9181C87.1761 38.3591 87.181 38.9222 86.9094 39.3669C82.2697 47.0916 74.7548 52.7216 66.1719 55.036C59.6771 67.424 47.0506 77.516 34.4941 80.4108C33.7773 80.5696 33.0607 80.139 32.8649 79.4342C29.4592 67.0222 32.4914 51.1271 40.3825 39.5528C38.3937 30.8887 39.8337 21.6099 44.4092 13.992C44.6101 13.6613 44.9561 13.3997 45.335 13.3052ZM79.903 0.990802C80.2523 0.903785 80.6249 0.955692 80.9448 1.14777C81.3755 1.40876 81.6333 1.8862 81.609 2.39109C81.5355 3.96184 80.8338 17.8354 78.6913 21.4024C76.2777 25.417 71.0495 26.7249 67.0295 24.3129C63.0122 21.9 61.7061 16.6675 64.1189 12.6501C66.2613 9.08318 78.1797 1.94635 79.5319 1.14344C79.6507 1.07413 79.7749 1.02276 79.903 0.990802Z\" fill=\"url(#paint1_linear_3930_34401)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M45.7106 13.5162L45.7107 13.5172C46.1059 13.5485 46.4517 13.7293 46.6337 14.0236L46.7011 14.157L50.7398 24.0726L50.9154 24.5054L51.1781 24.119L52.2834 22.4934C52.4444 22.2564 52.6808 22.0996 52.9407 22.0347C53.2234 21.9642 53.5297 22.0024 53.7936 22.1609L75.2207 35.0316C75.7019 35.3209 75.893 35.9117 75.6857 36.4196L75.6385 36.5197L74.7234 38.2593L74.5062 38.6721L74.9707 38.6251L85.6202 37.5321C85.9918 37.4941 86.3541 37.6423 86.5931 37.9234L86.6874 38.0515C86.9142 38.4125 86.9176 38.8736 86.6958 39.2368L86.6949 39.2379C82.0886 46.9069 74.6272 52.4975 66.1065 54.7951L66.0011 54.8228L65.9507 54.9203C59.5877 67.0568 47.3085 76.9761 35.0232 80.0273L34.4383 80.1671C33.8882 80.288 33.3386 79.9855 33.1403 79.4726L33.1057 79.3677C29.7216 67.034 32.735 51.2134 40.5892 39.6931L40.6501 39.6036L40.6262 39.4969C38.6517 30.8951 40.0809 21.6818 44.6228 14.12C44.7907 13.8443 45.0833 13.6253 45.3957 13.5474C45.5029 13.5207 45.6082 13.5093 45.7106 13.5162ZM79.9637 1.23298C80.2136 1.17082 80.4781 1.19539 80.7161 1.30812L80.8159 1.36223C81.1686 1.5763 81.3792 1.967 81.3595 2.37876L81.3596 2.37974C81.3229 3.16394 81.1286 7.0182 80.6771 11.1204C80.4513 13.172 80.1622 15.2819 79.796 17.0983C79.4279 18.9246 78.988 20.4221 78.4768 21.2733C76.1343 25.1697 71.0601 26.4391 67.1585 24.0983C63.2596 21.7565 61.9918 16.678 64.3335 12.779C64.8447 11.9278 65.9605 10.8367 67.3999 9.65375C68.8316 8.47721 70.5572 7.22962 72.2624 6.06644C75.6697 3.74222 78.9799 1.76205 79.658 1.35939C79.7576 1.30128 79.86 1.25886 79.9637 1.23298Z\" stroke=\"url(#paint2_linear_3930_34401)\" stroke-opacity=\"0.3\" stroke-width=\"0.5\"/>\n<circle cx=\"46.9145\" cy=\"57.5243\" r=\"6.5\" transform=\"rotate(-4.93988 46.9145 57.5243)\" fill=\"white\"/>\n<path d=\"M30.0918 65.3078L32.6978 78.8484C32.7179 78.9533 32.5738 79.0034 32.5247 78.9085L28.5313 71.2051C28.502 71.1485 28.4255 71.1378 28.3817 71.1842L24.8206 74.9647C24.7691 75.0194 24.6773 74.9932 24.6625 74.9195L22.0949 62.1689C22.0747 62.0684 22.2085 62.0144 22.2637 62.1007L26.2338 68.3131C26.2641 68.3606 26.3295 68.3701 26.3722 68.3333L29.9404 65.2552C29.9943 65.2087 30.0784 65.2379 30.0918 65.3078Z\" fill=\"white\"/>\n<path d=\"M42.0202 84.8457L54.9824 78.1548L45.7039 79.9238L46.5188 74.4812L34.309 80.6517L42.2449 79.8715L42.0202 84.8457Z\" fill=\"url(#paint3_linear_3930_34401)\"/>\n<defs>\n<filter id=\"filter0_ii_3930_34401\" x=\"26.4824\" y=\"-4.05005\" width=\"65.627\" height=\"89.4937\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_3930_34401\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_3930_34401\" result=\"effect2_innerShadow_3930_34401\"/>\n</filter>\n<linearGradient id=\"paint0_linear_3930_34401\" x1=\"29\" y1=\"80\" x2=\"29\" y2=\"22\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#F783E4\"/>\n<stop offset=\"1\" stop-color=\"#E73E52\"/>\n</linearGradient>\n<linearGradient id=\"paint1_linear_3930_34401\" x1=\"33.7812\" y1=\"20.9079\" x2=\"83.8612\" y2=\"47.2029\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#FFC09C\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#FFB856\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#C14EFF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint2_linear_3930_34401\" x1=\"32.6693\" y1=\"12.0241\" x2=\"103.41\" y2=\"33.4872\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#5A81FF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#567DFF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E78FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint3_linear_3930_34401\" x1=\"42.2417\" y1=\"84.9419\" x2=\"46.7403\" y2=\"74.5774\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#F783E4\"/>\n<stop offset=\"1\" stop-color=\"#E73E52\"/>\n</linearGradient>\n</defs>\n</svg>\n";
+
+const ERROR_OVERLAY_ID = "vouch-error-overlay";
+const STYLE_ID = `${ERROR_OVERLAY_ID}-style`;
+const ERROR_TITLE = "Something Went Wrong";
+function createErrorOverlay(error) {
+  if (document.getElementById(ERROR_OVERLAY_ID)) {
+    removeErrorOverlay();
+  }
+  injectCss(STYLE_ID);
+  const signetsRow = createSignetsRow();
+  const errorContent = createErrorModalContent({
+    title: ERROR_TITLE,
+    subtitle: error.message,
+    icon: svg(errorIconRaw, { alt: "Error" }),
+    buttons: [
+      createReportIssueButton(),
+      createRetryButton("error", removeErrorOverlay)
+    ]
+  });
+  const overlay = div(
+    { id: ERROR_OVERLAY_ID, className: "vouch-overlay" },
+    div(
+      { className: "vouch-modal-container" },
+      signetsRow ? div({ className: "vouch-modal-header" }, signetsRow) : null,
+      errorContent
+    )
+  );
+  document.body.appendChild(overlay);
+}
+function removeErrorOverlay() {
+  document.getElementById(ERROR_OVERLAY_ID)?.remove();
+  removeInjectedCss(STYLE_ID);
 }
 
 async function waitQuerySelectorAll(selector, timeout = 5e3, interval = 100) {
@@ -508,10 +574,41 @@ function reuploadAttachment(attachment) {
   window.sendEvent(event);
 }
 function openProcessingOverlay(options) {
+  if (window.__VOUCH_MOBILE__) {
+    createProcessingOverlay(options);
+    return;
+  }
+  window.sendEvent({
+    type: "OpenOverlay",
+    payload: options ?? {}
+  });
+}
+function injectProcessingOverlay(options) {
   createProcessingOverlay(options);
 }
 function closeProcessingOverlay() {
+  if (window.__VOUCH_MOBILE__) {
+    removeProcessingOverlay();
+    return;
+  }
+  window.sendEvent({
+    type: "CloseOverlay"
+  });
+}
+function injectCloseProcessingOverlay() {
   removeProcessingOverlay();
+}
+function injectUploadOverlay() {
+  createUploadOverlay();
+}
+function injectCloseUploadOverlay() {
+  removeUploadOverlay();
+}
+function injectUpdateUploadProgress(progress) {
+  updateUploadProgress(progress);
+}
+function injectUploadErrorState() {
+  transformUploadToErrorState();
 }
 function displayMessage(options) {
   showMessage(options);
@@ -566,7 +663,7 @@ XMLHttpRequest.prototype.send = function (...args) {
   let url = self.requestURL;
   url = addHostIfMissing(url);
   const method = self.method;
-  setCacheKeyHeader(self);
+  setCacheKeyHeader(url, self);
   var headers = self.headers;
   headers.push(["user-agent", navigator.userAgent]);
   try {
@@ -647,7 +744,7 @@ window.fetch = async function (input, init = {}) {
   let requestBody;
   if (input instanceof Request) {
     headers = new Headers(input.headers);
-    setCacheKeyHeader(headers);
+    setCacheKeyHeader(url, headers);
 
     if (input.body) {
       const body = await readableStreamToUint8Array(input.body);
@@ -675,7 +772,7 @@ window.fetch = async function (input, init = {}) {
       requestBody = [];
     }
 
-    setCacheKeyHeader(headers);
+    setCacheKeyHeader(url, headers);
     init.headers = Object.fromEntries(headers.entries());
   }
 

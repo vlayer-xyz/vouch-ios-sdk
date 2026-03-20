@@ -41,8 +41,7 @@
 "verify.false" = "fałsz";
 "verify.verify_button_title" = "Zweryfikuj";
 
-"proving.title" = "Pozostaw aplikację otwartą i aktywną do zakończenia weryfikacji";
-"proving.task_label" = "Tworzenie dowodu %s";
+"proving.title" = "Nie opuszczaj tego ekranu.\nWeryfikacja się zatrzyma.";
 "proving.progress.configuration" = "Pobieranie konfiguracji...";
 "proving.progress.start_proving" = "Rozpoczynanie tworzenia dowodu...";
 "proving.progress.proving" = "Tworzenie dowodu...";
