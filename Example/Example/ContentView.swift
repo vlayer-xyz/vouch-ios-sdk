@@ -26,8 +26,8 @@ struct ContentView: View {
     .padding()
     .popover(isPresented: $popoverVisible) {
       sdk.start(
-        dataSourceId: "4ce5983b-06b6-4097-9dd4-bbf03a667560",
-        webhookUrl: "",
+        dataSourceId: "e03b846f-58ce-4ae7-b96e-c454c5a1314e",
+        webhookUrl: "https://your-webhook-url.com",
         inputs: [:],
         callback: { result in
           switch result {
@@ -60,6 +60,8 @@ struct ContentView: View {
               print("Proof id taken.")
             case .processingTimeout:
               print("Processing timeout.")
+            case .apiKey:
+              print("Wrong API key.")
             @unknown default:
               print("Unknown error.")
             }

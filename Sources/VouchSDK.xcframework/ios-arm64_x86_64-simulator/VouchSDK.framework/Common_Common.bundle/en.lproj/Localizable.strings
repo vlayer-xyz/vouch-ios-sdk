@@ -9,8 +9,8 @@
 "home.no_claims_description" = "You don't have\nany claims yet.";
 "home.add_claim_button_title" = "Add Claim";
 
-"loading.error.bad_request.title" = "Internal error";
-"loading.error.bad_request.description" = "Unable to download a proof config because of a bad request.";
+"loading.error.bad_request.title" = "Bad request";
+"loading.error.bad_request.description" = "Please try downloading the latest version of the app.";
 "loading.error.unknown.title" = "Unknown error";
 "loading.error.unknown.description" = "Loading failed because of an unknown error.";
 "loading.error.connection.title" = "Connection error";
@@ -21,6 +21,10 @@
 "loading.error.decoding.description" = "Failed to decode the response. Please try downloading the latest version of the app.";
 "loading.error.undocumented.title" = "Unexpected server response";
 "loading.error.undocumented.description" = "Vouch server returned status code %d.";
+"loading.error.unauthorized.title" = "Unauthorized";
+"loading.error.unauthorized.description" = "Creating Proof Request failed because API key is invalid or missing.";
+"loading.error.requestIdTaken.title" = "Internal error";
+"loading.error.requestIdTaken.description" = "Proof request id has already been taken.";
 
 "sniffer.alert_title" = "Alert";
 "sniffer.error.title" = "Invalid data source";

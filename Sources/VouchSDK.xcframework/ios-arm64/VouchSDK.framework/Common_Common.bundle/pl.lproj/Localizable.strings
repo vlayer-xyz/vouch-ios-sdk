@@ -9,8 +9,8 @@
 "home.no_claims_description" = "Nie masz jeszcze\nżadnych oświadczeń.";
 "home.add_claim_button_title" = "Dodaj oświadczenie";
 
-"loading.error.bad_request.title" = "Błąd wewnętrzny";
-"loading.error.bad_request.description" = "Nie można pobrać konfiguracji dowodu z powodu błędnego żądania.";
+"loading.error.bad_request.title" = "Błędne żądanie";
+"loading.error.bad_request.description" = "Spróbuj pobrać najnowszą wersję aplikacji.";
 "loading.error.unknown.title" = "Nieznany błąd";
 "loading.error.unknown.description" = "Ładowanie nie powiodło się z powodu nieznanego błędu.";
 "loading.error.connection.title" = "Błąd połączenia";
@@ -21,6 +21,10 @@
 "loading.error.decoding.description" = "Nie udało się zdekodować odpowiedzi. Spróbuj pobrać najnowszą wersję aplikacji.";
 "loading.error.undocumented.title" = "Nieoczekiwana odpowiedź serwera";
 "loading.error.undocumented.description" = "Serwer Vouch zwrócił kod stanu %d.";
+"loading.error.unauthorized.title" = "Brak autoryzacji";
+"loading.error.unauthorized.description" = "Nie udało się utworzyć żądania dowodu, ponieważ klucz API jest nieprawidłowy lub go brakuje.";
+"loading.error.requestIdTaken.title" = "Błąd wewnętrzny";
+"loading.error.requestIdTaken.description" = "Identyfikator żądania dowodu został już zajęty.";
 
 "sniffer.alert_title" = "Ostrzeżenie";
 "sniffer.error.title" = "Nieprawidłowe źródło danych";

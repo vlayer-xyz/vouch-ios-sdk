@@ -37,7 +37,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(customerId:)",
+            "printedName": "init(customerId:apiKey:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -50,11 +50,17 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8VouchSDK0B0C10customerIdACSS_tcfc",
-            "mangledName": "$s8VouchSDK0B0C10customerIdACSS_tcfc",
+            "usr": "s:8VouchSDK0B0C10customerId6apiKeyACSS_SStcfc",
+            "mangledName": "$s8VouchSDK0B0C10customerId6apiKeyACSS_SStcfc",
             "moduleName": "VouchSDK",
             "declAttributes": [
               "AccessControl",
@@ -88,7 +94,7 @@
           {
             "kind": "Function",
             "name": "start",
-            "printedName": "start(dataSourceId:webhookUrl:inputs:callback:)",
+            "printedName": "start(dataSourceId:webhookUrl:inputs:metadata:callback:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -137,6 +143,21 @@
                 "usr": "s:SD"
               },
               {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
                 "printedName": "(Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> ()",
@@ -170,8 +191,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8VouchSDK0B0C5start12dataSourceId10webhookUrl6inputs8callbackQrSS_SSSDyS2SGys6ResultOyAA0A7SuccessVAA0A5ErrorVGScMYcctF",
-            "mangledName": "$s8VouchSDK0B0C5start12dataSourceId10webhookUrl6inputs8callbackQrSS_SSSDyS2SGys6ResultOyAA0A7SuccessVAA0A5ErrorVGScMYcctF",
+            "usr": "s:8VouchSDK0B0C5start12dataSourceId10webhookUrl6inputs8metadata8callbackQrSS_SSSDyS2SGSSSgys6ResultOyAA0A7SuccessVAA0A5ErrorVGScMYcctF",
+            "mangledName": "$s8VouchSDK0B0C5start12dataSourceId10webhookUrl6inputs8metadata8callbackQrSS_SSSDyS2SGSSSgys6ResultOyAA0A7SuccessVAA0A5ErrorVGScMYcctF",
             "moduleName": "VouchSDK",
             "declAttributes": [
               "AccessControl",
@@ -378,6 +399,43 @@
         "name": "VouchErrorReason",
         "printedName": "VouchErrorReason",
         "children": [
+          {
+            "kind": "Var",
+            "name": "apiKey",
+            "printedName": "apiKey",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReason.Type) -> VouchSDK.VouchErrorReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReason",
+                    "printedName": "VouchSDK.VouchErrorReason",
+                    "usr": "s:8VouchSDK0A11ErrorReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReason",
+                        "printedName": "VouchSDK.VouchErrorReason",
+                        "usr": "s:8VouchSDK0A11ErrorReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK0A11ErrorReasonO6apiKeyyA2CmF",
+            "mangledName": "$s8VouchSDK0A11ErrorReasonO6apiKeyyA2CmF",
+            "moduleName": "VouchSDK"
+          },
           {
             "kind": "Var",
             "name": "dataSourceOrCustomerNotFound",
@@ -1501,6 +1559,47 @@
           },
           {
             "kind": "Var",
+            "name": "apiKey",
+            "printedName": "apiKey",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReasonObjC.Type) -> VouchSDK.VouchErrorReasonObjC",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReasonObjC",
+                    "printedName": "VouchSDK.VouchErrorReasonObjC",
+                    "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReasonObjC.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReasonObjC",
+                        "printedName": "VouchSDK.VouchErrorReasonObjC",
+                        "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC@VouchErrorReasonObjCApiKey",
+            "mangledName": "$s8VouchSDK0A15ErrorReasonObjCO6apiKeyyA2CmF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 12
+          },
+          {
+            "kind": "Var",
             "name": "description",
             "printedName": "description",
             "children": [
@@ -2197,7 +2296,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(customerId:)",
+            "printedName": "init(customerId:apiKey:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2210,13 +2309,19 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)initWithCustomerId:",
-            "mangledName": "$s8VouchSDK0A9SDKBridgeC10customerIdACSS_tcfc",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)initWithCustomerId:apiKey:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC10customerId6apiKeyACSS_SStcfc",
             "moduleName": "VouchSDK",
-            "objc_name": "initWithCustomerId:",
+            "objc_name": "initWithCustomerId:apiKey:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -2252,7 +2357,7 @@
           {
             "kind": "Function",
             "name": "start",
-            "printedName": "start(dataSourceId:webhookUrl:inputs:completion:)",
+            "printedName": "start(dataSourceId:webhookUrl:inputs:metadata:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2296,6 +2401,20 @@
                       }
                     ],
                     "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "usr": "s:Sq"
@@ -2349,10 +2468,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)startWithDataSourceId:webhookUrl:inputs:completion:",
-            "mangledName": "$s8VouchSDK0A9SDKBridgeC5start12dataSourceId10webhookUrl6inputs10completionSo16UIViewControllerCSS_SSSDyS2SGSgyAA0A11SuccessObjCCSg_AA0a5ErrorO1CCSgtYbctF",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)startWithDataSourceId:webhookUrl:inputs:metadata:completion:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC5start12dataSourceId10webhookUrl6inputs8metadata10completionSo16UIViewControllerCSS_SSSDyS2SGSgSSSgyAA0A11SuccessObjCCSg_AA0a5ErrorP1CCSgtYbctF",
             "moduleName": "VouchSDK",
-            "objc_name": "startWithDataSourceId:webhookUrl:inputs:completion:",
+            "objc_name": "startWithDataSourceId:webhookUrl:inputs:metadata:completion:",
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -2762,7 +2881,7 @@
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/SDK.swift",
       "kind": "Dictionary",
-      "offset": 805,
+      "offset": 881,
       "length": 3,
       "value": "[]"
     },
@@ -2771,7 +2890,7 @@
       "kind": "StringLiteral",
       "offset": 104,
       "length": 7,
-      "value": "\"0.2.3\""
+      "value": "\"0.3.0\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
@@ -2859,8 +2978,15 @@
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "kind": "IntegerLiteral",
+      "offset": 672,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "StringLiteral",
-      "offset": 6271,
+      "offset": 6567,
       "length": 7,
       "value": "\"0.0.3\""
     }

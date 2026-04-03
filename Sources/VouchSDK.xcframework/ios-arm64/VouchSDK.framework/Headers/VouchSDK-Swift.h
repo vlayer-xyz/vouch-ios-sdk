@@ -332,6 +332,7 @@ typedef SWIFT_ENUM(NSInteger, VouchErrorReasonObjC, open) {
   VouchErrorReasonObjCProofIdTaken = 9,
   VouchErrorReasonObjCNetworkConnectionLost = 10,
   VouchErrorReasonObjCProcessingTimeout = 11,
+  VouchErrorReasonObjCApiKey = 12,
 };
 
 @class VouchSuccessObjC;
@@ -343,7 +344,9 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 /// Initialize with a customer ID
 /// \param customerId The unique customer identifier
 ///
-- (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId OBJC_DESIGNATED_INITIALIZER;
+/// \param apiKey The unique customer api key
+///
+- (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId apiKey:(NSString * _Nonnull)apiKey OBJC_DESIGNATED_INITIALIZER;
 + (BOOL)isSupported SWIFT_WARN_UNUSED_RESULT;
 /// Start a proof request flow. Returns a UIViewController to present.
 /// \param dataSourceId The data source identifier
@@ -354,7 +357,7 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 ///
 /// \param completion Completion handler called with success or error
 ///
-- (UIViewController * _Nonnull)startWithDataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nonnull)webhookUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs completion:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
+- (UIViewController * _Nonnull)startWithDataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nonnull)webhookUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata completion:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
 /// Get the SDK version
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersion;)
 + (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;

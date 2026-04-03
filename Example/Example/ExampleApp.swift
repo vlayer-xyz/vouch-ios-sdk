@@ -10,7 +10,7 @@ import VouchSDK
 
 @main
 struct ExampleApp: App {
-  let sdk = VouchSDK.SDK(customerId: "1be03be8-5014-413c-835a-feddf4020da2")
+  let sdk = VouchSDK.SDK(customerId: "YOUR_CUSTOMER_ID", apiKey: "YOUR_API_KEY")
 
   var body: some Scene {
     WindowGroup {
