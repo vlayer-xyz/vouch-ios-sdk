@@ -32,7 +32,7 @@ import VouchSDK
 ```
 Initialize the Vouch SDK
 ```swift
-let sdk = VouchSDK.SDK(customerId: "your_customer_id")
+let sdk = VouchSDK.SDK(customerId: "your_customer_id", apiKey: "your_api_key")
 ```
 Start proof by calling the `start` method providing data source id, customer id (provided by Vouch), webhook url (to receive proof results) and a callback:
 ```swift
