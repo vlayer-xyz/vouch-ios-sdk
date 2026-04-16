@@ -93,6 +93,27 @@
           },
           {
             "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8VouchSDK0B0C10initializeyyYaAA0A5ErrorVYKF",
+            "mangledName": "$s8VouchSDK0B0C10initializeyyYaAA0A5ErrorVYKF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "start",
             "printedName": "start(dataSourceId:webhookUrl:inputs:metadata:callback:)",
             "children": [
@@ -881,6 +902,80 @@
             "moduleName": "VouchSDK"
           },
           {
+            "kind": "Var",
+            "name": "internalServer",
+            "printedName": "internalServer",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReason.Type) -> VouchSDK.VouchErrorReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReason",
+                    "printedName": "VouchSDK.VouchErrorReason",
+                    "usr": "s:8VouchSDK0A11ErrorReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReason",
+                        "printedName": "VouchSDK.VouchErrorReason",
+                        "usr": "s:8VouchSDK0A11ErrorReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK0A11ErrorReasonO14internalServeryA2CmF",
+            "mangledName": "$s8VouchSDK0A11ErrorReasonO14internalServeryA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "uninitialized",
+            "printedName": "uninitialized",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReason.Type) -> VouchSDK.VouchErrorReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReason",
+                    "printedName": "VouchSDK.VouchErrorReason",
+                    "usr": "s:8VouchSDK0A11ErrorReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReason",
+                        "printedName": "VouchSDK.VouchErrorReason",
+                        "usr": "s:8VouchSDK0A11ErrorReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK0A11ErrorReasonO13uninitializedyA2CmF",
+            "mangledName": "$s8VouchSDK0A11ErrorReasonO13uninitializedyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -1597,6 +1692,88 @@
               "ObjC"
             ],
             "fixedbinaryorder": 12
+          },
+          {
+            "kind": "Var",
+            "name": "internalServer",
+            "printedName": "internalServer",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReasonObjC.Type) -> VouchSDK.VouchErrorReasonObjC",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReasonObjC",
+                    "printedName": "VouchSDK.VouchErrorReasonObjC",
+                    "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReasonObjC.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReasonObjC",
+                        "printedName": "VouchSDK.VouchErrorReasonObjC",
+                        "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC@VouchErrorReasonObjCInternalServer",
+            "mangledName": "$s8VouchSDK0A15ErrorReasonObjCO14internalServeryA2CmF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 13
+          },
+          {
+            "kind": "Var",
+            "name": "uninitialized",
+            "printedName": "uninitialized",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReasonObjC.Type) -> VouchSDK.VouchErrorReasonObjC",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReasonObjC",
+                    "printedName": "VouchSDK.VouchErrorReasonObjC",
+                    "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReasonObjC.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReasonObjC",
+                        "printedName": "VouchSDK.VouchErrorReasonObjC",
+                        "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC@VouchErrorReasonObjCUninitialized",
+            "mangledName": "$s8VouchSDK0A15ErrorReasonObjCO13uninitializedyA2CmF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 14
           },
           {
             "kind": "Var",
@@ -2356,6 +2533,31 @@
           },
           {
             "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)initializeWithCompletionHandler:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC10initializeyyYaKF",
+            "moduleName": "VouchSDK",
+            "objc_name": "initializeWithCompletionHandler:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "Custom",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "start",
             "printedName": "start(dataSourceId:webhookUrl:inputs:metadata:completion:)",
             "children": [
@@ -2479,55 +2681,6 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "sdkVersion",
-            "printedName": "sdkVersion",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(cpy)sdkVersion",
-            "mangledName": "$s8VouchSDK0A9SDKBridgeC10sdkVersionSSvpZ",
-            "moduleName": "VouchSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(cm)sdkVersion",
-                "mangledName": "$s8VouchSDK0A9SDKBridgeC10sdkVersionSSvgZ",
-                "moduleName": "VouchSDK",
-                "static": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
           },
           {
             "kind": "Constructor",
@@ -2881,7 +3034,7 @@
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/SDK.swift",
       "kind": "Dictionary",
-      "offset": 881,
+      "offset": 1764,
       "length": 3,
       "value": "[]"
     },
@@ -2890,7 +3043,7 @@
       "kind": "StringLiteral",
       "offset": 104,
       "length": 7,
-      "value": "\"0.3.0\""
+      "value": "\"0.4.0\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
@@ -2985,10 +3138,17 @@
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
-      "kind": "StringLiteral",
-      "offset": 6567,
-      "length": 7,
-      "value": "\"0.0.3\""
+      "kind": "IntegerLiteral",
+      "offset": 701,
+      "length": 2,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "kind": "IntegerLiteral",
+      "offset": 729,
+      "length": 2,
+      "value": "14"
     }
   ]
 }

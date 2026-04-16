@@ -1,16 +1,23 @@
-"general.privacy_policy" = "Dowiedz się więcej o tym, jak vouch chroni Twoją [Prywatność](https://www.vlayer.xyz/privacy-policy)";
-"general.unavailable" = "Vouch wymaga iOS 16.4 lub nowszego, aby działać";
+"general.unavailable.ios" = "Vouch wymaga iOS 16.4 lub nowszego, aby działać";
+"general.powered_by" = "Powered by";
 
-"home.title" = "Witamy w";
-"home.description" = "Wybierz pokazowe źródło, aby zobaczyć jak to działa.";
-"home.start_button_title" = "Przeglądaj źródła";
-"home.try_button_title" = "Wypróbuj przykład";
+"home.welcome.title" = "Zweryfikuj z Vouch";
+"home.welcome.description" = "Vouch weryfikuje Twoją tożsamość, zatrudnienie i dane społecznościowe - bez potrzeby dokumentów.";
+"home.welcome.warning.title" = "Wróć do swojej aplikacji";
+"home.welcome.warning.description" = "Aby rozpocząć, wróć do aplikacji, która Cię tu wysłała.";
+"home.welcome.try_button.action" = "tutaj";
+"home.welcome.try_button.description" = "Wypróbuj demonstracyjną weryfikację ";
 "home.claims_title" = "Moje oświadczenia:";
 "home.no_claims_description" = "Nie masz jeszcze\nżadnych oświadczeń.";
 "home.add_claim_button_title" = "Dodaj oświadczenie";
 
 "loading.error.bad_request.title" = "Błędne żądanie";
 "loading.error.bad_request.description" = "Spróbuj pobrać najnowszą wersję aplikacji.";
+"loading.title" = "Otwieranie %@";
+"loading.title_generic" = "Rozpoczynanie weryfikacji";
+"loading.description" = "Zalogujesz się bezpośrednio do %@.";
+"loading.warning.title" = "Vouch Verifier nigdy nie widzi Twojego hasła.";
+"loading.warning.description" = "Twoje hasło pozostaje tylko u Ciebie. Odczytujemy wyłącznie dane do zweryfikowania.";
 "loading.error.unknown.title" = "Nieznany błąd";
 "loading.error.unknown.description" = "Ładowanie nie powiodło się z powodu nieznanego błędu.";
 "loading.error.connection.title" = "Błąd połączenia";
@@ -20,41 +27,43 @@
 "loading.error.decoding.title" = "Błąd dekodowania";
 "loading.error.decoding.description" = "Nie udało się zdekodować odpowiedzi. Spróbuj pobrać najnowszą wersję aplikacji.";
 "loading.error.undocumented.title" = "Nieoczekiwana odpowiedź serwera";
-"loading.error.undocumented.description" = "Serwer Vouch zwrócił kod stanu %d.";
+"loading.error.undocumented.description" = "Serwer Vouch zwrócił kod stanu %@.";
 "loading.error.unauthorized.title" = "Brak autoryzacji";
 "loading.error.unauthorized.description" = "Nie udało się utworzyć żądania dowodu, ponieważ klucz API jest nieprawidłowy lub go brakuje.";
 "loading.error.requestIdTaken.title" = "Błąd wewnętrzny";
 "loading.error.requestIdTaken.description" = "Identyfikator żądania dowodu został już zajęty.";
 
 "sniffer.alert_title" = "Ostrzeżenie";
-"sniffer.error.title" = "Nieprawidłowe źródło danych";
-"sniffer.error.description" = "Źródło danych zawiera nieprawidłowe notaryzacje:";
-"sniffer.error.url_pattern" = "Nieprawidłowy wzorzec URL: %s";
-"sniffer.error.body_filter" = "Nieprawidłowy filtr treści: %s";
-"sniffer.error.output" = "Nieprawidłowy filtr wyjściowy: %s";
+"sniffer.error.invalid_datasource.title" = "Nieprawidłowe źródło danych";
+"sniffer.error.invalid_datasource.description" = "Źródło danych zawiera nieprawidłowe notaryzacje:";
+"sniffer.error.invalid_datasource.url_pattern" = "Nieprawidłowy wzorzec URL: %@";
+"sniffer.error.invalid_datasource.body_filter" = "Nieprawidłowy filtr treści: %@";
+"sniffer.error.invalid_datasource.output" = "Nieprawidłowy filtr wyjściowy: %@";
+"sniffer.error.processing_timeout.title" = "Przekroczono limit przetwarzania";
+"sniffer.error.processing_timeout.description" = "Znalezienie właściwego żądania trwa dłużej niż oczekiwano.";
 "sniffer.draft_mode_banner" = "Tryb roboczy - nie do użytku produkcyjnego.";
+"sniffer.bar.title" = "Zaloguj się do %@.";
+"sniffer.bar.disclaimer" = "Nigdy nie widzimy Twojego hasła.";
 
 "redirect.title" = "Zweryfikuj swoje dane";
-"redirect.description" = "Odwiedź swoje %s, aby kontynuować.";
-"redirect.open_button_title" = "Otwórz %s";
+"redirect.description" = "Odwiedź swoje %@, aby kontynuować.";
+"redirect.open_button_title" = "Otwórz %@";
 
 "verify.title" = "Zweryfikuj swoje prywatne dane";
-"verify.description" = "vouch zweryfikuje teraz Twoje dane w imieniu %s:";
+"verify.description" = "Vouch zweryfikuje teraz Twoje dane w imieniu %@:";
 "verify.no_value" = "null";
 "verify.true" = "prawda";
 "verify.false" = "fałsz";
 "verify.verify_button_title" = "Zweryfikuj";
 
-"proving.title" = "Nie opuszczaj tego ekranu.\nWeryfikacja się zatrzyma.";
-"proving.progress.configuration" = "Pobieranie konfiguracji...";
-"proving.progress.start_proving" = "Rozpoczynanie tworzenia dowodu...";
-"proving.progress.proving" = "Tworzenie dowodu...";
-"proving.progress.redacting" = "Redagowanie wrażliwych informacji...";
-"proving.progress.attachment_uploading" = "Przesyłanie załącznika...";
-"proving.progress.attachment_uploading_finalizing" = "Przetwarzanie załącznika...";
-"proving.progress.uploading" = "Przesyłanie dowodu...";
-"proving.progress.saving" = "Zapisywanie dowodu...";
-"proving.progress.tweak_waiting" = "Oczekiwanie przed wykonaniem żądania...";
+"proving.progress.preparing.title" = "Przygotowywanie weryfikacji";
+"proving.progress.preparing.description" = "Pobieranie Twoich danych z %@...";
+"proving.progress.in_progress.title" = "Weryfikacja w toku";
+"proving.progress.in_progress.description" = "Potwierdzanie Twoich danych w %@.\nZwykle trwa to ok. 40 s.";
+"proving.progress.finalizing.title" = "Prawie gotowe...";
+"proving.progress.finalizing.description" = "Tworzymy dowód\nTwojej weryfikacji.";
+"proving.warning.title" = "Pozostań na tym ekranie";
+"proving.warning.description" = "Opuszczenie teraz spowoduje anulowanie weryfikacji.";
 "proving.error.try_again_button_title" = "Spróbuj ponownie";
 "proving.error.return_button_title" = "Powrót";
 "proving.error.send_logs_button_title" = "Wyślij logi";
@@ -67,7 +76,7 @@
 "proving.error.prove_request_connection.title" = "Błąd połączenia";
 "proving.error.prove_request_connection.description" = "Nie udało się połączyć z serwerem podczas tworzenia dowodu.";
 "proving.error.prove_request_wrong_response.title" = "Błąd połączenia";
-"proving.error.prove_request_wrong_response.description" = "Żądanie nie powiodło się. Kod stanu: %d";
+"proving.error.prove_request_wrong_response.description" = "Żądanie nie powiodło się. Kod stanu: %@";
 "proving.error.prove_request_internal.title" = "Błąd wewnętrzny";
 "proving.error.prove_request_internal.description" = "Tworzenie dowodu nie powiodło się z powodów wewnętrznych.";
 "proving.error.prove_request_timeout.title" = "Przekroczono limit czasu";
@@ -87,7 +96,7 @@
 "proving.error.transcript_wrong_response.title" = "Błąd transkrypcji";
 "proving.error.transcript_wrong_response.description" = "Transkrypcja nie powiodła się, ponieważ odpowiedź była nieprawidłowa.";
 "proving.error.transcript_unsupported.title" = "Błąd transkrypcji";
-"proving.error.transcript_unsupported.description" = "Transkrypcja nieobsługiwana dla jednego z typów treści: [%s] lub kodowań transferu: [%s]";
+"proving.error.transcript_unsupported.description" = "Transkrypcja nieobsługiwana dla jednego z typów treści: [%@] lub kodowań transferu: [%@]";
 "proving.error.transcript_unsupported_jmes_path.title" = "Błąd transkrypcji";
 "proving.error.transcript_unsupported_jmes_path.description" = "Konfiguracja zawiera co najmniej jedną nieobsługiwaną ścieżkę.";
 "proving.error.transcript_internal.title" = "Błąd transkrypcji";
@@ -99,7 +108,7 @@
 "proving.error.upload_request_id_taken.title" = "Identyfikator żądania zajęty";
 "proving.error.upload_request_id_taken.description" = "Dowód dla podanego identyfikatora żądania został już przesłany.";
 "proving.error.upload_undocumented.title" = "Nie udało się przesłać dowodu";
-"proving.error.upload_undocumented.description" = "Przesyłanie nie powiodło się. Kod stanu %d.";
+"proving.error.upload_undocumented.description" = "Przesyłanie nie powiodło się. Kod stanu %@.";
 "proving.error.upload_unknown.title" = "Nieznany błąd";
 "proving.error.upload_unknown.description" = "Nie udało się przesłać dowodu z powodu nieznanego błędu.";
 "proving.error.save_no_format.title" = "Brak formatu";
@@ -117,14 +126,14 @@
 "proving.error.upload_attachment_invalid_response.title" = "Błąd przesłania załącznika.";
 "proving.error.upload_attachment_invalid_response.description" = "Nie udało się przesłać załącznika, ponieważ serwer zwrócił nieprawidłową odpowiedź.";
 "proving.error.upload_attachment_status_code.title" = "Błąd przesłania załącznika.";
-"proving.error.upload_attachment_status_code.description" = "Nie udało się przesłać załącznika z kodem stanu %d.";
+"proving.error.upload_attachment_status_code.description" = "Nie udało się przesłać załącznika z kodem stanu %@.";
 "proving.error.upload_attachment_unknown.title" = "Błąd przesłania załącznika.";
 "proving.error.upload_attachment_unknown.description" = "Nie udało się przesłać załącznika z nieznanych przyczyn.";
-"complete.title" = "Sukces!";
-"complete.description" = "Wszystko gotowe! Twoje dane zostały pomyślnie zweryfikowane przez %s.";
-"complete.description_desktop" = "Wszystko gotowe! Wróć do komputera, aby kontynuować.";
-"complete.description_claims" = "Wszystko gotowe! Twoje oświadczenia zostały pomyślnie zapisane.";
-"complete.go_to_button_title" = "Zakończ";
+
+"success.title" = "Weryfikacja została przesłana";
+"success.description" = "%@ sprawdzi teraz\nTwoją weryfikację.";
+"success.warning.title" = "Wróć do %@";
+"success.warning.description" = "Twój dowód weryfikacji został przesłany.";
 
 "log_preview.title" = "Logi";
 "log_preview.send_logs_button_title" = "Wyślij logi";
@@ -132,12 +141,12 @@
 "log_preview.send_logs_agreement" = "Wysyłając logi, zgadzasz się udostępnić swoje prywatne dane firmie Vouch.";
 "log_preview.refresh_button_title" = "Odśwież";
 "log_preview.alert.success.title" = "Sukces";
-"log_preview.alert.success.description" = "Logi przesłane z identyfikatorem: %s.";
+"log_preview.alert.success.description" = "Logi przesłane z identyfikatorem: %@.";
 "log_preview.alert.error.title" = "Błąd";
 "log_preview.alert.error.connection" = "Nie udało się przesłać logów z powodu błędu połączenia.";
 "log_preview.alert.error.badRequest" = "Nie udało się przesłać logów z powodu błędnego żądania.";
 "log_preview.alert.error.unknown" = "Nie udało się przesłać logów z powodu nieznanego błędu.";
-"log_preview.alert.error.undocumented" = "Nie udało się przesłać logów z powodu nieudokumentowanego błędu o kodzie %d.";
+"log_preview.alert.error.undocumented" = "Nie udało się przesłać logów z powodu nieudokumentowanego błędu o kodzie %@.";
 "log_preview.alert.return_button_title" = "Powrót";
 
 "claim_details.title" = "Szczegóły oświadczenia";
@@ -151,14 +160,14 @@
 
 "claim.creation_date" = "Data oświadczenia";
 
-"select_data_source.title" = "Tworzenie oświadczenia o %s";
+"select_data_source.title" = "Tworzenie oświadczenia o %@";
 "select_data_source.next_button_title" = "Dalej";
 "select_data_source.error.bad_request.title" = "Błędne żądanie";
 "select_data_source.error.bad_request.description" = "Nie udało się pobrać źródeł danych z powodu błędnego żądania.";
 "select_data_source.error.server_error.title" = "Błąd serwera";
 "select_data_source.error.server_error.description" = "Nie udało się pobrać źródeł danych z powodu błędu serwera.";
 "select_data_source.error.undocumented.title" = "Nieoczekiwana odpowiedź";
-"select_data_source.error.undocumented.description" = "Serwer zwrócił nieoczekiwany kod stanu %d podczas pobierania źródeł danych.";
+"select_data_source.error.undocumented.description" = "Serwer zwrócił nieoczekiwany kod stanu %@ podczas pobierania źródeł danych.";
 "select_data_source.error.connection.title" = "Błąd połączenia";
 "select_data_source.error.connection.description" = "Nie udało się połączyć z serwerem, aby pobrać źródła danych.";
 "select_data_source.error.return_button_title" = "Powrót";

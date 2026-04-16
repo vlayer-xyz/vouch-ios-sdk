@@ -12,6 +12,7 @@ import _SwiftConcurrencyShims
 public class SDK {
   @_Concurrency.MainActor public init(customerId: Swift.String, apiKey: Swift.String)
   public static func isSupported() -> Swift.Bool
+  public func initialize() async throws(VouchSDK.VouchError)
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], metadata: Swift.String? = nil, callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
   
@@ -36,6 +37,8 @@ public enum VouchErrorReason : Swift.Error {
   case proofIdTaken
   case networkConnectionLost
   case processingTimeout
+  case internalServer
+  case uninitialized
   public static func == (a: VouchSDK.VouchErrorReason, b: VouchSDK.VouchErrorReason) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -56,6 +59,8 @@ public enum VouchErrorReason : Swift.Error {
   case networkConnectionLost = 10
   case processingTimeout = 11
   case apiKey = 12
+  case internalServer = 13
+  case uninitialized = 14
   public var description: Swift.String {
     get
   }
@@ -81,12 +86,10 @@ public enum VouchErrorReason : Swift.Error {
 @objc public class VouchSDKBridge : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @_Concurrency.MainActor @objc(initWithCustomerId:apiKey:) public init(customerId: Swift.String, apiKey: Swift.String)
   @objc public static func isSupported() -> Swift.Bool
+  @_Concurrency.MainActor @objc public func initialize() async throws
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @objc public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String]?, metadata: Swift.String?, completion: @escaping @Sendable (VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?) -> Swift.Void) -> UIKit.UIViewController
   #endif
-  @objc public static var sdkVersion: Swift.String {
-    @objc get
-  }
   @objc deinit
 }
 public struct VouchSuccess {

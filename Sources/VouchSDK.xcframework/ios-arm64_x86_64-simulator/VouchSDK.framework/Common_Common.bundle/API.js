@@ -149,7 +149,7 @@ function createSignetsRow() {
       { className: "vouch-customer-signet-container" },
       data.customerSignet ? img(data.customerSignet, "Customer", "vouch-signet-img") : null,
       svg(vouchSignetRaw, {
-        alt: "vouch",
+        alt: "Vouch",
         className: "vouch-signet-badge"
       })
     ),
@@ -157,7 +157,7 @@ function createSignetsRow() {
     data.datasourceLogo ? img(data.datasourceLogo, "Data source", "vouch-signet-img") : null
   );
 }
-function createInfoBox() {
+function createInfoBox(messages) {
   return div(
     { className: "vouch-info-box" },
     svg(colorizeSvg(keepTabOpenIconRaw), {
@@ -168,55 +168,47 @@ function createInfoBox() {
       { className: "vouch-info-content" },
       div({
         className: "vouch-info-title",
-        textContent: "Keep this tab open"
+        textContent: messages?.title ?? "Keep this tab open"
       }),
       div({
         className: "vouch-info-description",
-        textContent: "Your verification is running securely in the background."
+        textContent: messages?.subtitle ?? "Your verification is running securely in the background."
       })
     )
   );
 }
-function createRetryButton(type, cleanupFn) {
+function createRetryButton(type, text, cleanupFn) {
   const btn = button({
     className: "vouch-modal-button",
-    textContent: "Try Again",
+    textContent: text,
     type: "button"
   });
   btn.addEventListener("click", () => {
-    window.sendEvent({
-      type: type === "reupload" ? "RetryReupload" : "RetryProcessing"
-    });
+    if (type === "accept-upload-failure") {
+      window.sendEvent({
+        type: "AcceptUploadFailure"
+      });
+    } else {
+      window.sendEvent({
+        type: type === "reupload" ? "RetryReupload" : "RetryProcessing"
+      });
+    }
     cleanupFn();
   });
   return btn;
 }
-function createReportIssueButton() {
+function createReportIssueButton(messages = {}) {
   const btn = button({
     className: "vouch-modal-button vouch-modal-button-outline",
-    textContent: "Report Issue",
+    textContent: messages.textBeforeSent ?? "Report Issue",
     type: "button"
   });
   btn.addEventListener("click", () => {
     window.sendEvent({
       type: "SendLogs"
     });
-    btn.textContent = "Report Sent";
+    btn.textContent = messages.textAfterSent ?? "Report Sent";
     btn.disabled = true;
-  });
-  return btn;
-}
-function createCancelButton(cleanupFn) {
-  const btn = button({
-    className: "vouch-modal-button",
-    textContent: "Cancel",
-    type: "button"
-  });
-  btn.addEventListener("click", () => {
-    window.sendEvent({
-      type: "CancelProcessing"
-    });
-    cleanupFn();
   });
   return btn;
 }
@@ -254,30 +246,43 @@ function getTimeoutIcon() {
   return colorizeSvg(timeoutIconRaw);
 }
 const OVERLAY_ID = "vouch-processing-overlay";
-const PROCESSING_TITLE = "Preparing Verification";
-const PROCESSING_SUBTITLE = "Fetching relevant information...";
-const TIMEOUT_TITLE = "Verification Timed Out";
-const TIMEOUT_SUBTITLE = "This sometimes happens. Try again,\nit usually works the second time.";
+const DEFAULT_MESSAGES$2 = {
+  title: "Preparing Verification",
+  subtitle: "Fetching relevant information...",
+  timeoutTitle: "Verification Timed Out",
+  timeoutSubtitle: "This sometimes happens. Try again,\nit usually works the second time.",
+  timeoutButtons: {
+    beforeSent: "Report Issue",
+    afterSent: "Report Sent",
+    retry: "Try Again"
+  }
+};
 function createProcessingOverlay({
   text,
   withVouchLogo = false,
-  timeout = 3e5
+  timeout = 3e5,
+  messages
 } = {}) {
-  if (document.getElementById(OVERLAY_ID)) {
-    return;
-  }
+  const existingNode = document.getElementById(OVERLAY_ID);
   clearOverlayTimeout();
-  injectCss(`${OVERLAY_ID}-style`);
+  if (!existingNode) {
+    injectCss(`${OVERLAY_ID}-style`);
+  }
   activeOverlayOptions = {
     text,
     withVouchLogo,
-    timeout
+    timeout,
+    messages
   };
   const overlay = div(
     { id: OVERLAY_ID, className: "vouch-overlay" },
     createProcessingModalContainer(activeOverlayOptions)
   );
-  document.body.appendChild(overlay);
+  if (existingNode) {
+    existingNode.replaceWith(overlay);
+  } else {
+    document.documentElement.appendChild(overlay);
+  }
   startOverlayTimeout(timeout);
 }
 function removeProcessingOverlay() {
@@ -290,6 +295,9 @@ function removeProcessingOverlay() {
   removeInjectedCss(`${OVERLAY_ID}-style`);
 }
 function handleTimeout() {
+  window.sendEvent({
+    type: "ProcessingTimeout"
+  });
   window.sendEvent({
     type: "Telemetry",
     payload: {
@@ -309,20 +317,29 @@ function transformToErrorState() {
   if (!overlay) return;
   const modalContent = overlay.querySelector(".vouch-modal-content");
   if (!modalContent) return;
+  const msgs = activeOverlayOptions?.messages ?? DEFAULT_MESSAGES$2;
   const errorContent = createErrorModalContent({
-    title: TIMEOUT_TITLE,
-    subtitle: TIMEOUT_SUBTITLE,
+    title: msgs.timeoutTitle,
+    subtitle: msgs.timeoutSubtitle,
     icon: svg(getTimeoutIcon(), { alt: "Timeout" }),
     buttons: [
-      createReportIssueButton(),
-      createRetryButton("proving", removeProcessingOverlay)
+      createReportIssueButton({
+        textBeforeSent: msgs.timeoutButtons.beforeSent,
+        textAfterSent: msgs.timeoutButtons.afterSent
+      }),
+      createRetryButton(
+        "proving",
+        msgs.timeoutButtons.retry,
+        removeProcessingOverlay
+      )
     ]
   });
   modalContent.replaceWith(errorContent);
 }
 function createProcessingModalContainer({
   text,
-  withVouchLogo = false
+  withVouchLogo = false,
+  messages
 }) {
   const signetsRow = createSignetsRow();
   return div(
@@ -334,18 +351,21 @@ function createProcessingModalContainer({
         { className: "vouch-modal-text" },
         div(
           { className: "vouch-modal-title-row" },
-          withVouchLogo ? svg(logoRaw, { className: "vouch-logo", alt: "vouch" }) : null,
+          withVouchLogo ? svg(logoRaw, { className: "vouch-logo", alt: "Vouch" }) : null,
           div({
             className: "vouch-modal-title",
-            textContent: text ?? PROCESSING_TITLE
+            textContent: text ?? messages?.title ?? DEFAULT_MESSAGES$2.title
           })
         ),
         div({
           className: "vouch-modal-subtitle",
-          textContent: PROCESSING_SUBTITLE
+          textContent: messages?.subtitle ?? DEFAULT_MESSAGES$2.subtitle
         })
       ),
-      div({ className: "vouch-modal-bottom" }, createInfoBox())
+      div(
+        { className: "vouch-modal-bottom" },
+        createInfoBox(messages?.infoBox)
+      )
     )
   );
 }
@@ -357,7 +377,7 @@ function clearOverlayTimeout() {
     timeoutId = null;
   }
 }
-function startOverlayTimeout(timeout) {
+function startOverlayTimeout(timeout = 3e5) {
   clearOverlayTimeout();
   if (timeout > 0) {
     timeoutId = setTimeout(() => {
@@ -375,19 +395,25 @@ const UploadEvents = {
   Error: "UploadError"
 };
 const UPLOAD_OVERLAY_ID = "vouch-upload-overlay";
-const UPLOAD_TITLE = "Preparing Your Data";
-const UPLOAD_SUBTITLE = "Fetching relevant information...";
-const ERROR_TITLE$1 = "Verification Interrupted";
-const ERROR_SUBTITLE = "This is often caused by connection issues.\nCheck your internet and try again.";
+const DEFAULT_MESSAGES$1 = {
+  title: "Preparing Your Data",
+  subtitle: "Fetching relevant information...",
+  errorTitle: "Verification Interrupted",
+  errorSubtitle: "This is often caused by connection issues.\nCheck your internet and try again.",
+  errorButtons: {
+    recoverable: "Try Again",
+    unrecoverable: "Go Back"
+  }
+};
 function getErrorIcon() {
   return colorizeSvg(errorIconRaw$1);
 }
-function createUploadOverlay() {
+function createUploadOverlay({ messages } = {}) {
   removeProcessingOverlay();
-  if (document.getElementById(UPLOAD_OVERLAY_ID)) {
-    removeUploadOverlay();
+  const existingNode = document.getElementById(UPLOAD_OVERLAY_ID);
+  if (!existingNode) {
+    injectCss(`${UPLOAD_OVERLAY_ID}-style`);
   }
-  injectCss(`${UPLOAD_OVERLAY_ID}-style`);
   const signetsRow = createSignetsRow();
   const overlay = div(
     { id: UPLOAD_OVERLAY_ID, className: "vouch-overlay" },
@@ -402,12 +428,12 @@ function createUploadOverlay() {
             { className: "vouch-modal-title-row" },
             div({
               className: "vouch-modal-title",
-              textContent: UPLOAD_TITLE
+              textContent: messages?.title ?? DEFAULT_MESSAGES$1.title
             })
           ),
           div({
             className: "vouch-modal-subtitle",
-            textContent: UPLOAD_SUBTITLE
+            textContent: messages?.subtitle ?? DEFAULT_MESSAGES$1.subtitle
           })
         ),
         div(
@@ -420,12 +446,16 @@ function createUploadOverlay() {
             }),
             div({ className: "vouch-progress-text-fill", textContent: "0%" })
           ),
-          createInfoBox()
+          createInfoBox(messages?.infoBox)
         )
       )
     )
   );
-  document.body.appendChild(overlay);
+  if (existingNode) {
+    existingNode.replaceWith(overlay);
+  } else {
+    document.documentElement.appendChild(overlay);
+  }
 }
 function updateUploadProgress(progress) {
   const progressBackground = document.querySelector(
@@ -448,16 +478,23 @@ function removeUploadOverlay() {
   document.getElementById(UPLOAD_OVERLAY_ID)?.remove();
   removeInjectedCss(`${UPLOAD_OVERLAY_ID}-style`);
 }
-function transformUploadToErrorState() {
+function transformUploadToErrorState({
+  isRecoverable = true,
+  messages
+} = {}) {
   const overlay = document.getElementById(UPLOAD_OVERLAY_ID);
   if (!overlay) return;
   const modalContent = overlay.querySelector(".vouch-modal-content");
   if (!modalContent) return;
+  const retryType = isRecoverable ? "reupload" : "accept-upload-failure";
+  const errorButtonText = isRecoverable ? messages?.errorButtons.recoverable ?? DEFAULT_MESSAGES$1.errorButtons.recoverable : messages?.errorButtons.unrecoverable ?? DEFAULT_MESSAGES$1.errorButtons.unrecoverable;
   const errorContent = createErrorModalContent({
-    title: ERROR_TITLE$1,
-    subtitle: ERROR_SUBTITLE,
+    title: messages?.errorTitle ?? DEFAULT_MESSAGES$1.errorTitle,
+    subtitle: messages?.errorSubtitle ?? DEFAULT_MESSAGES$1.errorSubtitle,
     icon: svg(getErrorIcon(), { alt: "Error" }),
-    buttons: [createRetryButton("reupload", removeUploadOverlay)]
+    buttons: [
+      createRetryButton(retryType, errorButtonText, removeUploadOverlay)
+    ]
   });
   modalContent.replaceWith(errorContent);
 }
@@ -479,7 +516,7 @@ function showMessage({
       { className: "vouch-processing" },
       div(
         { className: "modal-container" },
-        withVouchLogo && svg(logoRaw, { className: "logo", alt: "vouch" }),
+        withVouchLogo && svg(logoRaw, { className: "logo", alt: "Vouch" }),
         div(
           { className: "message-container" },
           Boolean(header?.length) && div({
@@ -510,24 +547,168 @@ function hideMessage() {
   }
 }
 
+const topbarStyles = ":host {\n  position: relative;\n  width: 100%;\n  height: 56px;\n  min-height: 56px;\n  display: block;\n  z-index: 999999;\n}\n\n.vouch-topbar-inner {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 56px;\n  background-color: #ffffff;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 8px 16px;\n  box-sizing: border-box;\n  font-family:\n    \"Manrope\",\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    Roboto,\n    sans-serif;\n  user-select: none;\n  border-bottom: 1px solid #e5e7eb;\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);\n}\n\n.vouch-topbar-inner * {\n  box-sizing: border-box;\n}\n\n.vouch-topbar-left {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n  min-width: 0;\n  flex: 1;\n}\n\n.vouch-topbar-logos {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  flex-shrink: 0;\n}\n\n.vouch-signets-row {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.vouch-customer-signet-container {\n  display: flex;\n  align-items: flex-end;\n  flex-shrink: 0;\n}\n\n.vouch-signet-img {\n  width: 40px;\n  height: 40px;\n  border-radius: 8px;\n  border: 1px solid #e1eae8;\n  object-fit: contain;\n}\n\n.vouch-signet-badge {\n  width: 24px;\n  height: 24px;\n  border-radius: 6px;\n  border: 1px solid #e1eae8;\n  margin-left: -16px;\n  object-fit: contain;\n}\n\n.vouch-signets-arrow {\n  width: 20px;\n  height: 20px;\n  flex-shrink: 0;\n}\n\n.vouch-topbar-message {\n  display: flex;\n  align-items: baseline;\n  gap: 4px;\n  font-size: 14px;\n  font-weight: bold;\n  color: #3a4341;\n  line-height: 1.4;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  min-width: 0;\n}\n\n.vouch-topbar-right {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  flex-shrink: 0;\n  margin-left: 12px;\n}\n\n.vouch-topbar-icon {\n  width: 24px;\n  height: 24px;\n}\n\n.vouch-topbar-help-link {\n  display: flex;\n  align-items: center;\n  line-height: 0;\n}\n\n.vouch-topbar-help-link svg {\n  width: 24px;\n  height: 24px;\n}\n\n.vouch-topbar-help-link:hover {\n  opacity: 0.8;\n}\n\n.vouch-topbar-divider {\n  width: 1px;\n  height: 20px;\n  background-color: #d1d5db;\n}\n\n.vouch-topbar-close {\n  width: 16px;\n  height: 16px;\n  cursor: pointer;\n}\n\n.vouch-topbar-icon-btn {\n  background: none;\n  border: none;\n  padding: 0;\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  anchor-name: --vouch-shield-btn;\n}\n\n.vouch-topbar-icon-btn:hover {\n  opacity: 0.8;\n}\n\n.vouch-topbar-icon-btn svg {\n  width: 24px;\n  height: 24px;\n}\n\n.vouch-security-popup {\n  position: fixed;\n  position-anchor: --vouch-shield-btn;\n  --width: 260px;\n  top: calc(anchor(bottom) + 16px);\n  left: calc(anchor(left) - var(--width));\n  width: var(--width);\n  margin: 0;\n  padding: 24px 16px;\n  background: #ffffff;\n  border: 1px solid #e1eae8;\n  border-radius: 10px;\n  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.07);\n  flex-direction: column;\n  gap: 16px;\n  font-family:\n    \"Manrope\",\n    -apple-system,\n    BlinkMacSystemFont,\n    \"Segoe UI\",\n    Roboto,\n    sans-serif;\n  user-select: none;\n  z-index: 10;\n}\n\n.vouch-security-popup:popover-open {\n  display: flex;\n}\n\n.vouch-popup-title {\n  font-size: 14px;\n  font-weight: 700;\n  color: #000000;\n  line-height: 1.2;\n  text-align: center;\n}\n\n.vouch-popup-body {\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  text-align: center;\n}\n\n.vouch-popup-body-line {\n  font-size: 12px;\n  font-weight: 500;\n  color: #6e837f;\n  line-height: 1.4;\n  white-space: pre-line;\n}\n\n.vouch-popup-info {\n  background: rgba(27, 175, 128, 0.1);\n  border-radius: 12px;\n  padding: 8px 16px;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n}\n\n.vouch-popup-info-title {\n  font-size: 12px;\n  font-weight: 700;\n  color: #3a4341;\n  line-height: 1.2;\n  text-align: left;\n}\n\n.vouch-popup-point {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.vouch-popup-check {\n  width: 16px;\n  height: 16px;\n  flex-shrink: 0;\n}\n\n.vouch-popup-point-text {\n  font-size: 12px;\n  font-weight: 500;\n  color: #3a4341;\n  line-height: 1.4;\n}\n";
+
+const circleShieldRaw = "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle opacity=\"0.1\" cx=\"12\" cy=\"12\" r=\"12\" fill=\"#1BAF80\"/>\n<path d=\"M10.0003 12L11.3337 13.3333L14.0003 10.6667M17.3337 12.6666C17.3337 16 15.0003 17.6666 12.227 18.6333C12.0818 18.6825 11.924 18.6802 11.7803 18.6266C9.00033 17.6666 6.66699 16 6.66699 12.6666V7.99997C6.66699 7.82316 6.73723 7.65359 6.86225 7.52857C6.98728 7.40355 7.15685 7.33331 7.33366 7.33331C8.66699 7.33331 10.3337 6.53331 11.4937 5.51997C11.6349 5.39931 11.8146 5.33301 12.0003 5.33301C12.1861 5.33301 12.3658 5.39931 12.507 5.51997C13.6737 6.53997 15.3337 7.33331 16.667 7.33331C16.8438 7.33331 17.0134 7.40355 17.1384 7.52857C17.2634 7.65359 17.3337 7.82316 17.3337 7.99997V12.6666Z\" stroke=\"#1BAF80\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n";
+
+const circleHelpRaw = "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle opacity=\"0.1\" cx=\"12\" cy=\"12\" r=\"12\" fill=\"#1BAF80\"/>\n<g clip-path=\"url(#clip0_1_18479)\">\n<path d=\"M10.0597 10.0001C10.2164 9.5545 10.5258 9.17879 10.933 8.93948C11.3402 8.70016 11.8189 8.61268 12.2844 8.69253C12.75 8.77238 13.1722 9.0144 13.4764 9.37574C13.7805 9.73708 13.947 10.1944 13.9463 10.6667C13.9463 12.0001 11.9463 12.6667 11.9463 12.6667M11.9997 15.3333H12.0063M18.6663 12C18.6663 15.6819 15.6816 18.6667 11.9997 18.6667C8.31778 18.6667 5.33301 15.6819 5.33301 12C5.33301 8.3181 8.31778 5.33333 11.9997 5.33333C15.6816 5.33333 18.6663 8.3181 18.6663 12Z\" stroke=\"#1BAF80\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_1_18479\">\n<rect width=\"16\" height=\"16\" fill=\"white\" transform=\"translate(4 4)\"/>\n</clipPath>\n</defs>\n</svg>\n";
+
+const closeRaw = "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.26634 12.6667L3.33301 11.7333L7.06634 8L3.33301 4.26667L4.26634 3.33333L7.99967 7.06667L11.733 3.33333L12.6663 4.26667L8.93301 8L12.6663 11.7333L11.733 12.6667L7.99967 8.93333L4.26634 12.6667Z\" fill=\"#6E837F\"/>\n</svg>\n";
+
+const checkSvgRaw = "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M2.5 8.5L6 12L13.5 4.5\" stroke=\"#1baf80\" stroke-width=\"1.5\" stroke-linecap=\"round\"\n          stroke-linejoin=\"round\"/>\n</svg>";
+
+const TOPBAR_ID = "vouch-topbar";
+const DISMISSED_KEY = "vouch-topbar-dismissed";
+function removeTopbar() {
+  document.getElementById(TOPBAR_ID)?.remove();
+  sessionStorage.setItem(DISMISSED_KEY, "true");
+}
+function buildStyleSheet() {
+  const sheet = new CSSStyleSheet();
+  sheet.replaceSync(`${FONT_FACE_CSS}
+${topbarStyles}`);
+  return sheet;
+}
+function createCheckPoint(text) {
+  return div(
+    { className: "vouch-popup-point" },
+    svg(checkSvgRaw, { className: "vouch-popup-check" }),
+    div({ className: "vouch-popup-point-text", textContent: text })
+  );
+}
+const SECURITY_POPUP_ID = "vouch-security-popup";
+function createSecurityPopup(messages) {
+  return dialog(
+    {
+      className: "vouch-security-popup",
+      id: SECURITY_POPUP_ID,
+      popover: "auto"
+    },
+    div({
+      className: "vouch-popup-title",
+      textContent: messages.securityPopup.title
+    }),
+    div(
+      { className: "vouch-popup-body" },
+      div({
+        className: "vouch-popup-body-line",
+        textContent: messages.securityPopup.bodyLine1
+      }),
+      div({
+        className: "vouch-popup-body-line",
+        textContent: messages.securityPopup.bodyLine2
+      })
+    ),
+    div(
+      { className: "vouch-popup-info" },
+      div({
+        className: "vouch-popup-info-title",
+        textContent: messages.securityPopup.neverAccessesTitle
+      }),
+      createCheckPoint(messages.securityPopup.neverAccessesPasswords),
+      createCheckPoint(messages.securityPopup.neverAccessesBrowsing),
+      createCheckPoint(messages.securityPopup.neverAccessesFiles)
+    )
+  );
+}
+function createShieldButton() {
+  const btn = document.createElement("button");
+  btn.className = "vouch-topbar-icon-btn";
+  btn.setAttribute("popovertarget", SECURITY_POPUP_ID);
+  btn.appendChild(svg(circleShieldRaw, { alt: "Security info" }));
+  return btn;
+}
+function createHelpLink() {
+  const body = "Hi Vouch team, I'm having trouble with the verification process. Here's what's happening: [Please describe your issue]\n\nThanks,\n[Name]";
+  const href = `mailto:support@getvouch.io?subject=${encodeURIComponent("Help with verification")}&body=${encodeURIComponent(body)}`;
+  return anchor(
+    { className: "vouch-topbar-help-link", href },
+    svg(circleHelpRaw, { alt: "Help" })
+  );
+}
+function createCloseButton() {
+  const svgElement = svg(closeRaw, {
+    className: "vouch-topbar-close",
+    alt: "Close"
+  });
+  svgElement.setAttribute("role", "button");
+  svgElement.setAttribute("tabindex", "0");
+  svgElement.addEventListener("click", removeTopbar);
+  return svgElement;
+}
+function createTopbar(messages) {
+  const host = document.createElement("div");
+  host.id = TOPBAR_ID;
+  const shadow = host.attachShadow({ mode: "open" });
+  shadow.adoptedStyleSheets = [buildStyleSheet()];
+  const { topbarMessage } = getProofRequestData() ?? { topbarMessage: "" };
+  const signets = createSignetsRow();
+  const topbar = div(
+    { className: "vouch-topbar-inner" },
+    div(
+      { className: "vouch-topbar-left" },
+      div({ className: "vouch-topbar-logos" }, signets),
+      div({
+        className: "vouch-topbar-message",
+        textContent: topbarMessage
+      })
+    ),
+    div(
+      { className: "vouch-topbar-right" },
+      createShieldButton(),
+      createHelpLink(),
+      div({ className: "vouch-topbar-divider" }),
+      createCloseButton()
+    )
+  );
+  shadow.appendChild(topbar);
+  shadow.appendChild(createSecurityPopup(messages));
+  return host;
+}
+function injectTopbar({ messages }) {
+  document.getElementById("__vouch_block_body__")?.remove();
+  if (document.getElementById(TOPBAR_ID)) {
+    return;
+  }
+  if (sessionStorage.getItem(DISMISSED_KEY)) {
+    return;
+  }
+  const topbar = createTopbar(messages);
+  document.body.insertBefore(topbar, document.body.firstChild);
+}
+
 const errorIconRaw = "<svg width=\"91\" height=\"87\" viewBox=\"0 0 91 87\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect y=\"22\" width=\"58\" height=\"58\" rx=\"29\" fill=\"url(#paint0_linear_3930_34401)\"/>\n<g filter=\"url(#filter0_ii_3930_34401)\">\n<path d=\"M45.335 13.3052C45.4656 13.2726 45.5982 13.2587 45.7307 13.2681C46.2481 13.309 46.7351 13.5787 46.9325 14.0621L50.9713 23.9786L52.0766 22.353C52.2735 22.0633 52.5627 21.8717 52.88 21.7925C53.2242 21.7066 53.5991 21.7522 53.9225 21.9465L75.3497 34.8171C75.9761 35.1937 76.2002 35.9904 75.8598 36.6364L74.9447 38.376L85.5952 37.2829C86.1147 37.2298 86.6182 37.4753 86.8988 37.9181C87.1761 38.3591 87.181 38.9222 86.9094 39.3669C82.2697 47.0916 74.7548 52.7216 66.1719 55.036C59.6771 67.424 47.0506 77.516 34.4941 80.4108C33.7773 80.5696 33.0607 80.139 32.8649 79.4342C29.4592 67.0222 32.4914 51.1271 40.3825 39.5528C38.3937 30.8887 39.8337 21.6099 44.4092 13.992C44.6101 13.6613 44.9561 13.3997 45.335 13.3052ZM79.903 0.990802C80.2523 0.903785 80.6249 0.955692 80.9448 1.14777C81.3755 1.40876 81.6333 1.8862 81.609 2.39109C81.5355 3.96184 80.8338 17.8354 78.6913 21.4024C76.2777 25.417 71.0495 26.7249 67.0295 24.3129C63.0122 21.9 61.7061 16.6675 64.1189 12.6501C66.2613 9.08318 78.1797 1.94635 79.5319 1.14344C79.6507 1.07413 79.7749 1.02276 79.903 0.990802Z\" fill=\"url(#paint1_linear_3930_34401)\" fill-opacity=\"0.3\"/>\n</g>\n<path d=\"M45.7106 13.5162L45.7107 13.5172C46.1059 13.5485 46.4517 13.7293 46.6337 14.0236L46.7011 14.157L50.7398 24.0726L50.9154 24.5054L51.1781 24.119L52.2834 22.4934C52.4444 22.2564 52.6808 22.0996 52.9407 22.0347C53.2234 21.9642 53.5297 22.0024 53.7936 22.1609L75.2207 35.0316C75.7019 35.3209 75.893 35.9117 75.6857 36.4196L75.6385 36.5197L74.7234 38.2593L74.5062 38.6721L74.9707 38.6251L85.6202 37.5321C85.9918 37.4941 86.3541 37.6423 86.5931 37.9234L86.6874 38.0515C86.9142 38.4125 86.9176 38.8736 86.6958 39.2368L86.6949 39.2379C82.0886 46.9069 74.6272 52.4975 66.1065 54.7951L66.0011 54.8228L65.9507 54.9203C59.5877 67.0568 47.3085 76.9761 35.0232 80.0273L34.4383 80.1671C33.8882 80.288 33.3386 79.9855 33.1403 79.4726L33.1057 79.3677C29.7216 67.034 32.735 51.2134 40.5892 39.6931L40.6501 39.6036L40.6262 39.4969C38.6517 30.8951 40.0809 21.6818 44.6228 14.12C44.7907 13.8443 45.0833 13.6253 45.3957 13.5474C45.5029 13.5207 45.6082 13.5093 45.7106 13.5162ZM79.9637 1.23298C80.2136 1.17082 80.4781 1.19539 80.7161 1.30812L80.8159 1.36223C81.1686 1.5763 81.3792 1.967 81.3595 2.37876L81.3596 2.37974C81.3229 3.16394 81.1286 7.0182 80.6771 11.1204C80.4513 13.172 80.1622 15.2819 79.796 17.0983C79.4279 18.9246 78.988 20.4221 78.4768 21.2733C76.1343 25.1697 71.0601 26.4391 67.1585 24.0983C63.2596 21.7565 61.9918 16.678 64.3335 12.779C64.8447 11.9278 65.9605 10.8367 67.3999 9.65375C68.8316 8.47721 70.5572 7.22962 72.2624 6.06644C75.6697 3.74222 78.9799 1.76205 79.658 1.35939C79.7576 1.30128 79.86 1.25886 79.9637 1.23298Z\" stroke=\"url(#paint2_linear_3930_34401)\" stroke-opacity=\"0.3\" stroke-width=\"0.5\"/>\n<circle cx=\"46.9145\" cy=\"57.5243\" r=\"6.5\" transform=\"rotate(-4.93988 46.9145 57.5243)\" fill=\"white\"/>\n<path d=\"M30.0918 65.3078L32.6978 78.8484C32.7179 78.9533 32.5738 79.0034 32.5247 78.9085L28.5313 71.2051C28.502 71.1485 28.4255 71.1378 28.3817 71.1842L24.8206 74.9647C24.7691 75.0194 24.6773 74.9932 24.6625 74.9195L22.0949 62.1689C22.0747 62.0684 22.2085 62.0144 22.2637 62.1007L26.2338 68.3131C26.2641 68.3606 26.3295 68.3701 26.3722 68.3333L29.9404 65.2552C29.9943 65.2087 30.0784 65.2379 30.0918 65.3078Z\" fill=\"white\"/>\n<path d=\"M42.0202 84.8457L54.9824 78.1548L45.7039 79.9238L46.5188 74.4812L34.309 80.6517L42.2449 79.8715L42.0202 84.8457Z\" fill=\"url(#paint3_linear_3930_34401)\"/>\n<defs>\n<filter id=\"filter0_ii_3930_34401\" x=\"26.4824\" y=\"-4.05005\" width=\"65.627\" height=\"89.4937\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n<feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n<feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"BackgroundImageFix\" result=\"shape\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"-2\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.35 0\"/>\n<feBlend mode=\"normal\" in2=\"shape\" result=\"effect1_innerShadow_3930_34401\"/>\n<feColorMatrix in=\"SourceAlpha\" type=\"matrix\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\" result=\"hardAlpha\"/>\n<feOffset dy=\"1\"/>\n<feGaussianBlur stdDeviation=\"0.5\"/>\n<feComposite in2=\"hardAlpha\" operator=\"arithmetic\" k2=\"-1\" k3=\"1\"/>\n<feColorMatrix type=\"matrix\" values=\"0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0\"/>\n<feBlend mode=\"normal\" in2=\"effect1_innerShadow_3930_34401\" result=\"effect2_innerShadow_3930_34401\"/>\n</filter>\n<linearGradient id=\"paint0_linear_3930_34401\" x1=\"29\" y1=\"80\" x2=\"29\" y2=\"22\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#F783E4\"/>\n<stop offset=\"1\" stop-color=\"#E73E52\"/>\n</linearGradient>\n<linearGradient id=\"paint1_linear_3930_34401\" x1=\"33.7812\" y1=\"20.9079\" x2=\"83.8612\" y2=\"47.2029\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#FFC09C\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#FFB856\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#C14EFF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint2_linear_3930_34401\" x1=\"32.6693\" y1=\"12.0241\" x2=\"103.41\" y2=\"33.4872\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#5A81FF\" stop-opacity=\"0.9\"/>\n<stop offset=\"0.447036\" stop-color=\"#567DFF\" stop-opacity=\"0.955296\"/>\n<stop offset=\"1\" stop-color=\"#4E78FF\" stop-opacity=\"0.9\"/>\n</linearGradient>\n<linearGradient id=\"paint3_linear_3930_34401\" x1=\"42.2417\" y1=\"84.9419\" x2=\"46.7403\" y2=\"74.5774\" gradientUnits=\"userSpaceOnUse\">\n<stop stop-color=\"#F783E4\"/>\n<stop offset=\"1\" stop-color=\"#E73E52\"/>\n</linearGradient>\n</defs>\n</svg>\n";
 
 const ERROR_OVERLAY_ID = "vouch-error-overlay";
 const STYLE_ID = `${ERROR_OVERLAY_ID}-style`;
-const ERROR_TITLE = "Something Went Wrong";
-function createErrorOverlay(error) {
-  if (document.getElementById(ERROR_OVERLAY_ID)) {
-    removeErrorOverlay();
+const DEFAULT_MESSAGES = {
+  title: "Something Went Wrong",
+  buttons: {
+    beforeSent: "Report Issue",
+    afterSent: "Report Sent",
+    retry: "Try Again"
   }
-  injectCss(STYLE_ID);
+};
+function createErrorOverlay({ error, messages }) {
+  const existingNode = document.getElementById(ERROR_OVERLAY_ID);
+  if (!existingNode) {
+    injectCss(STYLE_ID);
+  }
   const signetsRow = createSignetsRow();
   const errorContent = createErrorModalContent({
-    title: ERROR_TITLE,
+    title: messages?.title ?? DEFAULT_MESSAGES.title,
     subtitle: error.message,
     icon: svg(errorIconRaw, { alt: "Error" }),
     buttons: [
-      createReportIssueButton(),
-      createRetryButton("error", removeErrorOverlay)
+      createReportIssueButton({
+        textBeforeSent: messages?.buttons.beforeSent ?? DEFAULT_MESSAGES.buttons.beforeSent,
+        textAfterSent: messages?.buttons.afterSent ?? DEFAULT_MESSAGES.buttons.afterSent
+      }),
+      createRetryButton(
+        "error",
+        messages?.buttons.retry ?? DEFAULT_MESSAGES.buttons.retry,
+        removeErrorOverlay
+      )
     ]
   });
   const overlay = div(
@@ -538,7 +719,11 @@ function createErrorOverlay(error) {
       errorContent
     )
   );
-  document.body.appendChild(overlay);
+  if (existingNode) {
+    existingNode.replaceWith(overlay);
+  } else {
+    document.documentElement.appendChild(overlay);
+  }
 }
 function removeErrorOverlay() {
   document.getElementById(ERROR_OVERLAY_ID)?.remove();
@@ -577,21 +762,19 @@ function reuploadAttachment(attachment) {
 }
 function openProcessingOverlay(options) {
   if (window.__VOUCH_MOBILE__) {
-    createProcessingOverlay(options);
-    return;
+    startOverlayTimeout(options?.timeout);
   }
   window.sendEvent({
     type: "OpenOverlay",
     payload: options ?? {}
   });
 }
-function injectProcessingOverlay(options) {
-  createProcessingOverlay(options);
+function injectProcessingOverlay(props) {
+  createProcessingOverlay(props);
 }
 function closeProcessingOverlay() {
   if (window.__VOUCH_MOBILE__) {
-    removeProcessingOverlay();
-    return;
+    clearOverlayTimeout();
   }
   window.sendEvent({
     type: "CloseOverlay"
@@ -600,8 +783,8 @@ function closeProcessingOverlay() {
 function injectCloseProcessingOverlay() {
   removeProcessingOverlay();
 }
-function injectUploadOverlay() {
-  createUploadOverlay();
+function injectUploadOverlay(props) {
+  createUploadOverlay(props);
 }
 function injectCloseUploadOverlay() {
   removeUploadOverlay();
@@ -609,8 +792,8 @@ function injectCloseUploadOverlay() {
 function injectUpdateUploadProgress(progress) {
   updateUploadProgress(progress);
 }
-function injectUploadErrorState() {
-  transformUploadToErrorState();
+function injectUploadErrorState(isRecoverable = true, messages) {
+  transformUploadToErrorState({ isRecoverable, messages });
 }
 function displayMessage(options) {
   showMessage(options);
@@ -618,6 +801,7 @@ function displayMessage(options) {
 function closeMessage() {
   hideMessage();
 }
+const __vouch__injectTopbar = injectTopbar;
 function sendTelemetry(message) {
   window.sendEvent({
     type: "Telemetry",

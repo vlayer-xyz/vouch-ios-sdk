@@ -1,16 +1,23 @@
-"general.privacy_policy" = "Learn more about how vouch protects your [Privacy](https://www.vlayer.xyz/privacy-policy)";
-"general.unavailable" = "Vouch requires iOS 16.4 or later to function";
+"general.unavailable.ios" = "Vouch requires iOS 16.4 or later to function";
+"general.powered_by" = "Powered by";
 
-"home.title" = "Welcome at";
-"home.description" = "Pick the demo flow to explore how it works.";
-"home.start_button_title" = "Browse demos";
-"home.try_button_title" = "Try example";
+"home.welcome.title" = "Verify with Vouch";
+"home.welcome.description" = "Vouch verifies your identity, employment and social data - no documents needed.";
+"home.welcome.warning.title" = "Go back to your app";
+"home.welcome.warning.description" = "To get started, return to the app that sent you here.";
+"home.welcome.try_button.action" = "here";
+"home.welcome.try_button.description" = "Try a demo verification ";
 "home.claims_title" = "My Claims:";
 "home.no_claims_description" = "You don't have\nany claims yet.";
 "home.add_claim_button_title" = "Add Claim";
 
 "loading.error.bad_request.title" = "Bad request";
 "loading.error.bad_request.description" = "Please try downloading the latest version of the app.";
+"loading.title" = "Opening %@";
+"loading.title_generic" = "Starting Verification";
+"loading.description" = "You'll log in directly to %@.";
+"loading.warning.title" = "Vouch Verifier never sees your password.";
+"loading.warning.description" = "Your password stays with you. We only read the data to be verified.";
 "loading.error.unknown.title" = "Unknown error";
 "loading.error.unknown.description" = "Loading failed because of an unknown error.";
 "loading.error.connection.title" = "Connection error";
@@ -20,41 +27,43 @@
 "loading.error.decoding.title" = "Decoding error";
 "loading.error.decoding.description" = "Failed to decode the response. Please try downloading the latest version of the app.";
 "loading.error.undocumented.title" = "Unexpected server response";
-"loading.error.undocumented.description" = "Vouch server returned status code %d.";
+"loading.error.undocumented.description" = "Vouch server returned status code %@.";
 "loading.error.unauthorized.title" = "Unauthorized";
 "loading.error.unauthorized.description" = "Creating Proof Request failed because API key is invalid or missing.";
 "loading.error.requestIdTaken.title" = "Internal error";
 "loading.error.requestIdTaken.description" = "Proof request id has already been taken.";
 
 "sniffer.alert_title" = "Alert";
-"sniffer.error.title" = "Invalid data source";
-"sniffer.error.description" = "Data source contains invalid notarizations:";
-"sniffer.error.url_pattern" = "Invalid url pattern: %s";
-"sniffer.error.body_filter" = "Invalid body filter: %s";
-"sniffer.error.output" = "Invalid output filter: %s";
+"sniffer.error.invalid_datasource.title" = "Invalid data source";
+"sniffer.error.invalid_datasource.description" = "Data source contains invalid notarizations:";
+"sniffer.error.invalid_datasource.url_pattern" = "Invalid url pattern: %@";
+"sniffer.error.invalid_datasource.body_filter" = "Invalid body filter: %@";
+"sniffer.error.invalid_datasource.output" = "Invalid output filter: %@";
+"sniffer.error.processing_timeout.title" = "Processing timeout";
+"sniffer.error.processing_timeout.description" = "Finding the right request takes longer than expected.";
 "sniffer.draft_mode_banner" = "Draft mode only - not for production use.";
+"sniffer.bar.title" = "Log in to %@.";
+"sniffer.bar.disclaimer" = "We never see your password.";
 
 "redirect.title" = "Verify your data";
-"redirect.description" = "Please visit your %s to proceed.";
-"redirect.open_button_title" = "Open %s";
+"redirect.description" = "Please visit your %@ to proceed.";
+"redirect.open_button_title" = "Open %@";
 
 "verify.title" = "Verify Your Private Data";
-"verify.description" = "vouch will now verify your details on behalf of %s:";
+"verify.description" = "Vouch will now verify your details on behalf of %@:";
 "verify.no_value" = "null";
 "verify.true" = "true";
 "verify.false" = "false";
 "verify.verify_button_title" = "Verify";
 
-"proving.title" = "Don't leave this screen.\nVerification will stop.";
-"proving.progress.configuration" = "Downloading configuration...";
-"proving.progress.start_proving" = "Starting proving...";
-"proving.progress.proving" = "Proving...";
-"proving.progress.redacting" = "Redacting sensitive information...";
-"proving.progress.attachment_uploading" = "Uploading the attachment...";
-"proving.progress.attachment_uploading_finalizing" = "Processing the attachment...";
-"proving.progress.uploading" = "Uploading the proof...";
-"proving.progress.saving" = "Saving the proof...";
-"proving.progress.tweak_waiting" = "Waiting before performing the request...";
+"proving.progress.preparing.title" = "Preparing Verification";
+"proving.progress.preparing.description" = "Fetching your data from %@...";
+"proving.progress.in_progress.title" = "Verification in Progress";
+"proving.progress.in_progress.description" = "Confirming your data on %@.\nUsually takes ~40s.";
+"proving.progress.finalizing.title" = "Almost Done...";
+"proving.progress.finalizing.description" = "We're creating proof\nof your verification.";
+"proving.warning.title" = "Stay on this screen";
+"proving.warning.description" = "Leaving now will cancel your verification.";
 "proving.error.try_again_button_title" = "Try again";
 "proving.error.return_button_title" = "Return";
 "proving.error.send_logs_button_title" = "Send logs";
@@ -67,7 +76,7 @@
 "proving.error.prove_request_connection.title" = "Connection error";
 "proving.error.prove_request_connection.description" = "Failed to connect to the server during proving.";
 "proving.error.prove_request_wrong_response.title" = "Connection error";
-"proving.error.prove_request_wrong_response.description" = "Request failed with status code: %d";
+"proving.error.prove_request_wrong_response.description" = "Request failed with status code: %@";
 "proving.error.prove_request_internal.title" = "Internal error";
 "proving.error.prove_request_internal.description" = "Proving failed for internal reasons.";
 "proving.error.prove_request_timeout.title" = "Timeout";
@@ -87,7 +96,7 @@
 "proving.error.transcript_wrong_response.title" = "Transcript error";
 "proving.error.transcript_wrong_response.description" = "Transcript failed because the response was malformed.";
 "proving.error.transcript_unsupported.title" = "Transcript error";
-"proving.error.transcript_unsupported.description" = "Transcript not supported for one of content types: [%s], or transfer encodings: [%s]";
+"proving.error.transcript_unsupported.description" = "Transcript not supported for one of content types: [%@], or transfer encodings: [%@]";
 "proving.error.transcript_unsupported_jmes_path.title" = "Transcript error";
 "proving.error.transcript_unsupported_jmes_path.description" = "Configuration contains at least one unsupported path.";
 "proving.error.transcript_internal.title" = "Transcript error";
@@ -99,7 +108,7 @@
 "proving.error.upload_request_id_taken.title" = "Request id taken";
 "proving.error.upload_request_id_taken.description" = "A proof for the specified request id has already been uploaded.";
 "proving.error.upload_undocumented.title" = "Proof upload failed";
-"proving.error.upload_undocumented.description" = "Upload failed with status code %d.";
+"proving.error.upload_undocumented.description" = "Upload failed with status code %@.";
 "proving.error.upload_unknown.title" = "Unknown error";
 "proving.error.upload_unknown.description" = "Failed to upload the proof because of an unknown error.";
 "proving.error.save_no_format.title" = "No format";
@@ -117,14 +126,14 @@
 "proving.error.upload_attachment_invalid_response.title" = "Reupload attachment error.";
 "proving.error.upload_attachment_invalid_response.description" = "Failed to reupload the attachment because server returned an invalid response.";
 "proving.error.upload_attachment_status_code.title" = "Reupload attachment error.";
-"proving.error.upload_attachment_status_code.description" = "Failed to reupload the attachment with status code %d.";
+"proving.error.upload_attachment_status_code.description" = "Failed to reupload the attachment with status code %@.";
 "proving.error.upload_attachment_unknown.title" = "Reupload attachment error.";
 "proving.error.upload_attachment_unknown.description" = "Failed to reupload the attachment for unknown reasons.";
-"complete.title" = "Success!";
-"complete.description" = "You're all set! Your data has been successfully verified with %s.";
-"complete.description_desktop" = "You're all set! Please return to your desktop to continue.";
-"complete.description_claims" = "You're all set! Your claims have been saved successfully.";
-"complete.go_to_button_title" = "Finish";
+
+"success.title" = "Verification Submitted";
+"success.description" = "%@ will now\nreview your verification.";
+"success.warning.title" = "Go back to %@";
+"success.warning.description" = "Your proof of verification has been submitted.";
 
 "log_preview.title" = "Logs";
 "log_preview.send_logs_button_title" = "Send Logs";
@@ -132,12 +141,12 @@
 "log_preview.send_logs_agreement" = "By sending logs you agree to share your private data with Vouch.";
 "log_preview.refresh_button_title" = "Refresh";
 "log_preview.alert.success.title" = "Success";
-"log_preview.alert.success.description" = "Logs uploaded with id: %s.";
+"log_preview.alert.success.description" = "Logs uploaded with id: %@.";
 "log_preview.alert.error.title" = "Error";
 "log_preview.alert.error.connection" = "Failed to upload the logs because of a connection error.";
 "log_preview.alert.error.badRequest" = "Failed to upload the logs because of a bad request.";
 "log_preview.alert.error.unknown" = "Failed to upload the logs because of an unknown error.";
-"log_preview.alert.error.undocumented" = "Failed to upload the logs because of an undocumented error with code %d.";
+"log_preview.alert.error.undocumented" = "Failed to upload the logs because of an undocumented error with code %@.";
 "log_preview.alert.return_button_title" = "Return";
 
 "claim_details.title" = "Claim Details";
@@ -151,14 +160,14 @@
 
 "claim.creation_date" = "Claim Date";
 
-"select_data_source.title" = "Claiming your %s";
+"select_data_source.title" = "Claiming your %@";
 "select_data_source.next_button_title" = "Next";
 "select_data_source.error.bad_request.title" = "Bad Request";
 "select_data_source.error.bad_request.description" = "Failed to fetch data sources because of a bad request.";
 "select_data_source.error.server_error.title" = "Server Error";
 "select_data_source.error.server_error.description" = "Failed to fetch data sources because of a server error.";
 "select_data_source.error.undocumented.title" = "Unexpected Response";
-"select_data_source.error.undocumented.description" = "Server returned an unexpected status code %d when fetching data sources.";
+"select_data_source.error.undocumented.description" = "Server returned an unexpected status code %@ when fetching data sources.";
 "select_data_source.error.connection.title" = "Connection Error";
 "select_data_source.error.connection.description" = "Failed to connect to the server to fetch data sources.";
 "select_data_source.error.return_button_title" = "Return";
