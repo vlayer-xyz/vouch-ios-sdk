@@ -32,7 +32,7 @@ struct ContentView: View {
       }
     }
     .padding()
-    .popover(isPresented: $popoverVisible) {
+    .fullScreenCover(isPresented: $popoverVisible) {
       sdk.start(
         dataSourceId: "e03b846f-58ce-4ae7-b96e-c454c5a1314e",
         webhookUrl: "https://your-webhook-url.com",
