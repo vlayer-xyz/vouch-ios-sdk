@@ -3043,7 +3043,7 @@
       "kind": "StringLiteral",
       "offset": 104,
       "length": 7,
-      "value": "\"0.4.0\""
+      "value": "\"0.4.1\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
