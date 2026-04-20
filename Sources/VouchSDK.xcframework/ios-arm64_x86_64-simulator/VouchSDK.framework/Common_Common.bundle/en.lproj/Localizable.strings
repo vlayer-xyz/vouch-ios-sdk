@@ -45,21 +45,15 @@
 "sniffer.bar.title" = "Log in to %@.";
 "sniffer.bar.disclaimer" = "We never see your password.";
 
-"redirect.title" = "Verify your data";
-"redirect.description" = "Please visit your %@ to proceed.";
-"redirect.open_button_title" = "Open %@";
-
-"verify.title" = "Verify Your Private Data";
-"verify.description" = "Vouch will now verify your details on behalf of %@:";
-"verify.no_value" = "null";
+"verify.closed_title.in_progress" = "See what we're verifying";
+"verify.closed_title.finished" = "See what we verified";
 "verify.true" = "true";
 "verify.false" = "false";
-"verify.verify_button_title" = "Verify";
 
 "proving.progress.preparing.title" = "Preparing Verification";
-"proving.progress.preparing.description" = "Fetching your data from %@...";
+"proving.progress.preparing.description_with_subject" = "Fetching %@ from %@";
 "proving.progress.in_progress.title" = "Verification in Progress";
-"proving.progress.in_progress.description" = "Confirming your data on %@.\nUsually takes ~40s.";
+"proving.progress.in_progress.description_with_subject" = "Confirming %@ on %@.\nUsually takes ~40s.";
 "proving.progress.finalizing.title" = "Almost Done...";
 "proving.progress.finalizing.description" = "We're creating proof\nof your verification.";
 "proving.warning.title" = "Stay on this screen";

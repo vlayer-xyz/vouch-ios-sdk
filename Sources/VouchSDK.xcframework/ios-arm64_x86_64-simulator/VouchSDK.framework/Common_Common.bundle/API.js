@@ -849,7 +849,7 @@ XMLHttpRequest.prototype.send = function (...args) {
   let url = self.requestURL;
   url = addHostIfMissing(url);
   const method = self.method;
-  setCacheKeyHeader(url, self);
+  setCacheKeyHeader(url, self, null);
   var headers = self.headers;
   headers.push(["user-agent", navigator.userAgent]);
   try {
@@ -930,7 +930,8 @@ window.fetch = async function (input, init = {}) {
   let requestBody;
   if (input instanceof Request) {
     headers = new Headers(input.headers);
-    setCacheKeyHeader(url, headers);
+    const effectiveMode = init.mode ?? input.mode;
+    setCacheKeyHeader(url, headers, effectiveMode);
 
     if (input.body) {
       const body = await readableStreamToUint8Array(input.body);
@@ -958,7 +959,7 @@ window.fetch = async function (input, init = {}) {
       requestBody = [];
     }
 
-    setCacheKeyHeader(url, headers);
+    setCacheKeyHeader(url, headers, init.mode);
     init.headers = Object.fromEntries(headers.entries());
   }
 

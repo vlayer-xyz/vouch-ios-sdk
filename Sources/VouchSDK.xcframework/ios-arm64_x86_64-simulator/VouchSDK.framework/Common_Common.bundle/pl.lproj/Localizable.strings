@@ -45,21 +45,15 @@
 "sniffer.bar.title" = "Zaloguj się do %@.";
 "sniffer.bar.disclaimer" = "Nigdy nie widzimy Twojego hasła.";
 
-"redirect.title" = "Zweryfikuj swoje dane";
-"redirect.description" = "Odwiedź swoje %@, aby kontynuować.";
-"redirect.open_button_title" = "Otwórz %@";
-
-"verify.title" = "Zweryfikuj swoje prywatne dane";
-"verify.description" = "Vouch zweryfikuje teraz Twoje dane w imieniu %@:";
-"verify.no_value" = "null";
+"verify.closed_title.in_progress" = "Zobacz, co weryfikujemy";
+"verify.closed_title.finished" = "Zobacz, co zweryfikowaliśmy";
 "verify.true" = "prawda";
 "verify.false" = "fałsz";
-"verify.verify_button_title" = "Zweryfikuj";
 
 "proving.progress.preparing.title" = "Przygotowywanie weryfikacji";
-"proving.progress.preparing.description" = "Pobieranie Twoich danych z %@...";
+"proving.progress.preparing.description_with_subject" = "Pobieranie %@ z %@";
 "proving.progress.in_progress.title" = "Weryfikacja w toku";
-"proving.progress.in_progress.description" = "Potwierdzanie Twoich danych w %@.\nZwykle trwa to ok. 40 s.";
+"proving.progress.in_progress.description_with_subject" = "Potwierdzanie %@ na %@.\nZwykle trwa to ok. 40 s.";
 "proving.progress.finalizing.title" = "Prawie gotowe...";
 "proving.progress.finalizing.description" = "Tworzymy dowód\nTwojej weryfikacji.";
 "proving.warning.title" = "Pozostań na tym ekranie";
