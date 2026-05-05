@@ -38,6 +38,7 @@ public enum VouchErrorReason : Swift.Error {
   case networkConnectionLost
   case processingTimeout
   case internalServer
+  case processingStuck
   case uninitialized
   public static func == (a: VouchSDK.VouchErrorReason, b: VouchSDK.VouchErrorReason) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
@@ -61,6 +62,7 @@ public enum VouchErrorReason : Swift.Error {
   case apiKey = 12
   case internalServer = 13
   case uninitialized = 14
+  case processingStuck = 15
   public var description: Swift.String {
     get
   }

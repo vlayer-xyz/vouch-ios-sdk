@@ -4,6 +4,7 @@ let vouch_runMain = function () {
     document.readyState === "interactive"
   ) {
     if (typeof main === "function") {
+      window.sendEvent({ type: "MainStarted" });
       main();
     }
   } else {

@@ -940,6 +940,43 @@
           },
           {
             "kind": "Var",
+            "name": "processingStuck",
+            "printedName": "processingStuck",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReason.Type) -> VouchSDK.VouchErrorReason",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReason",
+                    "printedName": "VouchSDK.VouchErrorReason",
+                    "usr": "s:8VouchSDK0A11ErrorReasonO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReason.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReason",
+                        "printedName": "VouchSDK.VouchErrorReason",
+                        "usr": "s:8VouchSDK0A11ErrorReasonO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK0A11ErrorReasonO15processingStuckyA2CmF",
+            "mangledName": "$s8VouchSDK0A11ErrorReasonO15processingStuckyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
             "name": "uninitialized",
             "printedName": "uninitialized",
             "children": [
@@ -1774,6 +1811,47 @@
               "ObjC"
             ],
             "fixedbinaryorder": 14
+          },
+          {
+            "kind": "Var",
+            "name": "processingStuck",
+            "printedName": "processingStuck",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchErrorReasonObjC.Type) -> VouchSDK.VouchErrorReasonObjC",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchErrorReasonObjC",
+                    "printedName": "VouchSDK.VouchErrorReasonObjC",
+                    "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchErrorReasonObjC.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchErrorReasonObjC",
+                        "printedName": "VouchSDK.VouchErrorReasonObjC",
+                        "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@VouchSDK@E@VouchErrorReasonObjC@VouchErrorReasonObjCProcessingStuck",
+            "mangledName": "$s8VouchSDK0A15ErrorReasonObjCO15processingStuckyA2CmF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 15
           },
           {
             "kind": "Var",
@@ -3043,7 +3121,7 @@
       "kind": "StringLiteral",
       "offset": 104,
       "length": 7,
-      "value": "\"0.4.4\""
+      "value": "\"0.4.5\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
@@ -3149,6 +3227,13 @@
       "offset": 729,
       "length": 2,
       "value": "14"
+    },
+    {
+      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "kind": "IntegerLiteral",
+      "offset": 759,
+      "length": 2,
+      "value": "15"
     }
   ]
 }
