@@ -335,7 +335,6 @@ typedef SWIFT_ENUM(NSInteger, VouchErrorReasonObjC, open) {
   VouchErrorReasonObjCApiKey = 12,
   VouchErrorReasonObjCInternalServer = 13,
   VouchErrorReasonObjCUninitialized = 14,
-  VouchErrorReasonObjCProcessingStuck = 15,
 };
 
 @class VouchSuccessObjC;
@@ -720,7 +719,6 @@ typedef SWIFT_ENUM(NSInteger, VouchErrorReasonObjC, open) {
   VouchErrorReasonObjCApiKey = 12,
   VouchErrorReasonObjCInternalServer = 13,
   VouchErrorReasonObjCUninitialized = 14,
-  VouchErrorReasonObjCProcessingStuck = 15,
 };
 
 @class VouchSuccessObjC;
