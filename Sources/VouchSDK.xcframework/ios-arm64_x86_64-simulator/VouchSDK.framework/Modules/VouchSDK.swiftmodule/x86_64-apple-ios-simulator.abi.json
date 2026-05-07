@@ -37,7 +37,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(customerId:apiKey:)",
+            "printedName": "init(customerId:apiKey:languageCodeOverride:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -56,11 +56,26 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:8VouchSDK0B0C10customerId6apiKeyACSS_SStcfc",
-            "mangledName": "$s8VouchSDK0B0C10customerId6apiKeyACSS_SStcfc",
+            "usr": "s:8VouchSDK0B0C10customerId6apiKey20languageCodeOverrideACSS_S2SSgtcfc",
+            "mangledName": "$s8VouchSDK0B0C10customerId6apiKey20languageCodeOverrideACSS_S2SSgtcfc",
             "moduleName": "VouchSDK",
             "declAttributes": [
               "AccessControl",
@@ -2508,6 +2523,57 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(customerId:apiKey:languageCodeOverride:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchSDKBridge",
+                "printedName": "VouchSDK.VouchSDKBridge",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)initWithCustomerId:apiKey:languageCodeOverride:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC10customerId6apiKey20languageCodeOverrideACSS_S2SSgtcfc",
+            "moduleName": "VouchSDK",
+            "objc_name": "initWithCustomerId:apiKey:languageCodeOverride:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "Custom",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "isSupported",
             "printedName": "isSupported()",
@@ -3034,7 +3100,7 @@
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/SDK.swift",
       "kind": "Dictionary",
-      "offset": 1764,
+      "offset": 1904,
       "length": 3,
       "value": "[]"
     },
@@ -3042,8 +3108,8 @@
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/SDKTargetServices.swift",
       "kind": "StringLiteral",
       "offset": 104,
-      "length": 7,
-      "value": "\"0.4.8\""
+      "length": 8,
+      "value": "\"0.4.10\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",

@@ -349,6 +349,14 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 /// \param apiKey The unique customer api key
 ///
 - (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId apiKey:(NSString * _Nonnull)apiKey OBJC_DESIGNATED_INITIALIZER;
+/// Initialize with a customer ID and language override.
+/// \param customerId The unique customer identifier
+///
+/// \param apiKey The unique customer api key
+///
+/// \param languageCodeOverride Optional language override for SDK flows
+///
+- (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId apiKey:(NSString * _Nonnull)apiKey languageCodeOverride:(NSString * _Nullable)languageCodeOverride OBJC_DESIGNATED_INITIALIZER;
 + (BOOL)isSupported SWIFT_WARN_UNUSED_RESULT;
 - (void)initializeWithCompletionHandler:(void (^ _Nonnull)(NSError * _Nullable))completionHandler;
 /// Start a proof request flow. Returns a UIViewController to present.

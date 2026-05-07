@@ -10,7 +10,9 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public class SDK {
-  @_Concurrency.MainActor public init(customerId: Swift.String, apiKey: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor public init(customerId: Swift.String, apiKey: Swift.String, languageCodeOverride: Swift.String? = nil)
+  #endif
   public static func isSupported() -> Swift.Bool
   public func initialize() async throws(VouchSDK.VouchError)
   #if compiler(>=5.3) && $NonescapableTypes
@@ -85,6 +87,9 @@ public enum VouchErrorReason : Swift.Error {
 }
 @objc public class VouchSDKBridge : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @_Concurrency.MainActor @objc(initWithCustomerId:apiKey:) public init(customerId: Swift.String, apiKey: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @objc(initWithCustomerId:apiKey:languageCodeOverride:) public init(customerId: Swift.String, apiKey: Swift.String, languageCodeOverride: Swift.String?)
+  #endif
   @objc public static func isSupported() -> Swift.Bool
   @_Concurrency.MainActor @objc public func initialize() async throws
   #if compiler(>=5.3) && $NonescapableTypes
