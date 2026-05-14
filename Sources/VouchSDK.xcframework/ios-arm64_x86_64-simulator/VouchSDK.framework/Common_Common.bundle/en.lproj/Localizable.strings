@@ -53,7 +53,7 @@
 "proving.progress.preparing.title" = "Preparing Verification";
 "proving.progress.preparing.description_with_subject" = "Fetching %@ from %@";
 "proving.progress.in_progress.title" = "Verification in Progress";
-"proving.progress.in_progress.description_with_subject" = "Confirming %@ on %@.\nUsually takes ~40s.";
+"proving.progress.in_progress.description_with_subject" = "Confirming %@\non %@.";
 "proving.progress.finalizing.title" = "Almost Done...";
 "proving.progress.finalizing.description" = "We're creating proof\nof your verification.";
 "proving.warning.title" = "Stay on this screen";
@@ -132,6 +132,7 @@
 "log_preview.title" = "Logs";
 "log_preview.send_logs_button_title" = "Send Logs";
 "log_preview.copy_all_logs_button_title" = "Copy All Logs";
+"log_preview.clear_cookies_button_title" = "Clear Cookies";
 "log_preview.send_logs_agreement" = "By sending logs you agree to share your private data with Vouch.";
 "log_preview.refresh_button_title" = "Refresh";
 "log_preview.alert.success.title" = "Success";

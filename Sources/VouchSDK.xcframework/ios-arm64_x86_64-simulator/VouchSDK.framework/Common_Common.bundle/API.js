@@ -283,7 +283,9 @@ function createProcessingOverlay({
   } else {
     document.documentElement.appendChild(overlay);
   }
-  startOverlayTimeout(timeout);
+  if (window.__VOUCH_MOBILE__) {
+    startOverlayTimeout(timeout);
+  }
 }
 function removeProcessingOverlay() {
   clearOverlayTimeout();
@@ -304,7 +306,7 @@ function handleTimeout() {
       event: "PROCESSING_TIMEOUT"
     }
   });
-  transformToErrorState();
+  transformToTimeoutErrorState();
   console.error("Processing timeout");
   requestAnimationFrame(() => {
     window.sendEvent({
@@ -312,12 +314,12 @@ function handleTimeout() {
     });
   });
 }
-function transformToErrorState() {
+function transformToTimeoutErrorState(messages) {
   const overlay = document.getElementById(OVERLAY_ID);
   if (!overlay) return;
   const modalContent = overlay.querySelector(".vouch-modal-content");
   if (!modalContent) return;
-  const msgs = activeOverlayOptions?.messages ?? DEFAULT_MESSAGES$2;
+  const msgs = messages ?? activeOverlayOptions?.messages ?? DEFAULT_MESSAGES$2;
   const errorContent = createErrorModalContent({
     title: msgs.timeoutTitle,
     subtitle: msgs.timeoutSubtitle,
@@ -359,7 +361,7 @@ function createProcessingModalContainer({
         ),
         div({
           className: "vouch-modal-subtitle",
-          textContent: messages?.subtitle ?? DEFAULT_MESSAGES$2.subtitle
+          textContent: getProofRequestData()?.overlaySubtitle ?? messages?.subtitle ?? DEFAULT_MESSAGES$2.subtitle
         })
       ),
       div(
@@ -433,7 +435,7 @@ function createUploadOverlay({ messages } = {}) {
           ),
           div({
             className: "vouch-modal-subtitle",
-            textContent: messages?.subtitle ?? DEFAULT_MESSAGES$1.subtitle
+            textContent: getProofRequestData()?.overlaySubtitle ?? messages?.subtitle ?? DEFAULT_MESSAGES$1.subtitle
           })
         ),
         div(
@@ -782,6 +784,9 @@ function closeProcessingOverlay() {
 function injectCloseProcessingOverlay() {
   removeProcessingOverlay();
 }
+function injectProcessingOverlayTimeoutState(messages) {
+  transformToTimeoutErrorState(messages);
+}
 function injectUploadOverlay(props) {
   createUploadOverlay(props);
 }
@@ -857,12 +862,19 @@ XMLHttpRequest.prototype.send = function (...args) {
     // skip origin if URL parsing fails
   }
   headers.push(["accept-language", getAcceptLanguageHeader()]);
+
+  const xhrHasBody = args.length > 0 && args[0] !== undefined;
+  const xhrBodyBytes = xhrHasBody
+    ? (bodyToUint8ArraySync(args?.[0]) ?? new Uint8Array())
+    : null;
+  const xhrBodyByteArray = xhrBodyBytes ? Array.from(xhrBodyBytes) : null;
   var message = {
     type: "request_start",
+    source: "XMLHttpRequest",
     url: url,
     startDate: startDateUTC,
     method: method,
-    arguments: args,
+    bodyBytes: xhrBodyByteArray ?? [],
     headers: headers,
   };
   window.sendEvent(message);
@@ -926,7 +938,7 @@ window.fetch = async function (input, init = {}) {
   let method = init.method || (input instanceof Request ? input.method : "GET");
 
   let headers;
-  let requestBody;
+  let requestBodyBytes = null;
   if (input instanceof Request) {
     headers = new Headers(input.headers);
     const effectiveMode = init.mode ?? input.mode;
@@ -934,13 +946,13 @@ window.fetch = async function (input, init = {}) {
 
     if (input.body) {
       const body = await readableStreamToUint8Array(input.body);
-      requestBody = [trySerializeBody(body, headers.get("content-type"))];
+      requestBodyBytes = body;
       input = new Request(input, {
         body: body,
         headers: headers,
       });
     } else {
-      requestBody = [];
+      requestBodyBytes = null;
       input = new Request(input, { headers: headers });
     }
   } else {
@@ -949,13 +961,13 @@ window.fetch = async function (input, init = {}) {
     if (init && init.body !== undefined) {
       if (init.body instanceof ReadableStream) {
         const body = await readableStreamToUint8Array(init.body);
-        requestBody = [trySerializeBody(body, headers.get("content-type"))];
+        requestBodyBytes = body;
         init.body = body;
       } else {
-        requestBody = [await bodyToText(init.body)];
+        requestBodyBytes = await bodyToUint8Array(init.body);
       }
     } else {
-      requestBody = [];
+      requestBodyBytes = null;
     }
 
     setCacheKeyHeader(url, headers, init.mode);
@@ -973,10 +985,11 @@ window.fetch = async function (input, init = {}) {
 
   var message = {
     type: "request_start",
+    source: "fetch",
     url: url,
     startDate: startDateUTC,
     method: method,
-    arguments: requestBody,
+    bodyBytes: requestBodyBytes ? Array.from(requestBodyBytes) : [],
     headers: Array.from(headers.entries()),
   };
   window.sendEvent(message);
@@ -997,7 +1010,9 @@ window.fetch = async function (input, init = {}) {
       url: url,
       startDate: startDateUTC,
       method: method,
-      arguments: requestBody,
+      arguments: [
+        trySerializeBody(requestBodyBytes, headers.get("content-type")),
+      ],
       headers: Array.from(headers.entries()),
       response: respText,
       responseHeaders: responseHeaders,
@@ -1027,7 +1042,9 @@ window.fetch = async function (input, init = {}) {
       url: url,
       startDate: startDateUTC,
       method: method,
-      arguments: requestBody,
+      arguments: [
+        trySerializeBody(requestBodyBytes, headers.get("content-type")),
+      ],
       headers: Array.from(headers.entries()),
       response: error.toString(),
       responseHeaders: [],
@@ -1069,56 +1086,83 @@ async function readableStreamToUint8Array(stream) {
   }
 }
 
-function trySerializeBody(bytes, contentType) {
-  const shouldTryDecode = !contentType || isTextContentType(contentType);
-  if (!shouldTryDecode) {
-    return "";
+async function bodyToUint8Array(body) {
+  if (body == null) return null;
+
+  // Uint8Array
+  if (body instanceof Uint8Array) return body;
+
+  // ArrayBuffer
+  if (body instanceof ArrayBuffer) return new Uint8Array(body);
+
+  // TypedArray (Uint8Array, etc.) or DataView
+  if (ArrayBuffer.isView(body)) {
+    return new Uint8Array(body.buffer, body.byteOffset, body.byteLength);
   }
-
-  try {
-    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
-  } catch {
-    return "";
-  }
-}
-
-function isTextContentType(contentType) {
-  if (!contentType) {
-    return false;
-  }
-
-  const mediaType = contentType.toLowerCase().split(";")[0].trim();
-
-  if (mediaType.startsWith("text/")) {
-    return true;
-  }
-
-  if (!mediaType.startsWith("application/")) {
-    return false;
-  }
-
-  return (
-    mediaType.includes("json") ||
-    mediaType.includes("xml") ||
-    mediaType.includes("www-form-urlencoded")
-  );
-}
-
-async function bodyToText(body) {
-  if (body == null) return "";
-
-  // string
-  if (typeof body === "string") return body;
-
-  // URLSearchParams
-  if (body instanceof URLSearchParams) return body.toString();
 
   // Blob or File
-  if (body instanceof Blob) return await body.text();
+  if (body instanceof Blob) {
+    const buf = await body.arrayBuffer();
+    return new Uint8Array(buf);
+  }
 
-  // FormData
+  // URLSearchParams
+  if (body instanceof URLSearchParams) {
+    return new TextEncoder().encode(body.toString());
+  }
+
+  // string
+  if (typeof body === "string") {
+    return new TextEncoder().encode(body);
+  }
+
+  // FormData: stable debug representation
   if (body instanceof FormData) {
-    // No single “correct” textual representation; common choice is debug output:
+    const entries = [];
+    for (const [k, v] of body.entries()) {
+      entries.push([
+        k,
+        v instanceof File ? `File(${v.name}, ${v.type}, ${v.size})` : String(v),
+      ]);
+    }
+    return new TextEncoder().encode(JSON.stringify(entries));
+  }
+
+  // Fallback: best-effort textual encoding
+  return new TextEncoder().encode(String(body));
+}
+
+function bodyToUint8ArraySync(body) {
+  if (body == null) return null;
+
+  // Uint8Array
+  if (body instanceof Uint8Array) return body;
+
+  // ArrayBuffer
+  if (body instanceof ArrayBuffer) return new Uint8Array(body);
+
+  // TypedArray (Uint8Array, etc.) or DataView
+  if (ArrayBuffer.isView(body)) {
+    return new Uint8Array(body.buffer, body.byteOffset, body.byteLength);
+  }
+
+  // string / URLSearchParams / FormData / Blob / File / objects -> best-effort textual encoding
+  try {
+    const asText = bodyToTextSync(body);
+    if (asText == null) return new Uint8Array();
+    return new TextEncoder().encode(asText);
+  } catch {
+    return new Uint8Array();
+  }
+}
+
+function bodyToTextSync(body) {
+  if (body == null) return "";
+  if (typeof body === "string") return body;
+  if (body instanceof URLSearchParams) return body.toString();
+
+  // FormData: stable debug representation
+  if (body instanceof FormData) {
     const entries = [];
     for (const [k, v] of body.entries()) {
       entries.push([
@@ -1129,19 +1173,52 @@ async function bodyToText(body) {
     return JSON.stringify(entries);
   }
 
-  // ArrayBuffer
-  if (body instanceof ArrayBuffer) {
-    return new TextDecoder().decode(new Uint8Array(body));
+  // Blob/File: can't be read synchronously here; send empty bytes (type consistency).
+  if (body instanceof Blob) {
+    return "";
   }
 
-  // TypedArray (Uint8Array, etc.) or DataView
-  if (ArrayBuffer.isView(body)) {
-    return new TextDecoder().decode(
-      new Uint8Array(body.buffer, body.byteOffset, body.byteLength),
-    );
-  }
-
+  // Fallback
   return String(body);
+}
+
+function isTextContentType(contentType) {
+  const ct = (contentType ?? "").toLowerCase().split(";")[0].trim();
+  if (!ct) return false;
+  if (ct.startsWith("text/")) return true;
+  if (ct === "application/json") return true;
+  if (ct.endsWith("+json")) return true;
+  if (ct === "application/xml") return true;
+  if (ct.endsWith("+xml")) return true;
+  if (ct === "application/x-www-form-urlencoded") return true;
+  if (ct === "application/graphql") return true;
+  if (ct === "application/javascript") return true;
+  return false;
+}
+
+function trySerializeBody(bytes, contentType) {
+  const shouldTryDecode = !contentType || isTextContentType(contentType);
+  if (!shouldTryDecode) {
+    return "";
+  }
+
+  if (!bytes) return "";
+
+  try {
+    return new TextDecoder("utf-8", { fatal: true }).decode(bytes);
+  } catch {
+    return "";
+  }
+}
+
+function getHeaderValueFromPairs(pairs, headerName) {
+  const target = (headerName ?? "").toLowerCase();
+  for (const pair of pairs ?? []) {
+    const k = pair?.[0];
+    const v = pair?.[1];
+    if (typeof k === "string" && k.toLowerCase() === target) return v ?? null;
+  }
+  return null;
 }
 
 function isRedirect(response) {

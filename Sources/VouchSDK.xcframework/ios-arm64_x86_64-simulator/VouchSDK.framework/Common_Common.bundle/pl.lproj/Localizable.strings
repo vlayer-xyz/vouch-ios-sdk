@@ -53,7 +53,7 @@
 "proving.progress.preparing.title" = "Przygotowywanie weryfikacji";
 "proving.progress.preparing.description_with_subject" = "Pobieranie %@ z %@";
 "proving.progress.in_progress.title" = "Weryfikacja w toku";
-"proving.progress.in_progress.description_with_subject" = "Potwierdzanie %@ na %@.\nZwykle trwa to ok. 40 s.";
+"proving.progress.in_progress.description_with_subject" = "Potwierdzanie %@\nna %@.";
 "proving.progress.finalizing.title" = "Prawie gotowe...";
 "proving.progress.finalizing.description" = "Tworzymy dowód\nTwojej weryfikacji.";
 "proving.warning.title" = "Pozostań na tym ekranie";
@@ -132,6 +132,7 @@
 "log_preview.title" = "Logi";
 "log_preview.send_logs_button_title" = "Wyślij logi";
 "log_preview.copy_all_logs_button_title" = "Kopiuj wszystkie logi";
+"log_preview.clear_cookies_button_title" = "Wyczyść ciasteczka";
 "log_preview.send_logs_agreement" = "Wysyłając logi, zgadzasz się udostępnić swoje prywatne dane firmie Vouch.";
 "log_preview.refresh_button_title" = "Odśwież";
 "log_preview.alert.success.title" = "Sukces";

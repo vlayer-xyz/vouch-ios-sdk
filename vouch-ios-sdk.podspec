@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "vouch-ios-sdk"
-  spec.version      = "0.4.10"
+  spec.version      = "0.5.0"
   spec.summary      = "Binary iOS framework for integrating with the Vouch platform"
   spec.description  = <<-DESC
                       The Vouch iOS SDK provides a binary framework for integrating

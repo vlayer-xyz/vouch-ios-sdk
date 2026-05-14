@@ -3108,8 +3108,8 @@
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/SDKTargetServices.swift",
       "kind": "StringLiteral",
       "offset": 104,
-      "length": 8,
-      "value": "\"0.4.10\""
+      "length": 7,
+      "value": "\"0.5.0\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
