@@ -129,11 +129,11 @@
 "success.warning.title" = "Go back to %@";
 "success.warning.description" = "Your proof of verification has been submitted.";
 
-"log_preview.title" = "Logs";
+"log_preview.title" = "Diagnostic Logs";
 "log_preview.send_logs_button_title" = "Send Logs";
 "log_preview.copy_all_logs_button_title" = "Copy All Logs";
 "log_preview.clear_cookies_button_title" = "Clear Cookies";
-"log_preview.send_logs_agreement" = "By sending logs you agree to share your private data with Vouch.";
+"log_preview.send_logs_agreement" = "By sending logs you consent to sharing debugging information with Vouch.";
 "log_preview.refresh_button_title" = "Refresh";
 "log_preview.alert.success.title" = "Success";
 "log_preview.alert.success.description" = "Logs uploaded with id: %@.";
@@ -167,3 +167,9 @@
 "select_data_source.error.connection.description" = "Failed to connect to the server to fetch data sources.";
 "select_data_source.error.return_button_title" = "Return";
 "select_data_source.error.retry_button_title" = "Retry";
+
+"error.title" = "Something Went Wrong";
+"error.description" = "We couldn't complete\nyour verification. Details below.";
+"error.cancel_button_title" = "Cancel";
+"error.try_again_button_title" = "Try Again";
+"error.send_logs_button_title" = "Send Logs";

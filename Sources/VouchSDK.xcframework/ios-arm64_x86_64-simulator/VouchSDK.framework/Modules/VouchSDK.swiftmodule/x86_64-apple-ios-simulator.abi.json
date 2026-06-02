@@ -35,6 +35,46 @@
         "printedName": "SDK",
         "children": [
           {
+            "kind": "Var",
+            "name": "isInitialized",
+            "printedName": "isInitialized",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK0B0C13isInitializedSbvp",
+            "mangledName": "$s8VouchSDK0B0C13isInitializedSbvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK0B0C13isInitializedSbvg",
+                "mangledName": "$s8VouchSDK0B0C13isInitializedSbvg",
+                "moduleName": "VouchSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(customerId:apiKey:languageCodeOverride:)",
@@ -280,6 +320,13 @@
         "declAttributes": [
           "AccessControl"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VouchSDK"
       },
       {
         "kind": "Import",
@@ -2598,6 +2645,50 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Var",
+            "name": "isInitialized",
+            "printedName": "isInitialized",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(py)isInitialized",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC13isInitializedSbvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)isInitialized",
+                "mangledName": "$s8VouchSDK0A9SDKBridgeC13isInitializedSbvg",
+                "moduleName": "VouchSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "initialize",
             "printedName": "initialize()",
@@ -3098,119 +3189,119 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/SDK.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/SDK.swift",
       "kind": "Dictionary",
-      "offset": 1904,
+      "offset": 1972,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/SDKTargetServices.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/SDKTargetServices.swift",
       "kind": "StringLiteral",
-      "offset": 104,
+      "offset": 122,
       "length": 7,
-      "value": "\"0.5.0\""
+      "value": "\"0.6.0\""
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 296,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 325,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 365,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 396,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 425,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 462,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 489,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 520,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 558,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 584,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 619,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 651,
       "length": 2,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 672,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 701,
       "length": 2,
       "value": "13"
     },
     {
-      "filePath": "\/Users\/ksysu\/Projects\/vouch\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
       "offset": 729,
       "length": 2,

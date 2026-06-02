@@ -10,6 +10,9 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public class SDK {
+  public var isInitialized: Swift.Bool {
+    get
+  }
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor public init(customerId: Swift.String, apiKey: Swift.String, languageCodeOverride: Swift.String? = nil)
   #endif
@@ -91,6 +94,9 @@ public enum VouchErrorReason : Swift.Error {
   @_Concurrency.MainActor @objc(initWithCustomerId:apiKey:languageCodeOverride:) public init(customerId: Swift.String, apiKey: Swift.String, languageCodeOverride: Swift.String?)
   #endif
   @objc public static func isSupported() -> Swift.Bool
+  @objc public var isInitialized: Swift.Bool {
+    @objc get
+  }
   @_Concurrency.MainActor @objc public func initialize() async throws
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @objc public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String]?, metadata: Swift.String?, completion: @escaping @Sendable (VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?) -> Swift.Void) -> UIKit.UIViewController

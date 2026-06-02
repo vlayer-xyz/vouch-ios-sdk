@@ -358,6 +358,7 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 ///
 - (nonnull instancetype)initWithCustomerId:(NSString * _Nonnull)customerId apiKey:(NSString * _Nonnull)apiKey languageCodeOverride:(NSString * _Nullable)languageCodeOverride OBJC_DESIGNATED_INITIALIZER;
 + (BOOL)isSupported SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly) BOOL isInitialized;
 - (void)initializeWithCompletionHandler:(void (^ _Nonnull)(NSError * _Nullable))completionHandler;
 /// Start a proof request flow. Returns a UIViewController to present.
 /// \param dataSourceId The data source identifier

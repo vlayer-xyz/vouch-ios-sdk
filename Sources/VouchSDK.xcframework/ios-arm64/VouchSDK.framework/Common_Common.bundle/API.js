@@ -762,9 +762,6 @@ function reuploadAttachment(attachment) {
   window.sendEvent(event);
 }
 function openProcessingOverlay(options) {
-  if (window.__VOUCH_MOBILE__) {
-    startOverlayTimeout(options?.timeout);
-  }
   window.sendEvent({
     type: "OpenOverlay",
     payload: options ?? {}
@@ -774,9 +771,6 @@ function injectProcessingOverlay(props) {
   createProcessingOverlay(props);
 }
 function closeProcessingOverlay() {
-  if (window.__VOUCH_MOBILE__) {
-    clearOverlayTimeout();
-  }
   window.sendEvent({
     type: "CloseOverlay"
   });

@@ -129,11 +129,11 @@
 "success.warning.title" = "Wróć do %@";
 "success.warning.description" = "Twój dowód weryfikacji został przesłany.";
 
-"log_preview.title" = "Logi";
+"log_preview.title" = "Logi diagnostyczne";
 "log_preview.send_logs_button_title" = "Wyślij logi";
 "log_preview.copy_all_logs_button_title" = "Kopiuj wszystkie logi";
 "log_preview.clear_cookies_button_title" = "Wyczyść ciasteczka";
-"log_preview.send_logs_agreement" = "Wysyłając logi, zgadzasz się udostępnić swoje prywatne dane firmie Vouch.";
+"log_preview.send_logs_agreement" = "Wysyłając logi, wyrażasz zgodę na udostępnienie informacji diagnostycznych firmie Vouch.";
 "log_preview.refresh_button_title" = "Odśwież";
 "log_preview.alert.success.title" = "Sukces";
 "log_preview.alert.success.description" = "Logi przesłane z identyfikatorem: %@.";
@@ -167,3 +167,9 @@
 "select_data_source.error.connection.description" = "Nie udało się połączyć z serwerem, aby pobrać źródła danych.";
 "select_data_source.error.return_button_title" = "Powrót";
 "select_data_source.error.retry_button_title" = "Ponów";
+
+"error.title" = "Coś poszło nie tak";
+"error.description" = "Nie udało się ukończyć\nTwojej weryfikacji. Szczegóły poniżej.";
+"error.cancel_button_title" = "Anuluj";
+"error.try_again_button_title" = "Spróbuj ponownie";
+"error.send_logs_button_title" = "Wyślij logi";
