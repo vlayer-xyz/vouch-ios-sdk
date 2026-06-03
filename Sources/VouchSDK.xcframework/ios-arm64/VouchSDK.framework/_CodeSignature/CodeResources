@@ -52,7 +52,7 @@
 		</dict>
 		<key>Headers/VouchSDK-Swift.h</key>
 		<data>
-		dc2HWHpFLTXrdp9yzgtzHIPK6Ww=
+		x7irKRY6sTkzbW3jDofShQOMB4c=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -60,19 +60,19 @@
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		VZ0PYYrToZA/zYFM3jaPvcY2uZs=
+		wR/ZzWXS+cy81hpqM4esD5aclUk=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		/IM1osRDyMXzdg+c68lMzjzoi4c=
+		IWkZEXLaBS87FvvRcMi2leVqoWs=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		4FT5t9hzI2xcTAocAZj2NIvkKdU=
+		6vEsOCw+aN+V1qZbx25kn7NH7Yg=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		/IM1osRDyMXzdg+c68lMzjzoi4c=
+		IWkZEXLaBS87FvvRcMi2leVqoWs=
 		</data>
 		<key>SwiftyJSON_SwiftyJSON.bundle/Info.plist</key>
 		<data>
@@ -156,35 +156,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YeprVU3xYBYPRhy01ovmPBhyuC/MoBJivxuvJkjF/Pc=
+			2wqqYt7Is/cGxKkA6XUG1Xd4O9zBNBPtHsVfD26l1S0=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IRiBq6/507WafkEBPHvt1GgiIijGh1aGoGsnAO+r494=
+			2dds3MiNU0igHRHVji8uX1YyCY6u63+8Brn/xx9qcPY=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MUNu2u7bMZLXBlmipS6kHBt90E7cS3AfPSdzABcMovs=
+			czZxTRCC3VzeiR+qbgtCW9HkSInWAgAa/xTBBDX4sSY=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hfP2JEQWFUuln4lukRHo39qPHTcXKIM+7ARfR7F6sQ4=
+			IJfODKP6oOgTKgu/8iyM6oEp3mwXpWuu15SQXCcUlM4=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MUNu2u7bMZLXBlmipS6kHBt90E7cS3AfPSdzABcMovs=
+			czZxTRCC3VzeiR+qbgtCW9HkSInWAgAa/xTBBDX4sSY=
 			</data>
 		</dict>
 		<key>SwiftyJSON_SwiftyJSON.bundle/Info.plist</key>

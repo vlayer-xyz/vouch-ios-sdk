@@ -337,8 +337,29 @@ typedef SWIFT_ENUM(NSInteger, VouchErrorReasonObjC, open) {
   VouchErrorReasonObjCUninitialized = 14,
 };
 
-@class VouchSuccessObjC;
+SWIFT_CLASS("_TtC8VouchSDK20VouchMatchResultObjC")
+@interface VouchMatchResultObjC : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Objective-C compatible proof mode enum
+typedef SWIFT_ENUM(NSInteger, VouchProofModeObjC, open) {
+  VouchProofModeObjCAuto = 0,
+  VouchProofModeObjCMpc = 1,
+  VouchProofModeObjCProxy = 2,
+};
+
+SWIFT_CLASS("_TtC8VouchSDK21VouchProofRequestObjC")
+@interface VouchProofRequestObjC : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull proofRequestId;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class VouchSniffRequestsSuccessObjC;
 @class UIViewController;
+@class VouchSuccessObjC;
 /// Objective-C compatible wrapper for VouchSDK
 /// Use this class when integrating with React Native or other Objective-C based frameworks
 SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
@@ -360,6 +381,9 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 + (BOOL)isSupported SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL isInitialized;
 - (void)initializeWithCompletionHandler:(void (^ _Nonnull)(NSError * _Nullable))completionHandler;
+- (void)downloadConfigWithId:(NSString * _Nullable)id dataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nullable)webhookUrl redirectUrl:(NSString * _Nullable)redirectUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata completionHandler:(void (^ _Nonnull)(VouchProofRequestObjC * _Nullable, NSError * _Nullable))completionHandler;
+- (UIViewController * _Nonnull)sniffRequestsWithProofRequest:(VouchProofRequestObjC * _Nonnull)proofRequest completion:(void (^ _Nonnull)(VouchSniffRequestsSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
+- (void)proveWithProofRequest:(VouchProofRequestObjC * _Nonnull)proofRequest matches:(NSArray<VouchMatchResultObjC *> * _Nonnull)matches completionHandler:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, NSError * _Nullable))completionHandler;
 /// Start a proof request flow. Returns a UIViewController to present.
 /// \param dataSourceId The data source identifier
 ///
@@ -370,6 +394,26 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 /// \param completion Completion handler called with success or error
 ///
 - (UIViewController * _Nonnull)startWithDataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nonnull)webhookUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata completion:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
+/// Start a proof request flow. Returns a UIViewController to present.
+/// \param dataSourceId The data source identifier
+///
+/// \param webhookUrl The webhook URL for callbacks
+///
+/// \param inputs Additional input parameters (optional)
+///
+/// \param proofMode Overrides the proof mode from the proof request config
+///
+/// \param completion Completion handler called with success or error
+///
+- (UIViewController * _Nonnull)startWithDataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nonnull)webhookUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata proofMode:(enum VouchProofModeObjC)proofMode completion:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC8VouchSDK29VouchSniffRequestsSuccessObjC")
+@interface VouchSniffRequestsSuccessObjC : NSObject
+@property (nonatomic, readonly, strong) VouchProofRequestObjC * _Nonnull proofRequest;
+@property (nonatomic, readonly, copy) NSArray<VouchMatchResultObjC *> * _Nonnull matches;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -730,8 +774,29 @@ typedef SWIFT_ENUM(NSInteger, VouchErrorReasonObjC, open) {
   VouchErrorReasonObjCUninitialized = 14,
 };
 
-@class VouchSuccessObjC;
+SWIFT_CLASS("_TtC8VouchSDK20VouchMatchResultObjC")
+@interface VouchMatchResultObjC : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+/// Objective-C compatible proof mode enum
+typedef SWIFT_ENUM(NSInteger, VouchProofModeObjC, open) {
+  VouchProofModeObjCAuto = 0,
+  VouchProofModeObjCMpc = 1,
+  VouchProofModeObjCProxy = 2,
+};
+
+SWIFT_CLASS("_TtC8VouchSDK21VouchProofRequestObjC")
+@interface VouchProofRequestObjC : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull proofRequestId;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class VouchSniffRequestsSuccessObjC;
 @class UIViewController;
+@class VouchSuccessObjC;
 /// Objective-C compatible wrapper for VouchSDK
 /// Use this class when integrating with React Native or other Objective-C based frameworks
 SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
@@ -753,6 +818,9 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 + (BOOL)isSupported SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL isInitialized;
 - (void)initializeWithCompletionHandler:(void (^ _Nonnull)(NSError * _Nullable))completionHandler;
+- (void)downloadConfigWithId:(NSString * _Nullable)id dataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nullable)webhookUrl redirectUrl:(NSString * _Nullable)redirectUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata completionHandler:(void (^ _Nonnull)(VouchProofRequestObjC * _Nullable, NSError * _Nullable))completionHandler;
+- (UIViewController * _Nonnull)sniffRequestsWithProofRequest:(VouchProofRequestObjC * _Nonnull)proofRequest completion:(void (^ _Nonnull)(VouchSniffRequestsSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
+- (void)proveWithProofRequest:(VouchProofRequestObjC * _Nonnull)proofRequest matches:(NSArray<VouchMatchResultObjC *> * _Nonnull)matches completionHandler:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, NSError * _Nullable))completionHandler;
 /// Start a proof request flow. Returns a UIViewController to present.
 /// \param dataSourceId The data source identifier
 ///
@@ -763,6 +831,26 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 /// \param completion Completion handler called with success or error
 ///
 - (UIViewController * _Nonnull)startWithDataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nonnull)webhookUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata completion:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
+/// Start a proof request flow. Returns a UIViewController to present.
+/// \param dataSourceId The data source identifier
+///
+/// \param webhookUrl The webhook URL for callbacks
+///
+/// \param inputs Additional input parameters (optional)
+///
+/// \param proofMode Overrides the proof mode from the proof request config
+///
+/// \param completion Completion handler called with success or error
+///
+- (UIViewController * _Nonnull)startWithDataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nonnull)webhookUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata proofMode:(enum VouchProofModeObjC)proofMode completion:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC8VouchSDK29VouchSniffRequestsSuccessObjC")
+@interface VouchSniffRequestsSuccessObjC : NSObject
+@property (nonatomic, readonly, strong) VouchProofRequestObjC * _Nonnull proofRequest;
+@property (nonatomic, readonly, copy) NSArray<VouchMatchResultObjC *> * _Nonnull matches;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
