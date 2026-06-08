@@ -11,6 +11,281 @@
         "declKind": "Import",
         "moduleName": "VouchSDK",
         "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProofMode",
+        "printedName": "ProofMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "auto",
+            "printedName": "auto",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.ProofMode.Type) -> VouchSDK.ProofMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProofMode",
+                    "printedName": "VouchSDK.ProofMode",
+                    "usr": "s:8VouchSDK9ProofModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.ProofMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProofMode",
+                        "printedName": "VouchSDK.ProofMode",
+                        "usr": "s:8VouchSDK9ProofModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK9ProofModeO4autoyA2CmF",
+            "mangledName": "$s8VouchSDK9ProofModeO4autoyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "mpc",
+            "printedName": "mpc",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.ProofMode.Type) -> VouchSDK.ProofMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProofMode",
+                    "printedName": "VouchSDK.ProofMode",
+                    "usr": "s:8VouchSDK9ProofModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.ProofMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProofMode",
+                        "printedName": "VouchSDK.ProofMode",
+                        "usr": "s:8VouchSDK9ProofModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK9ProofModeO3mpcyA2CmF",
+            "mangledName": "$s8VouchSDK9ProofModeO3mpcyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "proxy",
+            "printedName": "proxy",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.ProofMode.Type) -> VouchSDK.ProofMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProofMode",
+                    "printedName": "VouchSDK.ProofMode",
+                    "usr": "s:8VouchSDK9ProofModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.ProofMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProofMode",
+                        "printedName": "VouchSDK.ProofMode",
+                        "usr": "s:8VouchSDK9ProofModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK9ProofModeO5proxyyA2CmF",
+            "mangledName": "$s8VouchSDK9ProofModeO5proxyyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK9ProofModeO9hashValueSivp",
+            "mangledName": "$s8VouchSDK9ProofModeO9hashValueSivp",
+            "moduleName": "VouchSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK9ProofModeO9hashValueSivg",
+                "mangledName": "$s8VouchSDK9ProofModeO9hashValueSivg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8VouchSDK9ProofModeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s8VouchSDK9ProofModeO4hash4intoys6HasherVz_tF",
+            "moduleName": "VouchSDK",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProofMode",
+                "printedName": "VouchSDK.ProofMode",
+                "usr": "s:8VouchSDK9ProofModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProofMode",
+                "printedName": "VouchSDK.ProofMode",
+                "usr": "s:8VouchSDK9ProofModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8VouchSDK9ProofModeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8VouchSDK9ProofModeO2eeoiySbAC_ACtFZ",
+            "moduleName": "VouchSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8VouchSDK9ProofModeO",
+        "mangledName": "$s8VouchSDK9ProofModeO",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Common",
+        "printedName": "Common",
+        "declKind": "Import",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
           "AccessControl",
           "RawDocComment"
         ]
@@ -170,7 +445,7 @@
           {
             "kind": "Function",
             "name": "start",
-            "printedName": "start(dataSourceId:webhookUrl:inputs:metadata:callback:)",
+            "printedName": "start(dataSourceId:webhookUrl:inputs:metadata:proofMode:callback:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -234,6 +509,13 @@
                 "usr": "s:Sq"
               },
               {
+                "kind": "TypeNominal",
+                "name": "ProofMode",
+                "printedName": "VouchSDK.ProofMode",
+                "hasDefaultArg": true,
+                "usr": "s:8VouchSDK9ProofModeO"
+              },
+              {
                 "kind": "TypeFunc",
                 "name": "Function",
                 "printedName": "(Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> ()",
@@ -267,8 +549,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:8VouchSDK0B0C5start12dataSourceId10webhookUrl6inputs8metadata8callbackQrSS_SSSDyS2SGSSSgys6ResultOyAA0A7SuccessVAA0A5ErrorVGScMYcctF",
-            "mangledName": "$s8VouchSDK0B0C5start12dataSourceId10webhookUrl6inputs8metadata8callbackQrSS_SSSDyS2SGSSSgys6ResultOyAA0A7SuccessVAA0A5ErrorVGScMYcctF",
+            "usr": "s:8VouchSDK0B0C5start12dataSourceId10webhookUrl6inputs8metadata9proofMode8callbackQrSS_SSSDyS2SGSSSgAA05ProofL0Oys6ResultOyAA0A7SuccessVAA0A5ErrorVGScMYcctF",
+            "mangledName": "$s8VouchSDK0B0C5start12dataSourceId10webhookUrl6inputs8metadata9proofMode8callbackQrSS_SSSDyS2SGSSSgAA05ProofL0Oys6ResultOyAA0A7SuccessVAA0A5ErrorVGScMYcctF",
             "moduleName": "VouchSDK",
             "declAttributes": [
               "AccessControl",
@@ -1216,6 +1498,270 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "VouchSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VouchProofModeObjC",
+        "printedName": "VouchProofModeObjC",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "auto",
+            "printedName": "auto",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchProofModeObjC.Type) -> VouchSDK.VouchProofModeObjC",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchProofModeObjC",
+                    "printedName": "VouchSDK.VouchProofModeObjC",
+                    "usr": "c:@M@VouchSDK@E@VouchProofModeObjC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchProofModeObjC.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchProofModeObjC",
+                        "printedName": "VouchSDK.VouchProofModeObjC",
+                        "usr": "c:@M@VouchSDK@E@VouchProofModeObjC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@VouchSDK@E@VouchProofModeObjC@VouchProofModeObjCAuto",
+            "mangledName": "$s8VouchSDK0A13ProofModeObjCO4autoyA2CmF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "mpc",
+            "printedName": "mpc",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchProofModeObjC.Type) -> VouchSDK.VouchProofModeObjC",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchProofModeObjC",
+                    "printedName": "VouchSDK.VouchProofModeObjC",
+                    "usr": "c:@M@VouchSDK@E@VouchProofModeObjC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchProofModeObjC.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchProofModeObjC",
+                        "printedName": "VouchSDK.VouchProofModeObjC",
+                        "usr": "c:@M@VouchSDK@E@VouchProofModeObjC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@VouchSDK@E@VouchProofModeObjC@VouchProofModeObjCMpc",
+            "mangledName": "$s8VouchSDK0A13ProofModeObjCO3mpcyA2CmF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "proxy",
+            "printedName": "proxy",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchProofModeObjC.Type) -> VouchSDK.VouchProofModeObjC",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchProofModeObjC",
+                    "printedName": "VouchSDK.VouchProofModeObjC",
+                    "usr": "c:@M@VouchSDK@E@VouchProofModeObjC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.VouchProofModeObjC.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchProofModeObjC",
+                        "printedName": "VouchSDK.VouchProofModeObjC",
+                        "usr": "c:@M@VouchSDK@E@VouchProofModeObjC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@VouchSDK@E@VouchProofModeObjC@VouchProofModeObjCProxy",
+            "mangledName": "$s8VouchSDK0A13ProofModeObjCO5proxyyA2CmF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VouchSDK.VouchProofModeObjC?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchProofModeObjC",
+                    "printedName": "VouchSDK.VouchProofModeObjC",
+                    "usr": "c:@M@VouchSDK@E@VouchProofModeObjC"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8VouchSDK0A13ProofModeObjCO8rawValueACSgSi_tcfc",
+            "mangledName": "$s8VouchSDK0A13ProofModeObjCO8rawValueACSgSi_tcfc",
+            "moduleName": "VouchSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK0A13ProofModeObjCO8rawValueSivp",
+            "mangledName": "$s8VouchSDK0A13ProofModeObjCO8rawValueSivp",
+            "moduleName": "VouchSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK0A13ProofModeObjCO8rawValueSivg",
+                "mangledName": "$s8VouchSDK0A13ProofModeObjCO8rawValueSivg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@VouchSDK@E@VouchProofModeObjC",
+        "mangledName": "$s8VouchSDK0A13ProofModeObjCO",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -2840,6 +3386,138 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(dataSourceId:webhookUrl:inputs:metadata:proofMode:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VouchProofModeObjC",
+                "printedName": "VouchSDK.VouchProofModeObjC",
+                "usr": "c:@M@VouchSDK@E@VouchProofModeObjC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "VouchSDK.VouchSuccessObjC?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VouchSuccessObjC",
+                            "printedName": "VouchSDK.VouchSuccessObjC",
+                            "usr": "c:@M@VouchSDK@objc(cs)VouchSuccessObjC"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "VouchSDK.VouchErrorObjC?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VouchErrorObjC",
+                            "printedName": "VouchSDK.VouchErrorObjC",
+                            "usr": "c:@M@VouchSDK@objc(cs)VouchErrorObjC"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)startWithDataSourceId:webhookUrl:inputs:metadata:proofMode:completion:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC5start12dataSourceId10webhookUrl6inputs8metadata9proofMode10completionSo16UIViewControllerCSS_SSSDyS2SGSgSSSgAA0a5ProofM4ObjCOyAA0a7SuccessR1CCSg_AA0a5ErrorR1CCSgtYbctF",
+            "moduleName": "VouchSDK",
+            "objc_name": "startWithDataSourceId:webhookUrl:inputs:metadata:proofMode:completion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "Custom",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -3200,110 +3878,131 @@
       "kind": "StringLiteral",
       "offset": 122,
       "length": 7,
-      "value": "\"0.6.0\""
+      "value": "\"0.7.1\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 296,
+      "offset": 261,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 325,
+      "offset": 278,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 365,
+      "offset": 297,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 396,
+      "offset": 667,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "kind": "IntegerLiteral",
+      "offset": 696,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "kind": "IntegerLiteral",
+      "offset": 736,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
+      "kind": "IntegerLiteral",
+      "offset": 767,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 425,
+      "offset": 796,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 462,
+      "offset": 833,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 489,
+      "offset": 860,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 520,
+      "offset": 891,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 558,
+      "offset": 929,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 584,
+      "offset": 955,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 619,
+      "offset": 990,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 651,
+      "offset": 1022,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 672,
+      "offset": 1043,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 701,
+      "offset": 1072,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
       "kind": "IntegerLiteral",
-      "offset": 729,
+      "offset": 1100,
       "length": 2,
       "value": "14"
     }

@@ -9,6 +9,16 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public enum ProofMode : Swift.Sendable, Swift.Equatable {
+  case auto
+  case mpc
+  case proxy
+  public static func == (a: VouchSDK.ProofMode, b: VouchSDK.ProofMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public class SDK {
   public var isInitialized: Swift.Bool {
     get
@@ -19,7 +29,7 @@ public class SDK {
   public static func isSupported() -> Swift.Bool
   public func initialize() async throws(VouchSDK.VouchError)
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], metadata: Swift.String? = nil, callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
+  @_Concurrency.MainActor public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String] = [:], metadata: Swift.String? = nil, proofMode: VouchSDK.ProofMode = .auto, callback: @escaping @_Concurrency.MainActor (Swift.Result<VouchSDK.VouchSuccess, VouchSDK.VouchError>) -> Swift.Void) -> some SwiftUICore.View
   
   #endif
   @objc deinit
@@ -47,6 +57,18 @@ public enum VouchErrorReason : Swift.Error {
   public static func == (a: VouchSDK.VouchErrorReason, b: VouchSDK.VouchErrorReason) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public enum VouchProofModeObjC : Swift.Int {
+  case auto = 0
+  case mpc = 1
+  case proxy = 2
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -101,6 +123,9 @@ public enum VouchErrorReason : Swift.Error {
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @objc public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String]?, metadata: Swift.String?, completion: @escaping @Sendable (VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?) -> Swift.Void) -> UIKit.UIViewController
   #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @objc public func start(dataSourceId: Swift.String, webhookUrl: Swift.String, inputs: [Swift.String : Swift.String]?, metadata: Swift.String?, proofMode: VouchSDK.VouchProofModeObjC, completion: @escaping @Sendable (VouchSDK.VouchSuccessObjC?, VouchSDK.VouchErrorObjC?) -> Swift.Void) -> UIKit.UIViewController
+  #endif
   @objc deinit
 }
 public struct VouchSuccess {
@@ -112,8 +137,12 @@ public struct VouchSuccess {
   }
   public typealias Body = @_opaqueReturnTypeOf("$s8VouchSDK0A4ViewV4bodyQrvp", 0) __
 }
+extension VouchSDK.ProofMode : Swift.Hashable {}
 extension VouchSDK.VouchErrorReason : Swift.Equatable {}
 extension VouchSDK.VouchErrorReason : Swift.Hashable {}
+extension VouchSDK.VouchProofModeObjC : Swift.Equatable {}
+extension VouchSDK.VouchProofModeObjC : Swift.Hashable {}
+extension VouchSDK.VouchProofModeObjC : Swift.RawRepresentable {}
 extension VouchSDK.VouchErrorReasonObjC : Swift.Equatable {}
 extension VouchSDK.VouchErrorReasonObjC : Swift.Hashable {}
 extension VouchSDK.VouchErrorReasonObjC : Swift.RawRepresentable {}

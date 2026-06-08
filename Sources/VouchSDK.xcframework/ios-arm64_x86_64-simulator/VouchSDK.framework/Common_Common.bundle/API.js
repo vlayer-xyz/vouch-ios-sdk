@@ -810,6 +810,36 @@ function sendTelemetry(message) {
   });
 }
 
+const common = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  __vouch__injectTopbar,
+  closeMessage,
+  closeProcessingOverlay,
+  createErrorOverlay,
+  displayMessage,
+  injectCloseProcessingOverlay,
+  injectCloseUploadOverlay,
+  injectProcessingOverlay,
+  injectProcessingOverlayTimeoutState,
+  injectUpdateUploadProgress,
+  injectUploadErrorState,
+  injectUploadOverlay,
+  openProcessingOverlay,
+  removeErrorOverlay,
+  reuploadAttachment,
+  sendTelemetry,
+  sleep,
+  waitFor,
+  waitQuerySelectorAll
+}, Symbol.toStringTag, { value: 'Module' }));
+
+// Expose the shared API (author helpers + client-internal `inject*` DOM hooks)
+// on `window`. WebView hosts evaluate the native overlay open/close in a
+// separate `injectJavaScript` call that cannot see this bundle's module scope,
+// so the hooks must live on `window` to survive across evaluations. Mirrors the
+// desktop extension's injected bridge (`apps/browser-extension/src/injected/js-api.ts`).
+Object.assign(window, common);
+
 window.__VOUCH_MOBILE__ = true;
 
 //

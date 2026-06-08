@@ -6,7 +6,7 @@
 	<dict>
 		<key>Common_Common.bundle/API.js</key>
 		<data>
-		tfd7lvd6bgsXVwdSQtKZFtf9bzc=
+		/eP0XLt+oqIjaxKqbRdqAcOYLr4=
 		</data>
 		<key>Common_Common.bundle/Assets.car</key>
 		<data>
@@ -52,7 +52,7 @@
 		</dict>
 		<key>Headers/VouchSDK-Swift.h</key>
 		<data>
-		dc2HWHpFLTXrdp9yzgtzHIPK6Ww=
+		3g6rLeUkHNsjybFoFIGWXkZiMtw=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -60,19 +60,19 @@
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		VZ0PYYrToZA/zYFM3jaPvcY2uZs=
+		dbQSgZVT8CzNNw4DyLQM3ivs9ek=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		/IM1osRDyMXzdg+c68lMzjzoi4c=
+		VbnTWuq2fUGcd2Sn3S6lmOPFAgI=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		4FT5t9hzI2xcTAocAZj2NIvkKdU=
+		6vEsOCw+aN+V1qZbx25kn7NH7Yg=
 		</data>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		/IM1osRDyMXzdg+c68lMzjzoi4c=
+		VbnTWuq2fUGcd2Sn3S6lmOPFAgI=
 		</data>
 		<key>SwiftyJSON_SwiftyJSON.bundle/Info.plist</key>
 		<data>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			M/xdXDA8ZIFcIBLxApX3fTyjCqfO5fHY8XZcsJKKjbU=
+			XyWySBeZG2BVZcXaY7aw1CwekN2E3oWSXm+RDW5yu/0=
 			</data>
 		</dict>
 		<key>Common_Common.bundle/Assets.car</key>
@@ -156,35 +156,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YeprVU3xYBYPRhy01ovmPBhyuC/MoBJivxuvJkjF/Pc=
+			eSFhro1ZfdUBvU4TX7pmoFlY2LMluz6Sov6B7QIX/4U=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IRiBq6/507WafkEBPHvt1GgiIijGh1aGoGsnAO+r494=
+			gtjS0K7YKbnSHg4tq16NrsDHnWROfnuE+9P5vvs+Fsw=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MUNu2u7bMZLXBlmipS6kHBt90E7cS3AfPSdzABcMovs=
+			LYFJhax7slAVgD8nfQdgNv7TChSRDiWZIV4tXTyOfGc=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hfP2JEQWFUuln4lukRHo39qPHTcXKIM+7ARfR7F6sQ4=
+			IJfODKP6oOgTKgu/8iyM6oEp3mwXpWuu15SQXCcUlM4=
 			</data>
 		</dict>
 		<key>Modules/VouchSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MUNu2u7bMZLXBlmipS6kHBt90E7cS3AfPSdzABcMovs=
+			LYFJhax7slAVgD8nfQdgNv7TChSRDiWZIV4tXTyOfGc=
 			</data>
 		</dict>
 		<key>SwiftyJSON_SwiftyJSON.bundle/Info.plist</key>

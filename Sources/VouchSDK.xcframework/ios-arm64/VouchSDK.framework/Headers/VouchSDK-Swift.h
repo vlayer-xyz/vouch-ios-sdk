@@ -337,6 +337,13 @@ typedef SWIFT_ENUM(NSInteger, VouchErrorReasonObjC, open) {
   VouchErrorReasonObjCUninitialized = 14,
 };
 
+/// Objective-C compatible proof mode enum
+typedef SWIFT_ENUM(NSInteger, VouchProofModeObjC, open) {
+  VouchProofModeObjCAuto = 0,
+  VouchProofModeObjCMpc = 1,
+  VouchProofModeObjCProxy = 2,
+};
+
 @class VouchSuccessObjC;
 @class UIViewController;
 /// Objective-C compatible wrapper for VouchSDK
@@ -370,6 +377,18 @@ SWIFT_CLASS("_TtC8VouchSDK14VouchSDKBridge")
 /// \param completion Completion handler called with success or error
 ///
 - (UIViewController * _Nonnull)startWithDataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nonnull)webhookUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata completion:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
+/// Start a proof request flow. Returns a UIViewController to present.
+/// \param dataSourceId The data source identifier
+///
+/// \param webhookUrl The webhook URL for callbacks
+///
+/// \param inputs Additional input parameters (optional)
+///
+/// \param proofMode Overrides the proof mode from the proof request config
+///
+/// \param completion Completion handler called with success or error
+///
+- (UIViewController * _Nonnull)startWithDataSourceId:(NSString * _Nonnull)dataSourceId webhookUrl:(NSString * _Nonnull)webhookUrl inputs:(NSDictionary<NSString *, NSString *> * _Nullable)inputs metadata:(NSString * _Nullable)metadata proofMode:(enum VouchProofModeObjC)proofMode completion:(void (^ _Nonnull)(VouchSuccessObjC * _Nullable, VouchErrorObjC * _Nullable))completion SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
