@@ -292,6 +292,26 @@
       },
       {
         "kind": "Import",
+        "name": "Prover",
+        "printedName": "Prover",
+        "declKind": "Import",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -444,6 +464,145 @@
           },
           {
             "kind": "Function",
+            "name": "downloadConfig",
+            "printedName": "downloadConfig(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProofRequest",
+                "printedName": "VouchSDK.ProofRequest",
+                "usr": "s:8VouchSDK12ProofRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CreateProofRequestParams",
+                "printedName": "VouchSDK.CreateProofRequestParams",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8VouchSDK0B0C14downloadConfigyAA12ProofRequestVAA06CreateeF6ParamsVYaAA0A5ErrorVYKF",
+            "mangledName": "$s8VouchSDK0B0C14downloadConfigyAA12ProofRequestVAA06CreateeF6ParamsVYaAA0A5ErrorVYKF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sniffRequests",
+            "printedName": "sniffRequests(proofRequest:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProofRequest",
+                "printedName": "VouchSDK.ProofRequest",
+                "usr": "s:8VouchSDK12ProofRequestV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<VouchSDK.SniffRequestsSuccess, VouchSDK.VouchError>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<VouchSDK.SniffRequestsSuccess, VouchSDK.VouchError>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SniffRequestsSuccess",
+                        "printedName": "VouchSDK.SniffRequestsSuccess",
+                        "usr": "s:8VouchSDK20SniffRequestsSuccessV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchError",
+                        "printedName": "VouchSDK.VouchError",
+                        "usr": "s:8VouchSDK0A5ErrorV"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8VouchSDK0B0C13sniffRequests12proofRequest8callbackQrAA05ProofF0V_ys6ResultOyAA05SniffD7SuccessVAA0A5ErrorVGScMYcctF",
+            "mangledName": "$s8VouchSDK0B0C13sniffRequests12proofRequest8callbackQrAA05ProofF0V_ys6ResultOyAA05SniffD7SuccessVAA0A5ErrorVGScMYcctF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prove",
+            "printedName": "prove(proofRequest:matches:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchSuccess",
+                "printedName": "VouchSDK.VouchSuccess",
+                "usr": "s:8VouchSDK0A7SuccessV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProofRequest",
+                "printedName": "VouchSDK.ProofRequest",
+                "usr": "s:8VouchSDK12ProofRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VouchSDK.MatchResult]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MatchResult",
+                    "printedName": "VouchSDK.MatchResult",
+                    "usr": "s:8VouchSDK11MatchResultV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8VouchSDK0B0C5prove12proofRequest7matchesAA0A7SuccessVAA05ProofE0V_SayAA11MatchResultVGtYaAA0A5ErrorVYKF",
+            "mangledName": "$s8VouchSDK0B0C5prove12proofRequest7matchesAA0A7SuccessVAA05ProofE0V_SayAA11MatchResultVGtYaAA0A5ErrorVYKF",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "start",
             "printedName": "start(dataSourceId:webhookUrl:inputs:metadata:proofMode:callback:)",
             "children": [
@@ -584,6 +743,1017 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "CreateProofRequestParams",
+        "printedName": "CreateProofRequestParams",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK24CreateProofRequestParamsV2idSSvp",
+            "mangledName": "$s8VouchSDK24CreateProofRequestParamsV2idSSvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV2idSSvg",
+                "mangledName": "$s8VouchSDK24CreateProofRequestParamsV2idSSvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "dataSourceId",
+            "printedName": "dataSourceId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK24CreateProofRequestParamsV12dataSourceIdSSvp",
+            "mangledName": "$s8VouchSDK24CreateProofRequestParamsV12dataSourceIdSSvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV12dataSourceIdSSvg",
+                "mangledName": "$s8VouchSDK24CreateProofRequestParamsV12dataSourceIdSSvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "webhookUrl",
+            "printedName": "webhookUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK24CreateProofRequestParamsV10webhookUrlSSSgvp",
+            "mangledName": "$s8VouchSDK24CreateProofRequestParamsV10webhookUrlSSSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV10webhookUrlSSSgvg",
+                "mangledName": "$s8VouchSDK24CreateProofRequestParamsV10webhookUrlSSSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "redirectUrl",
+            "printedName": "redirectUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK24CreateProofRequestParamsV11redirectUrlSSSgvp",
+            "mangledName": "$s8VouchSDK24CreateProofRequestParamsV11redirectUrlSSSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV11redirectUrlSSSgvg",
+                "mangledName": "$s8VouchSDK24CreateProofRequestParamsV11redirectUrlSSSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "inputs",
+            "printedName": "inputs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK24CreateProofRequestParamsV6inputsSDyS2SGvp",
+            "mangledName": "$s8VouchSDK24CreateProofRequestParamsV6inputsSDyS2SGvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV6inputsSDyS2SGvg",
+                "mangledName": "$s8VouchSDK24CreateProofRequestParamsV6inputsSDyS2SGvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "metadata",
+            "printedName": "metadata",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK24CreateProofRequestParamsV8metadataSSSgvp",
+            "mangledName": "$s8VouchSDK24CreateProofRequestParamsV8metadataSSSgvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV8metadataSSSgvg",
+                "mangledName": "$s8VouchSDK24CreateProofRequestParamsV8metadataSSSgvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:dataSourceId:webhookUrl:redirectUrl:inputs:metadata:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CreateProofRequestParams",
+                "printedName": "VouchSDK.CreateProofRequestParams",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8VouchSDK24CreateProofRequestParamsV2id12dataSourceId10webhookUrl08redirectL06inputs8metadataACSS_S2SSgAJSDyS2SGAJtcfc",
+            "mangledName": "$s8VouchSDK24CreateProofRequestParamsV2id12dataSourceId10webhookUrl08redirectL06inputs8metadataACSS_S2SSgAJSDyS2SGAJtcfc",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CreateProofRequestParams",
+                "printedName": "VouchSDK.CreateProofRequestParams",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CreateProofRequestParams",
+                "printedName": "VouchSDK.CreateProofRequestParams",
+                "usr": "s:8VouchSDK24CreateProofRequestParamsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8VouchSDK24CreateProofRequestParamsV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8VouchSDK24CreateProofRequestParamsV2eeoiySbAC_ACtFZ",
+            "moduleName": "VouchSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8VouchSDK24CreateProofRequestParamsV",
+        "mangledName": "$s8VouchSDK24CreateProofRequestParamsV",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ProofRequest",
+        "printedName": "ProofRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK12ProofRequestV2idSSvp",
+            "mangledName": "$s8VouchSDK12ProofRequestV2idSSvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK12ProofRequestV2idSSvg",
+                "mangledName": "$s8VouchSDK12ProofRequestV2idSSvg",
+                "moduleName": "VouchSDK",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8VouchSDK12ProofRequestV",
+        "mangledName": "$s8VouchSDK12ProofRequestV",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MatchResult",
+        "printedName": "MatchResult",
+        "declKind": "Struct",
+        "usr": "s:8VouchSDK11MatchResultV",
+        "mangledName": "$s8VouchSDK11MatchResultV",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Progress",
+        "printedName": "Progress",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "configuring",
+            "printedName": "configuring",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.Progress.Type) -> VouchSDK.Progress",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Progress",
+                    "printedName": "VouchSDK.Progress",
+                    "usr": "s:8VouchSDK8ProgressO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.Progress.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Progress",
+                        "printedName": "VouchSDK.Progress",
+                        "usr": "s:8VouchSDK8ProgressO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK8ProgressO11configuringyA2CmF",
+            "mangledName": "$s8VouchSDK8ProgressO11configuringyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "proving",
+            "printedName": "proving",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.Progress.Type) -> (Swift.UInt64) -> VouchSDK.Progress",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.UInt64) -> VouchSDK.Progress",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Progress",
+                        "printedName": "VouchSDK.Progress",
+                        "usr": "s:8VouchSDK8ProgressO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(progress: Swift.UInt64)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt64",
+                            "printedName": "Swift.UInt64",
+                            "usr": "s:s6UInt64V"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.Progress.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Progress",
+                        "printedName": "VouchSDK.Progress",
+                        "usr": "s:8VouchSDK8ProgressO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK8ProgressO7provingyACs6UInt64V_tcACmF",
+            "mangledName": "$s8VouchSDK8ProgressO7provingyACs6UInt64V_tcACmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "attachmentUploading",
+            "printedName": "attachmentUploading",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.Progress.Type) -> VouchSDK.Progress",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Progress",
+                    "printedName": "VouchSDK.Progress",
+                    "usr": "s:8VouchSDK8ProgressO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.Progress.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Progress",
+                        "printedName": "VouchSDK.Progress",
+                        "usr": "s:8VouchSDK8ProgressO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK8ProgressO19attachmentUploadingyA2CmF",
+            "mangledName": "$s8VouchSDK8ProgressO19attachmentUploadingyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "tweakWaiting",
+            "printedName": "tweakWaiting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.Progress.Type) -> VouchSDK.Progress",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Progress",
+                    "printedName": "VouchSDK.Progress",
+                    "usr": "s:8VouchSDK8ProgressO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.Progress.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Progress",
+                        "printedName": "VouchSDK.Progress",
+                        "usr": "s:8VouchSDK8ProgressO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK8ProgressO12tweakWaitingyA2CmF",
+            "mangledName": "$s8VouchSDK8ProgressO12tweakWaitingyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "uploading",
+            "printedName": "uploading",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.Progress.Type) -> VouchSDK.Progress",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Progress",
+                    "printedName": "VouchSDK.Progress",
+                    "usr": "s:8VouchSDK8ProgressO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.Progress.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Progress",
+                        "printedName": "VouchSDK.Progress",
+                        "usr": "s:8VouchSDK8ProgressO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK8ProgressO9uploadingyA2CmF",
+            "mangledName": "$s8VouchSDK8ProgressO9uploadingyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "saving",
+            "printedName": "saving",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.Progress.Type) -> VouchSDK.Progress",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Progress",
+                    "printedName": "VouchSDK.Progress",
+                    "usr": "s:8VouchSDK8ProgressO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.Progress.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Progress",
+                        "printedName": "VouchSDK.Progress",
+                        "usr": "s:8VouchSDK8ProgressO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK8ProgressO6savingyA2CmF",
+            "mangledName": "$s8VouchSDK8ProgressO6savingyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Var",
+            "name": "finished",
+            "printedName": "finished",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.Progress.Type) -> VouchSDK.Progress",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Progress",
+                    "printedName": "VouchSDK.Progress",
+                    "usr": "s:8VouchSDK8ProgressO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VouchSDK.Progress.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Progress",
+                        "printedName": "VouchSDK.Progress",
+                        "usr": "s:8VouchSDK8ProgressO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:8VouchSDK8ProgressO8finishedyA2CmF",
+            "mangledName": "$s8VouchSDK8ProgressO8finishedyA2CmF",
+            "moduleName": "VouchSDK"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Progress",
+                "printedName": "VouchSDK.Progress",
+                "usr": "s:8VouchSDK8ProgressO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Progress",
+                "printedName": "VouchSDK.Progress",
+                "usr": "s:8VouchSDK8ProgressO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8VouchSDK8ProgressO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s8VouchSDK8ProgressO2eeoiySbAC_ACtFZ",
+            "moduleName": "VouchSDK",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:8VouchSDK8ProgressO",
+        "mangledName": "$s8VouchSDK8ProgressO",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Common",
         "printedName": "Common",
@@ -611,13 +1781,178 @@
         "moduleName": "VouchSDK"
       },
       {
-        "kind": "Import",
-        "name": "Common",
-        "printedName": "Common",
-        "declKind": "Import",
+        "kind": "TypeDecl",
+        "name": "SniffRequestsSuccess",
+        "printedName": "SniffRequestsSuccess",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "proofRequest",
+            "printedName": "proofRequest",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProofRequest",
+                "printedName": "VouchSDK.ProofRequest",
+                "usr": "s:8VouchSDK12ProofRequestV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK20SniffRequestsSuccessV12proofRequestAA05ProofG0Vvp",
+            "mangledName": "$s8VouchSDK20SniffRequestsSuccessV12proofRequestAA05ProofG0Vvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProofRequest",
+                    "printedName": "VouchSDK.ProofRequest",
+                    "usr": "s:8VouchSDK12ProofRequestV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK20SniffRequestsSuccessV12proofRequestAA05ProofG0Vvg",
+                "mangledName": "$s8VouchSDK20SniffRequestsSuccessV12proofRequestAA05ProofG0Vvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "matches",
+            "printedName": "matches",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VouchSDK.MatchResult]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MatchResult",
+                    "printedName": "VouchSDK.MatchResult",
+                    "usr": "s:8VouchSDK11MatchResultV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8VouchSDK20SniffRequestsSuccessV7matchesSayAA11MatchResultVGvp",
+            "mangledName": "$s8VouchSDK20SniffRequestsSuccessV7matchesSayAA11MatchResultVGvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VouchSDK.MatchResult]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MatchResult",
+                        "printedName": "VouchSDK.MatchResult",
+                        "usr": "s:8VouchSDK11MatchResultV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8VouchSDK20SniffRequestsSuccessV7matchesSayAA11MatchResultVGvg",
+                "mangledName": "$s8VouchSDK20SniffRequestsSuccessV7matchesSayAA11MatchResultVGvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(proofRequest:matches:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SniffRequestsSuccess",
+                "printedName": "VouchSDK.SniffRequestsSuccess",
+                "usr": "s:8VouchSDK20SniffRequestsSuccessV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProofRequest",
+                "printedName": "VouchSDK.ProofRequest",
+                "usr": "s:8VouchSDK12ProofRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VouchSDK.MatchResult]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MatchResult",
+                    "printedName": "VouchSDK.MatchResult",
+                    "usr": "s:8VouchSDK11MatchResultV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8VouchSDK20SniffRequestsSuccessV12proofRequest7matchesAcA05ProofG0V_SayAA11MatchResultVGtcfc",
+            "mangledName": "$s8VouchSDK20SniffRequestsSuccessV12proofRequest7matchesAcA05ProofG0V_SayAA11MatchResultVGtcfc",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:8VouchSDK20SniffRequestsSuccessV",
+        "mangledName": "$s8VouchSDK20SniffRequestsSuccessV",
         "moduleName": "VouchSDK",
         "declAttributes": [
           "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
         ]
       },
       {
@@ -3075,6 +4410,542 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "VouchProofRequestObjC",
+        "printedName": "VouchProofRequestObjC",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "proofRequestId",
+            "printedName": "proofRequestId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC(py)proofRequestId",
+            "mangledName": "$s8VouchSDK0A16ProofRequestObjCC05proofD2IdSSvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC(im)proofRequestId",
+                "mangledName": "$s8VouchSDK0A16ProofRequestObjCC05proofD2IdSSvg",
+                "moduleName": "VouchSDK",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchProofRequestObjC",
+                "printedName": "VouchSDK.VouchProofRequestObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC(im)init",
+            "mangledName": "$s8VouchSDK0A16ProofRequestObjCCACycfc",
+            "moduleName": "VouchSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC",
+        "mangledName": "$s8VouchSDK0A16ProofRequestObjCC",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VouchMatchResultObjC",
+        "printedName": "VouchMatchResultObjC",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchMatchResultObjC",
+                "printedName": "VouchSDK.VouchMatchResultObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchMatchResultObjC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchMatchResultObjC(im)init",
+            "mangledName": "$s8VouchSDK0A15MatchResultObjCCACycfc",
+            "moduleName": "VouchSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VouchSDK@objc(cs)VouchMatchResultObjC",
+        "mangledName": "$s8VouchSDK0A15MatchResultObjCC",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VouchSniffRequestsSuccessObjC",
+        "printedName": "VouchSniffRequestsSuccessObjC",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "proofRequest",
+            "printedName": "proofRequest",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchProofRequestObjC",
+                "printedName": "VouchSDK.VouchProofRequestObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSniffRequestsSuccessObjC(py)proofRequest",
+            "mangledName": "$s8VouchSDK0A24SniffRequestsSuccessObjCC12proofRequestAA0a5ProofhF1CCvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchProofRequestObjC",
+                    "printedName": "VouchSDK.VouchProofRequestObjC",
+                    "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchSniffRequestsSuccessObjC(im)proofRequest",
+                "mangledName": "$s8VouchSDK0A24SniffRequestsSuccessObjCC12proofRequestAA0a5ProofhF1CCvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "matches",
+            "printedName": "matches",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VouchSDK.VouchMatchResultObjC]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchMatchResultObjC",
+                    "printedName": "VouchSDK.VouchMatchResultObjC",
+                    "usr": "c:@M@VouchSDK@objc(cs)VouchMatchResultObjC"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSniffRequestsSuccessObjC(py)matches",
+            "mangledName": "$s8VouchSDK0A24SniffRequestsSuccessObjCC7matchesSayAA0a11MatchResultF1CCGvp",
+            "moduleName": "VouchSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VouchSDK.VouchMatchResultObjC]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VouchMatchResultObjC",
+                        "printedName": "VouchSDK.VouchMatchResultObjC",
+                        "usr": "c:@M@VouchSDK@objc(cs)VouchMatchResultObjC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchSniffRequestsSuccessObjC(im)matches",
+                "mangledName": "$s8VouchSDK0A24SniffRequestsSuccessObjCC7matchesSayAA0a11MatchResultF1CCGvg",
+                "moduleName": "VouchSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchSniffRequestsSuccessObjC",
+                "printedName": "VouchSDK.VouchSniffRequestsSuccessObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchSniffRequestsSuccessObjC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSniffRequestsSuccessObjC(im)init",
+            "mangledName": "$s8VouchSDK0A24SniffRequestsSuccessObjCCACycfc",
+            "moduleName": "VouchSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VouchSDK@objc(cs)VouchSniffRequestsSuccessObjC",
+        "mangledName": "$s8VouchSDK0A24SniffRequestsSuccessObjCC",
+        "moduleName": "VouchSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "VouchSDKBridge",
         "printedName": "VouchSDKBridge",
         "children": [
@@ -3255,6 +5126,243 @@
               "ObjC",
               "Custom",
               "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "downloadConfig",
+            "printedName": "downloadConfig(id:dataSourceId:webhookUrl:redirectUrl:inputs:metadata:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchProofRequestObjC",
+                "printedName": "VouchSDK.VouchProofRequestObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)downloadConfigWithId:dataSourceId:webhookUrl:redirectUrl:inputs:metadata:completionHandler:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC14downloadConfig2id12dataSourceId10webhookUrl08redirectK06inputs8metadataAA0A16ProofRequestObjCCSSSg_SSA2MSDyS2SGSgAMtYaKF",
+            "moduleName": "VouchSDK",
+            "objc_name": "downloadConfigWithId:dataSourceId:webhookUrl:redirectUrl:inputs:metadata:completionHandler:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "Custom"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sniffRequests",
+            "printedName": "sniffRequests(proofRequest:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VouchProofRequestObjC",
+                "printedName": "VouchSDK.VouchProofRequestObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VouchSDK.VouchSniffRequestsSuccessObjC?, VouchSDK.VouchErrorObjC?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VouchSDK.VouchSniffRequestsSuccessObjC?, VouchSDK.VouchErrorObjC?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "VouchSDK.VouchSniffRequestsSuccessObjC?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VouchSniffRequestsSuccessObjC",
+                            "printedName": "VouchSDK.VouchSniffRequestsSuccessObjC",
+                            "usr": "c:@M@VouchSDK@objc(cs)VouchSniffRequestsSuccessObjC"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "VouchSDK.VouchErrorObjC?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VouchErrorObjC",
+                            "printedName": "VouchSDK.VouchErrorObjC",
+                            "usr": "c:@M@VouchSDK@objc(cs)VouchErrorObjC"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)sniffRequestsWithProofRequest:completion:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC13sniffRequests12proofRequest10completionSo16UIViewControllerCAA0a5ProofG4ObjCC_yAA0a5Sniffe7SuccessL1CCSg_AA0a5ErrorL1CCSgtYbctF",
+            "moduleName": "VouchSDK",
+            "objc_name": "sniffRequestsWithProofRequest:completion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "Custom"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prove",
+            "printedName": "prove(proofRequest:matches:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VouchSuccessObjC",
+                "printedName": "VouchSDK.VouchSuccessObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchSuccessObjC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VouchProofRequestObjC",
+                "printedName": "VouchSDK.VouchProofRequestObjC",
+                "usr": "c:@M@VouchSDK@objc(cs)VouchProofRequestObjC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VouchSDK.VouchMatchResultObjC]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VouchMatchResultObjC",
+                    "printedName": "VouchSDK.VouchMatchResultObjC",
+                    "usr": "c:@M@VouchSDK@objc(cs)VouchMatchResultObjC"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VouchSDK@objc(cs)VouchSDKBridge(im)proveWithProofRequest:matches:completionHandler:",
+            "mangledName": "$s8VouchSDK0A9SDKBridgeC5prove12proofRequest7matchesAA0A11SuccessObjCCAA0a5ProoffI1CC_SayAA0a11MatchResultI1CCGtYaKF",
+            "moduleName": "VouchSDK",
+            "objc_name": "proveWithProofRequest:matches:completionHandler:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "Custom"
             ],
             "throwing": true,
             "funcSelfKind": "NonMutating"
@@ -3638,16 +5746,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Common",
-        "printedName": "Common",
-        "declKind": "Import",
-        "moduleName": "VouchSDK",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "VouchSuccess",
         "printedName": "VouchSuccess",
@@ -3737,130 +5835,6 @@
         "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "VouchSDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "VouchView",
-        "printedName": "VouchView",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "body",
-            "printedName": "body",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "OpaqueTypeArchetype",
-                "printedName": "some SwiftUI.View",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "View",
-                    "printedName": "SwiftUI.View",
-                    "usr": "s:7SwiftUI4ViewP"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:8VouchSDK0A4ViewV4bodyQrvp",
-            "mangledName": "$s8VouchSDK0A4ViewV4bodyQrvp",
-            "moduleName": "VouchSDK",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OpaqueTypeArchetype",
-                    "printedName": "some SwiftUI.View",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "View",
-                        "printedName": "SwiftUI.View",
-                        "usr": "s:7SwiftUI4ViewP"
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:8VouchSDK0A4ViewV4bodyQrvg",
-                "mangledName": "$s8VouchSDK0A4ViewV4bodyQrvg",
-                "moduleName": "VouchSDK",
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:8VouchSDK0A4ViewV",
-        "mangledName": "$s8VouchSDK0A4ViewV",
-        "moduleName": "VouchSDK",
-        "declAttributes": [
-          "Preconcurrency",
-          "Custom",
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "View",
-            "printedName": "View",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Body",
-                "printedName": "Body",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "OpaqueTypeArchetype",
-                    "printedName": "some SwiftUI.View",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "View",
-                        "printedName": "SwiftUI.View",
-                        "usr": "s:7SwiftUI4ViewP"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7SwiftUI4ViewP",
-            "mangledName": "$s7SwiftUI4ViewP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          }
-        ]
       }
     ],
     "json_format_version": 8
@@ -3869,7 +5843,14 @@
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/SDK.swift",
       "kind": "Dictionary",
-      "offset": 1972,
+      "offset": 6469,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/SDK.swift",
+      "kind": "Dictionary",
+      "offset": 12976,
       "length": 3,
       "value": "[]"
     },
@@ -3878,7 +5859,7 @@
       "kind": "StringLiteral",
       "offset": 122,
       "length": 7,
-      "value": "\"0.7.1\""
+      "value": "\"0.8.0\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
