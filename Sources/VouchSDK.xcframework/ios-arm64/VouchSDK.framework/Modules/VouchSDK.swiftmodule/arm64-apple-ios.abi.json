@@ -5859,7 +5859,7 @@
       "kind": "StringLiteral",
       "offset": 122,
       "length": 7,
-      "value": "\"0.8.0\""
+      "value": "\"0.9.0\""
     },
     {
       "filePath": "\/Users\/ksysu\/Projects\/vouch2\/apps\/ios\/SDK\/VouchSDKBridge.swift",
