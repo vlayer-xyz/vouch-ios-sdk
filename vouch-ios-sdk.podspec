@@ -20,4 +20,8 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "Sources/VouchSDK.xcframework"
 
   spec.frameworks = "Foundation", "SwiftUI", "UIKit"
+  spec.license = {
+    :type => "Custom",
+    :text => File.read(File.join(File.dirname(__FILE__), "LICENSE"))
+  }
 end
