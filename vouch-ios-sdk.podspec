@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "vouch-ios-sdk"
-  spec.version      = "0.9.0"
+  spec.version      = "0.9.1"
   spec.summary      = "Binary iOS framework for integrating with the Vouch platform"
   spec.description  = <<-DESC
                       The Vouch iOS SDK provides a binary framework for integrating
@@ -15,7 +15,10 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "14.0"
   spec.swift_version = "6.1"
 
-  spec.source       = { :git => "https://github.com/vlayer-xyz/vouch-ios-sdk.git", :tag => "v#{spec.version}" }
+  spec.source       = {
+    :http => "https://github.com/vlayer-xyz/vouch-ios-sdk/releases/download/v0.9.1/VouchSDK.xcframework.zip",
+    :sha256 => "050b66b64004dedd584a78f3c68fed19a524030828241c2587cc9f709aa692b3"
+  }
 
   spec.vendored_frameworks = "Sources/VouchSDK.xcframework"
 
