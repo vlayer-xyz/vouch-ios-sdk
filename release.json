@@ -1,7 +1,7 @@
 {
-  "version": "0.9.8",
-  "tag": "v0.9.8",
+  "version": "0.9.9",
+  "tag": "v0.9.9",
   "asset_name": "VouchSDK.xcframework.zip",
-  "release_url": "https://github.com/vlayer-xyz/vouch-ios-sdk/releases/download/v0.9.8/VouchSDK.xcframework.zip",
-  "sha256": "316d17e93c51df3e69c6a2897413def34912b99fccd4979787fc5c206da457c5"
+  "release_url": "https://github.com/vlayer-xyz/vouch-ios-sdk/releases/download/v0.9.9/VouchSDK.xcframework.zip",
+  "sha256": "af69c3a2a31d9061187c8ff9bf2d0b66c8a27cb60c1dd1b88bb52a47472d39dc"
 }
